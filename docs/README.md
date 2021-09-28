@@ -9,9 +9,19 @@ Comandos Git ejecutados desde terminal y desde el IDE
 
 ## Versionado
 
-Buenas prácticas de versionado
+### Buenas prácticas de versionado
 
-Uso de ramas separadas de 'main'
+Al crear nuevas ramas se seguirá el siguiente criterio. 
+
+ <ul><li>feature/<nombre>: para crear nuevas funcionalidades.</li><li>BUG/<nombre>: para corregir errores.</li></ul>
+
+Será necesario realizar commits con mensajes claros, breves y descriptivos. Estos mensajes deberán ser escritos en español. En cada commit se deberá especificar cuál es la acción que se está realizando. Para ello se utilizarán las palabras clave "agregar", "cambiar", "arreglar", "quitar" al principio de cada mensaje de commit. 
+
+### Uso de ramas separadas de 'main'
+
+Para el desarrollo del proyecto se tomó la decisión de trabajar en una rama secundaria llamada "Develop". Es así que todas las ramas generadas durante el transcurso del mismo serán mergeadas a Develop en una primera instancia, para luego, una vez que el proyecto se encuentre en su versión final, poder mergear esta rama a la rama "main".
+
+### Resumen de commits y evolución del proyecto
 
 Resumen de commits y evolución del proyecto
 
