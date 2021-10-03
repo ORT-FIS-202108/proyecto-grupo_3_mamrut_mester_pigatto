@@ -11,11 +11,11 @@ Comandos Git ejecutados desde terminal y desde el IDE
 
 ### Buenas prácticas de versionado
 
-Al crear nuevas ramas se seguirá el siguiente criterio. 
+Al crear nuevas ramas se deberá seguir el siguiente criterio. 
 
  <ul><li>feature/<nombre>: para crear nuevas funcionalidades.</li><li>BUG/<nombre>: para corregir errores.</li></ul>
 
-Será necesario realizar commits con mensajes claros, breves y descriptivos. Estos mensajes deberán ser escritos en español. En cada commit se deberá especificar cuál es la acción que se está realizando. Para ello se utilizarán las palabras clave "agregar", "cambiar", "arreglar", "quitar" al principio de cada mensaje de commit. 
+Será necesario realizar commits con mensajes claros, breves y descriptivos. Estos mensajes deberán ser escritos en español. En cada commit se deberá especificar cuál es la acción que se está realizando. Para ello se utilizarán las palabras clave "agregar", "cambiar", "arreglar", "quitar" al principio de cada mensaje de commit.
 
 ### Uso de ramas separadas de 'main'
 
