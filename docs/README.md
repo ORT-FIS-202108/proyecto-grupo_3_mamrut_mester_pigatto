@@ -56,6 +56,82 @@ Modelo conceptual del problema
 
 Definición de requerimientos funcionales y no funcionales
 
+<br>
+
+
+## Requerimientos funcionales y no funcionales
+
+<br>
+
+**Actores:**
+
+* Usuario
+
+
+
+## Requerimientos funcionales
+
+<br>
+
+**RF1: Creacion de usuario**
+
+Actor: Usuario
+
+Descripción: El usuario debera poder registrarse en el sistema, y manejar sus gastos e ingresos.
+
+Prioridad: Alta
+
+<br>
+
+**RF2: Ver historial**
+
+Actor: Usuario
+
+Descripción: El usuario debe poder ver dentro de la aplicacion sus gastos e ingresos de forma ordenada.
+
+Prioridad: Alta
+
+<br>
+
+**RF3: Crear recordatorios**
+
+Actor: Usuario
+
+Descripción: El usuario tiene la posibilidad de crear recordatorios para recordar realizar pagos y cancelar deudas
+
+Prioridad: Alta
+
+<br>
+
+## Requerimientos no funcionales
+
+<br>
+
+
+**RNF1: Sistemas operativos**
+
+Descripción: La aplicacion debera funcionar en IOS y Android.
+
+Prioridad: Alta
+
+<br>
+
+**RNF2: Capacidad de usuarios**
+
+Descripción: El sistema debera soportar multiples usuarios concurrentes.
+
+Prioridad: Media
+
+<br>
+
+**RNF3: Lenguaje de programación**
+
+Descripción: El sistema sera programado en 
+
+Prioridad: Alta
+
+<br>
+
 User Stories / Use Cases detallados
 
 Bocetos de IU
