@@ -79,8 +79,6 @@ Actor: Usuario
 
 Descripción: El usuario debera poder registrarse en el sistema, y manejar sus gastos e ingresos.
 
-Prioridad: Alta
-
 <br>
 
 **RF2: Ver historial**
@@ -89,8 +87,6 @@ Actor: Usuario
 
 Descripción: El usuario debe poder ver dentro de la aplicacion sus gastos e ingresos de forma ordenada.
 
-Prioridad: Alta
-
 <br>
 
 **RF3: Crear recordatorios**
@@ -98,8 +94,6 @@ Prioridad: Alta
 Actor: Usuario
 
 Descripción: El usuario tiene la posibilidad de crear recordatorios para recordar realizar pagos y cancelar deudas
-
-Prioridad: Alta
 
 <br>
 
@@ -112,23 +106,17 @@ Prioridad: Alta
 
 Descripción: La aplicacion debera funcionar en IOS y Android.
 
-Prioridad: Alta
-
 <br>
 
 **RNF2: Capacidad de usuarios**
 
 Descripción: El sistema debera soportar multiples usuarios concurrentes.
 
-Prioridad: Media
-
 <br>
 
 **RNF3: Lenguaje de programación**
 
 Descripción: El sistema sera programado en 
-
-Prioridad: Alta
 
 <br>
 
