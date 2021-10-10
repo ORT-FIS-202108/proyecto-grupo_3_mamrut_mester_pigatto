@@ -63,13 +63,13 @@ Modelo conceptual del problema
 
 ## Especificación
 
-## Requerimientos funcionales y no funcionales
+### Requerimientos funcionales y no funcionales
 
-## Requerimientos funcionales
+#### Requerimientos funcionales
 
 <ul><li>El usuario debera poder registrarse en el sistema.</li><li>El usuario debe poder ver dentro de la aplicacion sus gastos e ingresos de forma ordenada.</li><li>El usuario tiene la posibilidad de crear recordatorios para recordar registrar sus gastos.</li><li>El usuario debe poder loggearse a su cuenta ingresando su usuario y contraseña.</li><li>El usuario debe poder escanear facturas para que sus gastos queden registrados.</li><li>El usuario debe poder ingresar gastos de forma manual.</li><li>El sistema debe permitir el ingreso de gastos en pesos uruguayos y en dólares americanos.</li><li>El usuario debe poder establecer topes de gastos por categoría mensual, y ser notificado en caso de sobrepasar esos límites.</li><li>El usuario debe poder ingresar gastos recurrentes una única vez y luego verlos cada mes en el reporte de gastos.</li></ul>
 
-## Requerimientos no funcionales
+#### Requerimientos no funcionales
 
 <ul><li>La aplicacion debera funcionar en IOS y Android.</li><li>El sistema debera soportar multiples usuarios concurrentes.</li><li>El sistema sera programado en Javascript.</li><li>Se utilizará como color pirmario Deep Purple 700 y como secundario Teal 700</li><li>La fuente a utilizar será Roboto.</li></ul>
 
