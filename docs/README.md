@@ -65,6 +65,98 @@ Modelo conceptual del problema
 
 Definición de requerimientos funcionales y no funcionales
 
+### User Stories
+
+ID: #1
+
+Título: Registro de usuarios
+
+Narrativa: Como usuario quiero poder registrame como usuario de la aplicación para poder mantener mi cuenta de registro de gastos.
+
+Criterios de aceptación: 
+
+<ul><li>El nombre de usuario debe ser un email.</li><li>La contraseña debe tener al menos ocho caracteres y un número.</li><li>Será necesario confirmar la contraseña ingresada para completar el proceso de registro.</li></ul>
+
+ID: #2
+
+Título: Ingreso al sistema
+
+Narrativa: Como usuario quiero poder loggearme utilizando mi email y contraseña para poder acceder a mi cuenta.
+
+Criterios de aceptación: 
+
+<ul><li>Si se ingresa una contraseña incorrecta el sistema deberá notificar al usuario y proveer la opción de setear una nueva.</li></ul>
+
+ID: #3
+
+Título: Ingreso de gastos
+
+Narrativa: Como usuario quiero poder ingresar gastos de forma manual para poder verlos en el resumen de gastos.
+
+Criterios de aceptación: 
+
+<ul><li>El usuario deberá ingresar una referencia asociada al gasto, el monto y asignarle una categoría.</li></ul>
+
+ID: #4
+
+Título: Gastos en múltiples monedas
+
+Narrativa: Como usuario quiero poder ingresar gastos en pesos uruguayos y en dólares americanos para poder hacer un seguimiento de mis gastos en la moneada en que fueron realizados.
+
+Criterios de aceptación: 
+
+<ul><li>El registrar un gasto nuevo, el sistema debe solicitar que se seleccione una moneda, pesos uruguayos o dólares americanos.</li></ul>
+
+ID: #6
+
+Título: Topes de gastos
+
+Narrativa: Como usuario quiero poder definir topes mensuales por categoría de gastos para poder controlar los gastos a realizar por categoría.
+
+Criterios de aceptación: 
+
+<ul><li>El sistema debe permitir fijar topes en pesos uruguayos y en dólares americanos.</li></ul>
+
+ID: #7
+
+Título: Notificaciones por topes de gastos
+
+Narrativa: Como usuario quiero ser notificado en caso de exceder algún tope de gasto establecido para algunas de mis categorías para tener conocimiento sobre el cumplimiento de mis metas mensuales.
+
+Criterios de aceptación: 
+
+<ul><li>La notificación deberá ser visible desde la página de inicio.</li></ul>
+
+ID: #8
+
+Título: Gastos recurrentes
+
+Narrativa: Como usuario quiero poder ingresar gastos recurrentes para no tener la necesidad de registrarlos cada mes.
+
+Criterios de aceptación: 
+
+<ul><li>El gasto ingresado deberá figurar en el resumen de gastos mensual sin necesidad de que el usuario lo ingrese nuevamente.</li></ul>
+
+ID: #9
+
+Título: Manejo gastos recurrentes
+
+Narrativa: Como usuario quiero poder editar y eliminar gastos recurrentes para poder ajustarlos de acuerdo a su evolución.
+
+Criterios de aceptación: 
+
+<ul><li>Solamente se podrá editar el monto del gasto.</li><li>En el listado de gastos recurrentes debe verse un botón que permita eliminarlos automáticamento.</li></ul>
+
+ID: #10
+
+Título: Creación categorías de gastos
+
+Narrativa: Como usuario quiero poder crear nuevas categorías de gastos para que las categorías reflejen adecuadamente el concepto de mis gastos.
+
+Criterios de aceptación: 
+
+<ul><li>El sistema deberá solicitar que se ingrese el nombre de la nueva categoría.</li></ul>
+
 User Stories / Use Cases detallados
 
 Bocetos de IU
