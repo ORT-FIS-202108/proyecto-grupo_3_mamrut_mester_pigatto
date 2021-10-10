@@ -63,75 +63,15 @@ Modelo conceptual del problema
 
 ## Especificación
 
-## Requerimientos funcionales
-
-<ul><li>El usuario debe poder loggearse a su cuenta ingresando su usuario y contraseña.</li><li>El usuario debe poder escanear facturas para que sus gastos queden registrados.</li><li>El usuario debe poder ingresar gastos de forma manual.</li><li>El sistema debe permitir el ingreso de gastos en pesos uruguayos y en dólares americanos.</li><li>El usuario debe poder establecer topes de gastos por categoría mensual, y ser notificado en caso de sobrepasar esos límites.</li><li>El usuario debe poder ingresar gastos recurrentes una única vez y luego verlos cada mes en el reporte de gastos.</li></ul>
-
-Definición de requerimientos funcionales y no funcionales
-
-<br>
-
-
 ## Requerimientos funcionales y no funcionales
 
-<br>
-
-**Actores:**
-
-* Usuario
-
-
-
 ## Requerimientos funcionales
 
-<br>
-
-**RF1: Creacion de usuario**
-
-Actor: Usuario
-
-Descripción: El usuario debera poder registrarse en el sistema, y manejar sus gastos e ingresos.
-
-<br>
-
-**RF2: Ver historial**
-
-Actor: Usuario
-
-Descripción: El usuario debe poder ver dentro de la aplicacion sus gastos e ingresos de forma ordenada.
-
-<br>
-
-**RF3: Crear recordatorios**
-
-Actor: Usuario
-
-Descripción: El usuario tiene la posibilidad de crear recordatorios para recordar registrar sus gastos
-
-<br>
+<ul><li>El usuario debera poder registrarse en el sistema.</li><li>El usuario debe poder ver dentro de la aplicacion sus gastos e ingresos de forma ordenada.</li><li>El usuario tiene la posibilidad de crear recordatorios para recordar registrar sus gastos.</li><li>El usuario debe poder loggearse a su cuenta ingresando su usuario y contraseña.</li><li>El usuario debe poder escanear facturas para que sus gastos queden registrados.</li><li>El usuario debe poder ingresar gastos de forma manual.</li><li>El sistema debe permitir el ingreso de gastos en pesos uruguayos y en dólares americanos.</li><li>El usuario debe poder establecer topes de gastos por categoría mensual, y ser notificado en caso de sobrepasar esos límites.</li><li>El usuario debe poder ingresar gastos recurrentes una única vez y luego verlos cada mes en el reporte de gastos.</li></ul>
 
 ## Requerimientos no funcionales
 
-<br>
-
-
-**RNF1: Sistemas operativos**
-
-Descripción: La aplicacion debera funcionar en IOS y Android.
-
-<br>
-
-**RNF2: Capacidad de usuarios**
-
-Descripción: El sistema debera soportar multiples usuarios concurrentes.
-
-<br>
-
-**RNF3: Lenguaje de programación**
-
-Descripción: El sistema sera programado en Javascript.
-
-<br>
+<ul><li>La aplicacion debera funcionar en IOS y Android.</li><li>El sistema debera soportar multiples usuarios concurrentes.</li><li>El sistema sera programado en Javascript.</li><li>Se utilizará como color pirmario Deep Purple 700 y como secundario Teal 700</li><li>La fuente a utilizar será Roboto.</li></ul>
 
 User Stories / Use Cases detallados
 
