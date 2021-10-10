@@ -63,7 +63,66 @@ Modelo conceptual del problema
 
 ## Especificación
 
-Definición de requerimientos funcionales y no funcionales
+## Requerimientos funcionales y no funcionales
+
+<br>
+
+**Actores:**
+
+* Usuario
+
+
+
+## Requerimientos funcionales
+
+<br>
+
+**RF1: Creacion de usuario**
+
+Actor: Usuario
+
+Descripción: El usuario debera poder registrarse en el sistema, y manejar sus gastos e ingresos.
+
+<br>
+
+**RF2: Ver historial**
+
+Actor: Usuario
+
+Descripción: El usuario debe poder ver dentro de la aplicacion sus gastos e ingresos de forma ordenada.
+
+<br>
+
+**RF3: Crear recordatorios**
+
+Actor: Usuario
+
+Descripción: El usuario tiene la posibilidad de crear recordatorios para recordar registrar sus gastos
+
+<br>
+
+## Requerimientos no funcionales
+
+<br>
+
+
+**RNF1: Sistemas operativos**
+
+Descripción: La aplicacion debera funcionar en IOS y Android.
+
+<br>
+
+**RNF2: Capacidad de usuarios**
+
+Descripción: El sistema debera soportar multiples usuarios concurrentes.
+
+<br>
+
+**RNF3: Lenguaje de programación**
+
+Descripción: El sistema sera programado en Javascript.
+
+<br>
 
 ### User Stories
 
@@ -156,6 +215,8 @@ Narrativa: Como usuario quiero poder crear nuevas categorías de gastos para que
 Criterios de aceptación: 
 
 <ul><li>El sistema deberá solicitar que se ingrese el nombre de la nueva categoría.</li></ul>
+<br>
+
 
 User Stories / Use Cases detallados
 
