@@ -93,7 +93,7 @@ Descripción: El usuario debe poder ver dentro de la aplicacion sus gastos e ing
 
 Actor: Usuario
 
-Descripción: El usuario tiene la posibilidad de crear recordatorios para recordar realizar pagos y cancelar deudas
+Descripción: El usuario tiene la posibilidad de crear recordatorios para recordar registrar sus gastos
 
 <br>
 
@@ -116,7 +116,7 @@ Descripción: El sistema debera soportar multiples usuarios concurrentes.
 
 **RNF3: Lenguaje de programación**
 
-Descripción: El sistema sera programado en 
+Descripción: El sistema sera programado en Javascript.
 
 <br>
 
