@@ -1,5 +1,6 @@
 Carpeta para bocetos de interfaz de usuario
 
+##Primer boceto página de inicio y menu principal
 
 <img src="./images/inicio_y_menu.JPG"
         alt="Primer boceto inicio y menu"
