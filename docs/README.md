@@ -59,7 +59,9 @@ Referencias a fuentes de información
 
 Caracterización de usuarios: User Personas
 
-Modelo conceptual del problema
+### Modelo conceptual del problema
+
+<img src="./images/modeloConceptual.png" width="350">
 
 ## Especificación
 
