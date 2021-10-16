@@ -175,11 +175,11 @@ Actor: Usuario
 
 Curso normal:
 
-| Acción de los actores | Respuesta del sistema |
-| --------------------- | --------------------- |
-| 1. Selecciona 'registrarse' | 2. Despliega pantalla con formulario de registro de usuarios|
-| 3. Completa formulario de registro            | 4. Chequea formatos |
-| 5. Presiona botón 'registrarse'          | 6. Confirma registro de usuario exitoso e inicia sesión del usuario, redirige a pantalla de inicio |
+|           Acción de los actores       |                   Respuesta del sistema                     |
+| ------------------------------------- | ----------------------------------------------------------- |
+| 1. Selecciona 'registrarse'           | 2. Despliega pantalla con formulario de registro de usuarios|
+| 3. Completa formulario de registro    | 4. Chequea formatos                                         |
+| 5. Presiona botón 'registrarse'       | 6. Confirma registro de usuario exitoso e inicia sesión del usuario, redirige a pantalla de inicio |
 
 Cursos alternativos:
 
@@ -197,10 +197,10 @@ Actor: Usuario
 
 Curso normal:
 
-| Acción de los actores | Respuesta del sistema |
-| --------------------- | --------------------- |
-| 1. Ingresa email y contraseña | 2. Chequea formatos |
-| 3. Presiona botón 'iniciar sesión' | 4. Confirma usuario e inicia sesión, redirige a pantalla de inicio |
+|           Acción de los actores       |                        Respuesta del sistema                       |
+| ------------------------------------- | ------------------------------------------------------------------ |
+| 1. Ingresa email y contraseña         | 2. Chequea formatos                                                |
+| 3. Presiona botón 'iniciar sesión'    | 4. Confirma usuario e inicia sesión, redirige a pantalla de inicio |
 
 Cursos alternativos:
 
@@ -214,10 +214,10 @@ Actor: Usuario
 
 Curso normal:
 
-| Acción de los actores | Respuesta del sistema |
-| --------------------- | --------------------- |
-| 1. Selecciona 'Agregar gasto' | 2. Despliega formulario de ingreso de gastos |
-| 3. Completa formulario de gasto | 4. Confirma ingreso de gasto y despliega señal de éxito |
+|           Acción de los actores       |                  Respuesta del sistema                  |
+| ------------------------------------- | ------------------------------------------------------- |
+| 1. Selecciona 'Agregar gasto'         | 2. Despliega formulario de ingreso de gastos            |
+| 3. Completa formulario de gasto       | 4. Confirma ingreso de gasto y despliega señal de éxito |
 
 Cursos alternativos:
 
@@ -231,9 +231,9 @@ Actor: Usuario
 
 Curso normal:
 
-| Acción de los actores | Respuesta del sistema |
-| --------------------- | --------------------- |
-| 1. Selecciona 'Agregar recordatorio' | 2. Despliega formulario de ingreso de recordatorio |
+|           Acción de los actores        |                        Respuesta del sistema                         |
+| -------------------------------------- | -------------------------------------------------------------------- |
+| 1. Selecciona 'Agregar recordatorio'   | 2. Despliega formulario de ingreso de recordatorio                   |
 | 3. Completa formulario de recordatorio | 4. Confirma ingreso de nuevo recordatorio y despliega señal de éxito |
 
 Cursos alternativos:
@@ -246,9 +246,9 @@ Actor: Usuario
 
 Curso normal:
 
-| Acción de los actores | Respuesta del sistema |
-| --------------------- | --------------------- |
-| 1. Selecciona 'menu'  | 2. Despliega menu     |
+| Acción de los actores  |                 Respuesta del sistema                |
+| ---------------------- | ---------------------------------------------------- |
+| 1. Selecciona 'menu'   | 2. Despliega menu                                    |
 | 3. Selecciona 'gastos' | 4. Despliega pantalla 'gastos' con listado de gastos |
 
 Cursos alternativos:
@@ -261,9 +261,9 @@ Actor: Usuario
 
 Curso normal:
 
-| Acción de los actores | Respuesta del sistema |
-| --------------------- | --------------------- |
-| 1. Selecciona 'menu'  | 2. Despliega menu     |
+| Acción de los actores    |                 Respuesta del sistema                    |
+| ------------------------ | -------------------------------------------------------- |
+| 1. Selecciona 'menu'     | 2. Despliega menu                                        |
 | 3. Selecciona 'ingresos' | 4. Despliega pantalla 'ingresos' con listado de ingresos |
 
 Cursos alternativos:
@@ -276,8 +276,8 @@ Actor: Usuario
 
 Curso normal:
 
-| Acción de los actores | Respuesta del sistema |
-| --------------------- | --------------------- |
+| Acción de los actores   | Respuesta del sistema |
+| ----------------------- | --------------------- |
 | 1. Selecciona 'gastos'  | 2. Despliega pantalla 'gastos' mostrando gráfico de torta representativo de los gastos del período seleccionado, divididos por concepto  |
 
 1.1. No hay gastos ingresados al sistma para el período seleccionado: se despliega pantalla de gastos vacía con indicación de que aún no hay gastos ingresados en el sistema para ese período.
@@ -288,8 +288,8 @@ Actor: Usuario
 
 Curso normal:
 
-| Acción de los actores | Respuesta del sistema |
-| --------------------- | --------------------- |
+|   Acción de los actores   | Respuesta del sistema |
+| ------------------------- | --------------------- |
 | 1. Selecciona 'ingresos'  | 2. Despliega pantalla 'ingresos' mostrando gráfico de torta representativo de los ingresos del período seleccionado, divididos por concepto  |
 
 1.1. No hay ingresos ingresados al sistma para el período seleccionado: se despliega pantalla de ingresos vacía con indicación de que aún no hay ingresos ingresados en el sistema para ese período.
@@ -300,8 +300,8 @@ Actor: Usuario
 
 Curso normal:
 
-| Acción de los actores | Respuesta del sistema |
-| --------------------- | --------------------- |
+|    Acción de los actores    | Respuesta del sistema |
+| --------------------------- | --------------------- |
 | 1. Selecciona 'resultados'  | 2. Despliega pantalla resultados mostrando comparativo entre ingresos y gastos y saldo del período seleccionado    |
 
 Bocetos de IU
