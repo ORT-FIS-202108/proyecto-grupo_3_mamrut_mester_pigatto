@@ -9,10 +9,10 @@
 
 <img src="./images/agregar_gasto.JPG"
         alt="Primer boceto inicio y menu"
-        width="350"/>
+        height="400"/>
 
 <img src="./images/agregar_ingreso.JPG"
         alt="Primer boceto inicio y menu"
-        width="350"/>
+        height="400"/>
 
 Vincular y explicar en el informe académico
