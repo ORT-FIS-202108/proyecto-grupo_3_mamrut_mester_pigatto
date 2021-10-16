@@ -13,9 +13,9 @@
 
 <h4>Acerca de una app de registro de gastos</h4>
 
-<img src="./images/cuestionario/utilizan.png" width="350"/>
+<img src="./images/cuestionario/utilizan_app.png" width="350"/>
 
-<img src="./images/cuestionario/utilidad.png" width="350"/>
+<img src="./images/cuestionario/utilidad_app.png" width="350"/>
 
 <img src="./images/cuestionario/funcionalidades.png" width="350"/>
 
