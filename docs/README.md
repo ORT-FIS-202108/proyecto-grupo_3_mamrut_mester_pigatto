@@ -166,10 +166,10 @@ Narrativa: Como usuario quiero poder crear nuevas categorías de gastos para que
 Criterios de aceptación: 
 
 <ul><li>El sistema deberá solicitar que se ingrese el nombre de la nueva categoría.</li></ul>
-<br>
+
+### Use Cases
 
 
-User Stories / Use Cases detallados
 
 Bocetos de IU
 
