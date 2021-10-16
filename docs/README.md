@@ -166,10 +166,143 @@ Narrativa: Como usuario quiero poder crear nuevas categorías de gastos para que
 Criterios de aceptación: 
 
 <ul><li>El sistema deberá solicitar que se ingrese el nombre de la nueva categoría.</li></ul>
-<br>
 
+### Use Cases
 
-User Stories / Use Cases detallados
+Título: Registrar nuevo usuario
+
+Actor: Usuario
+
+Curso normal:
+
+|           Acción de los actores       |                   Respuesta del sistema                     |
+| ------------------------------------- | ----------------------------------------------------------- |
+| 1. Selecciona 'registrarse'           | 2. Despliega pantalla con formulario de registro de usuarios|
+| 3. Completa formulario de registro    | 4. Chequea formatos                                         |
+| 5. Presiona botón 'registrarse'       | 6. Confirma registro de usuario exitoso e inicia sesión del usuario, redirige a pantalla de inicio |
+
+Cursos alternativos:
+
+3.1. El usuario ingresa una fecha de nacimiento correspondiente a una edad menor a 10 años o mayor a 100: el sistema arroja un error indicando que se debe ingresar una fecha de nacimiento válida.
+
+3.2. El correo electrónico ingresado ya es utilizado por otro usuario: el sistema arroja error indicando que ya existe un usuario utilizando esa dirección en el sistema.
+
+3.3. La contraseña ingresada no cumple con todos los requisitos necesarios: el sistema arroja error indicando que la contraseña indicando qué requisitos debe tener una contraseña válida. 
+
+3.4. El campo 'verificar contraseña' no coincide con la contraseña ingresada: el sistema arroja un error indicando que los dos campos deben ser iguales.
+
+Título: Inicio de sesión
+
+Actor: Usuario
+
+Curso normal:
+
+|           Acción de los actores       |                        Respuesta del sistema                       |
+| ------------------------------------- | ------------------------------------------------------------------ |
+| 1. Ingresa email y contraseña         | 2. Chequea formatos                                                |
+| 3. Presiona botón 'iniciar sesión'    | 4. Confirma usuario e inicia sesión, redirige a pantalla de inicio |
+
+Cursos alternativos:
+
+1.1. El formato de la dirección de email no es correcto: se despliega alerta indicando error de formato.
+
+3.1. El usuario no esta registrado en el sistema: el sistema rechaza inicio de sesión y despliega opción para registrarse.
+
+Título: Agregar gasto
+
+Actor: Usuario
+
+Curso normal:
+
+|           Acción de los actores       |                  Respuesta del sistema                  |
+| ------------------------------------- | ------------------------------------------------------- |
+| 1. Selecciona 'Agregar gasto'         | 2. Despliega formulario de ingreso de gastos            |
+| 3. Completa formulario de gasto       | 4. Confirma ingreso de gasto y despliega señal de éxito |
+
+Cursos alternativos:
+
+3.1. El concepto del gasto no figura en el sistema: usuario cancela ingreso de gasto y se dirige a ingresar el nuevo concepto.
+
+3.2. Se ingresa más de un pago habiendo seleccionado un medio de pago que no admite pagos: el sistma arroja un error indicando que el medio de pago seleccionado no admite el pago en cuotas.
+
+Título: Agregar Recordatorio
+
+Actor: Usuario
+
+Curso normal:
+
+|           Acción de los actores        |                        Respuesta del sistema                         |
+| -------------------------------------- | -------------------------------------------------------------------- |
+| 1. Selecciona 'Agregar recordatorio'   | 2. Despliega formulario de ingreso de recordatorio                   |
+| 3. Completa formulario de recordatorio | 4. Confirma ingreso de nuevo recordatorio y despliega señal de éxito |
+
+Cursos alternativos:
+
+3.1. La fecha ingresada es anterior a la fecha actual: sistema indica error indicando que solo se permite el ingreso de nuevos recordatorios con fechas futuras.
+
+Título: Ver listado gastos
+
+Actor: Usuario
+
+Curso normal:
+
+| Acción de los actores  |                 Respuesta del sistema                |
+| ---------------------- | ---------------------------------------------------- |
+| 1. Selecciona 'menu'   | 2. Despliega menu                                    |
+| 3. Selecciona 'gastos' | 4. Despliega pantalla 'gastos' con listado de gastos |
+
+Cursos alternativos:
+
+4.1. El usuario no tiene gastos ingresados: se despliega pantalla de gastos vacía con indicación de que aún no hay gastos ingresados en el sistema.
+
+Título: Ver listado ingresos
+
+Actor: Usuario
+
+Curso normal:
+
+| Acción de los actores    |                 Respuesta del sistema                    |
+| ------------------------ | -------------------------------------------------------- |
+| 1. Selecciona 'menu'     | 2. Despliega menu                                        |
+| 3. Selecciona 'ingresos' | 4. Despliega pantalla 'ingresos' con listado de ingresos |
+
+Cursos alternativos:
+
+4.1. El usuario no tiene ingresos ingresados: se despliega pantalla de ingresos vacía con indicación de que aún no hay ingresos ingresados en el sistema.
+
+Título: Ver resumen gastos
+
+Actor: Usuario
+
+Curso normal:
+
+| Acción de los actores   | Respuesta del sistema |
+| ----------------------- | --------------------- |
+| 1. Selecciona 'gastos'  | 2. Despliega pantalla 'gastos' mostrando gráfico de torta representativo de los gastos del período seleccionado, divididos por concepto  |
+
+1.1. No hay gastos ingresados al sistma para el período seleccionado: se despliega pantalla de gastos vacía con indicación de que aún no hay gastos ingresados en el sistema para ese período.
+
+Título: Ver resumen ingresos
+
+Actor: Usuario
+
+Curso normal:
+
+|   Acción de los actores   | Respuesta del sistema |
+| ------------------------- | --------------------- |
+| 1. Selecciona 'ingresos'  | 2. Despliega pantalla 'ingresos' mostrando gráfico de torta representativo de los ingresos del período seleccionado, divididos por concepto  |
+
+1.1. No hay ingresos ingresados al sistma para el período seleccionado: se despliega pantalla de ingresos vacía con indicación de que aún no hay ingresos ingresados en el sistema para ese período.
+
+Título: Ver resultados
+
+Actor: Usuario
+
+Curso normal:
+
+|    Acción de los actores    | Respuesta del sistema |
+| --------------------------- | --------------------- |
+| 1. Selecciona 'resultados'  | 2. Despliega pantalla resultados mostrando comparativo entre ingresos y gastos y saldo del período seleccionado    |
 
 Bocetos de IU
 
