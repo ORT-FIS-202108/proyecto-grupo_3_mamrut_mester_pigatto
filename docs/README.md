@@ -53,9 +53,9 @@ Por otra parte, otro objetivo del cuestionario realizado era el de consultar con
 
 Finalemente, en el cuestionario se consultó acerca de incorporar una funcionalidad para que el usuario pueda recibir notificaciones diarias a modo de recordatorio para registrar los gastos incurridos en cada día. Aproximadamente el 80% de las respuestas fueron favorables. 
 
-A continuación se presenta la evidencia correspondiente sobre el cuestionario realizado. 
-
 Referencias a fuentes de información
+
+[Evidencia investigación](./investigacion/README.md)
 
 Caracterización de usuarios: User Personas
 
