@@ -53,7 +53,13 @@ Por otra parte, otro objetivo del cuestionario realizado era el de consultar con
 
 Finalemente, en el cuestionario se consultó acerca de incorporar una funcionalidad para que el usuario pueda recibir notificaciones diarias a modo de recordatorio para registrar los gastos incurridos en cada día. Aproximadamente el 80% de las respuestas fueron favorables. 
 
-Referencias a fuentes de información
+### Referencias a fuentes de información
+
+A modo de investigación decidimos analizar el funcionamiento de algunas aplicaciones de registro de gastos, o similares, existentes en el mercado. A pesar que en el punto de ingeniería reversa nos enfocamos en la aplicación uruguaya ZCuentas, también utilizamos como referencia algunas aplicaciones como Mobills, iGasto y MoneyControl. 
+
+Por otra parte, como se mencionó anteriormente, también realizamos un cuestionario dirigido al público objetivo, que se encuentra en jóvenes entre 18 y 30 años.
+
+A continuación se encuentran disponibles los resultados obtenidos a partir la investigación realizada. 
 
 [Evidencia investigación](./investigacion/README.md)
 
