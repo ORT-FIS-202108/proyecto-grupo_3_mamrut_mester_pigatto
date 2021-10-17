@@ -335,7 +335,11 @@ Bocetos de IU
 
 Verificar la especificación
 
-Validar la solución con personas no involucradas en el proyecto
+### Validar la solución con personas no involucradas en el proyecto
+
+Con el objetivo de validar si la solución propuesta satisface realmente las necesidades de los usuarios, consultamos acerca de la misma a personas no involucradas en el proyecto. Las respuestas obtenidas fueron similares a las obtenidas en el cuestionario realizado. Si bien la mayoría de los consultados nunca habían utilizado una aplicación de registro de gastos con anterioridad, la gran mayoría considera que una aplicación como la planteada les podría ser muy útil al momento de organizar sus ingresos, gastos y ahorros. 
+
+En relación a la aplicación en si misma, las opiniones en general indican que resulta fácil de usar ya que los accesos son intuitivos, los nombres de cada sección son descriptivos de la misma y los resultados provistos por la aplicación son claros y visualemente fáciles de comprender. 
 
 ## Reflexión
 
