@@ -42,7 +42,7 @@ Para el desarrollo del proyecto se tomó la decisión de trabajar en una rama se
 
 ### Resumen de commits y evolución del proyecto
 
-Resumen de commits y evolución del proyecto
+[Ver resumen de commits y evolución del proyecto](https://github.com/ORT-FIS-202108/proyecto-grupo_3_mamrut_mester_pigatto/graphs/commit-activity)
 
 ## Elicitación
 
