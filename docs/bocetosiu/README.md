@@ -31,7 +31,7 @@
 
 <h3>Agregar gasto y agregar ingreso</h3>
 
-<img src="./images/agregar_gasto_ingreso.JPG"
+<img src="./images/agregar_gasto.JPG"
         alt="Agregar gasto e ingreso"
         height="400"/>
 
