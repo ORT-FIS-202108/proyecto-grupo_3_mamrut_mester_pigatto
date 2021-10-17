@@ -357,7 +357,15 @@ En relación a la aplicación en si misma, las opiniones en general indican que 
 
 ## Reflexión
 
-Detalle del trabajo individual
+### Detalle del trabajo individual
+
+#### Reflexión Ivana Mester
+
+Desde un punto de vista personal, considero que este obligatorio me ayudó mucho a entender y aprendar a manejar Git. Es una sistema de control de versiones de gran utilidad que podré incoportar a todos los trabajos que haga a partir de ahora para que el proceso sea más dinámico y eficiente. Por primera vez en la facultad tuve la posibilidad de trabajar en simultáneo con mis compañeros, lo que agilizó el proceso de gran manera. 
+
+Desde el punto de vista del contenido del proyecto, siendo Contadora Pública entiendo la importancia de una aplicación de este estilo, ya que se lo dificil que es para los jóvenes organizar sus gastos y manejar sus ingresos. Me gustó tener la posibilidad de desarrollar una aplicación propia, incorporando aquellas funcionalidades que me parecen más necesarias.
+
+Por otra parte, me resultó sumamente interesante tener la posibilidad de participar en lo que sería todo el proceso de llevar a cabo un proyecto, desde analizar los intereses de los ususarios hasta pensar los requerimentos y definir cuáles serían aquellas funcionalidades interesantes de incorporar. 
 
 ### Técnicas aplicadas y aprendizajes
 
