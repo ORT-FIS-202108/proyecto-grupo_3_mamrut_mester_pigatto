@@ -329,7 +329,15 @@ Curso normal:
 | --------------------------- | --------------------- |
 | 1. Selecciona 'resultados'  | 2. Despliega pantalla resultados mostrando comparativo entre ingresos y gastos y saldo del período seleccionado    |
 
-Bocetos de IU
+### Bocetos de IU
+
+Realizamos el boceto de nuestra aplicación utilizando la herramienta Figma. Luego de definir y diseñar las diferentes páginas de la aplicación utilizamos la herramienta para crear un prototipo interactivo definiendo el flujo de las páginas con las distintas interacciones. Se accede al prototipo interactivo a través del siguiente enlace:
+
+[Ver prototipo interactivo](https://www.figma.com/proto/FbE7VTm4ivPGPi0doZoub1/Untitled?node-id=1%3A4&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A4&show-proto-sidebar=1)
+
+Por otro lado, adjuntamos en el informe el diseño de todas las páginas de la aplicación:
+
+[Bocetos de IU](./bocetosiu/README.md)
 
 ## Validación y verificación
 
