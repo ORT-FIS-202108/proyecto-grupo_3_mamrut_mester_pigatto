@@ -375,7 +375,7 @@ Desde el punto de vista del contenido del proyecto, siendo Contadora Pública en
 
 Por otra parte, me resultó sumamente interesante tener la posibilidad de participar en lo que sería todo el proceso de llevar a cabo un proyecto, desde analizar los intereses de los ususarios hasta pensar los requerimentos y definir cuáles serían aquellas funcionalidades interesantes de incorporar. 
 
-#### Reflexión Mauricio Mamrut:
+#### Reflexión Mauricio Mamrut
 
 Realizar la tarea me gustó mucho por varios motivos. En primer lugar, siempre me ha interesado la temática de las finanzas personales y estoy convencido de los beneficios que trae utilizar una aplicación como la que se nos propuso diseñar. En el pasado he utilizado aplicaciones similares por lo que a la hora de pensar en el diseño y las funcionalidades tenía varias ideas sobre cosas para tener en cuenta y algunas otras a evitar.
 
