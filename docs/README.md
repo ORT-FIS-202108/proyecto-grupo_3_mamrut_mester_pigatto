@@ -345,7 +345,11 @@ En relación a la aplicación en si misma, las opiniones en general indican que 
 
 Detalle del trabajo individual
 
-Técnicas aplicadas y aprendizajes
+### Técnicas aplicadas y aprendizajes
+
+Como forma de organizar el trabajo de la manera más eficiente posible creamos un grupo de whatsapp para mantenernos el tanto de cada avance y coordinamos reuniones por Zoom periódicas para poder analizar los avances en el proyecto hasta el momento, organizar el contenido que deseábamos incorporar en cada sección y así distribuir las tareas de la mejor manera posible.
+
+Consideramos que las partes más desafiantes del proyecto fueron la de implementar Git para trabajar de manera local y en equipo y el uso de la herramienta de prototipado. En relación al uso de Git, nos encontramos con algunas dificultades al crear nuevas ramas, ya que en más de una ocasión ocurrió que se cree una nueva rama desde 'develop' sin ejecutar el comando 'git pull' previamente, lo que generaba que la rama creada no estuviera actualizada con el repositorio remoto. Por otra parte, nos vimos enfrentados a la necesidad de resolver conflictos antes de poder mergear algunas ramas a la rama 'develop', ya que estos se suelen generar al trabajar en equipo en un mismo poryecto. Por último, consideramos que luego de finalizar esta primera parte del proyecto, sí tenemos un mejor entendimiento y manejo de los comandos de Git, que al comienzo quizás resultaban un tanto confusos. En cuanto a la herramienta de protipado utilizada, Figma, si bien logramos cumplir los objetivos del trabajo, no habíamos trabajado con una herramienta de este estilo previamente, más allá de lo trabajado en clase, por lo que nos vimos enfrentados a la necesidad de aprendar a utilizarla. 
 
 
 
