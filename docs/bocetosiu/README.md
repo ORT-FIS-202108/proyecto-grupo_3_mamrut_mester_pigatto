@@ -14,19 +14,19 @@
 <h3>Resultados, ingresos y gastos</h3>
 
 <img src="./images/resultados.JPG"
-        alt="Primer boceto inicio y menu"
+        alt="Resultados, ingresos y gastos"
         height="400"/>
 
 <h3>Gastos, ingresos y recordatorios</h3>
 
 <img src="./images/gastos_ingresos_rec.JPG"
-        alt="Primer boceto inicio y menu"
+        alt="Gastos, ingresos y recordatorios"
         height="400"/>
 
 <h3>Medios de pago y conceptos</h3>
 
 <img src="./images/medios_conceptos.JPG"
-        alt="Primer boceto inicio y menu"
+        alt="medio de pago y concepto"
         height="400"/>
 
 <h3>Agregar gasto y agregar ingreso</h3>
@@ -35,5 +35,9 @@
         alt="Agregar gasto e ingreso"
         height="400"/>
 
+<h3>Agregar recordatorio, medio de pago y concepto</h3>
 
-Vincular y explicar en el informe académico
+<img src="./images/agregar_concepto_recordatorio.JPG"
+        alt="Agregar concepto"
+        height="400"/>
+
