@@ -84,7 +84,7 @@ A continuación se encuentran disponibles los resultados obtenidos a partir la i
 
 ### User Personas
 
-<img src="./images/userPersona1.png" width="350">
+<img src="./images/userPersona1.png" width="750">
 
 ### Modelo conceptual del problema
 
