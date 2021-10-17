@@ -94,11 +94,11 @@ Caracterización de usuarios: User Personas
 
 #### Requerimientos funcionales
 
-<ul><li>El usuario debera poder registrarse en el sistema.</li><li>El usuario debe poder ver dentro de la aplicacion sus gastos e ingresos de forma ordenada.</li><li>El usuario tiene la posibilidad de crear recordatorios para recordar registrar sus gastos.</li><li>El usuario debe poder loggearse a su cuenta ingresando su usuario y contraseña.</li><li>El usuario debe poder escanear facturas para que sus gastos queden registrados.</li><li>El usuario debe poder ingresar gastos de forma manual.</li><li>El sistema debe permitir el ingreso de gastos en pesos uruguayos y en dólares americanos.</li><li>El usuario debe poder establecer topes de gastos por categoría mensual, y ser notificado en caso de sobrepasar esos límites.</li><li>El usuario debe poder ingresar gastos recurrentes una única vez y luego verlos cada mes en el reporte de gastos.</li></ul>
+<ol><li>El usuario debera poder registrarse en el sistema.</li><li>El usuario debe poder ver dentro de la aplicacion sus gastos e ingresos de forma ordenada.</li><li>El usuario tiene la posibilidad de crear recordatorios para recordar registrar sus gastos.</li><li>El usuario debe poder loggearse a su cuenta ingresando su usuario y contraseña.</li><li>El usuario debe poder escanear facturas para que sus gastos queden registrados.</li><li>El usuario debe poder ingresar gastos de forma manual.</li><li>El sistema debe permitir el ingreso de gastos en pesos uruguayos y en dólares americanos.</li><li>El usuario debe poder establecer topes de gastos por categoría mensual, y ser notificado en caso de sobrepasar esos límites.</li><li>El usuario debe poder ingresar gastos recurrentes una única vez y luego verlos cada mes en el reporte de gastos.</li></ol>
 
 #### Requerimientos no funcionales
 
-<ul><li>La aplicacion debera funcionar en IOS y Android.</li><li>El sistema debera soportar multiples usuarios concurrentes.</li><li>El sistema sera programado en Javascript.</li><li>Se utilizará como color pirmario Deep Purple 700 y como secundario Teal 700</li><li>La fuente a utilizar será Roboto.</li></ul>
+<ol><li>La aplicacion debera funcionar en IOS y Android.</li><li>El sistema debera soportar multiples usuarios concurrentes.</li><li>El sistema sera programado en Javascript.</li><li>Se utilizará como color pirmario Deep Purple 700 y como secundario Teal 700</li><li>La fuente a utilizar será Roboto.</li></ol>
 
 ### User Stories
 
@@ -333,7 +333,21 @@ Bocetos de IU
 
 ## Validación y verificación
 
-Verificar la especificación
+### Verificar la especificación
+
+Con el objetivo de verificar si los requerimientos funcionales planteados tienen las características deseables de las sentencias de los requerimientos, realizamos la siguiente tabla. 
+
+|  Requerimiento funcional                 | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  |
+| ---------------------------------------- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| Completo                                 | SI | SI | SI | SI | SI | SI | SI | SI | SI |
+| Factible                                 | SI | SI | SI | SI | SI | SI | SI | SI | SI |
+| Necesario                                | SI | SI | SI | SI | SI | SI | SI | SI | SI |
+| Priorizado                               | SI | SI | SI | SI | SI | SI | SI | SI | SI |
+| Ambiguo                                  | NO | NO | NO | NO | NO | NO | NO | NO | NO |
+| Verificable                              | SI | SI | SI | SI | SI | SI | SI | SI | SI |
+| Consistente y adecuado nivel de detalle  | SI | SI | SI | SI | SI | SI | SI | SI | SI |
+| Modificable                              | SI | SI | SI | SI | SI | SI | SI | SI | SI |
+| Trazable                                 | SI | SI | SI | SI | SI | SI | SI | SI | SI |
 
 ### Validar la solución con personas no involucradas en el proyecto
 
