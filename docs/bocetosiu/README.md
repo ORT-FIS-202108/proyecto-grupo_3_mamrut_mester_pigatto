@@ -35,7 +35,5 @@
         alt="Agregar gasto e ingreso"
         height="400"/>
 
-<h3>Resumen ingresos y gastos</h3>
-
 
 Vincular y explicar en el informe académico
