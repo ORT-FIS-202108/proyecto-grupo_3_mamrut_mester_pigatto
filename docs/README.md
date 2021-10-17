@@ -3,9 +3,28 @@ Fecha de entrega: 18-oct-2021
 
 ## Repositorio Git
 
-Creación y uso de repositorios locales y remotos
+### Creación y uso de repositorios locales y remotos
 
-Comandos Git ejecutados desde terminal y desde el IDE
+Para poder trabajar en el proyecto, cada integrante del equipo debió clonar el repositorio remoto, provisto por la cátedra, en su computadora, para así poder trabajar de manera local e independiente. Al momento de crear nuevas ramas es importante tener la rama de desarrollo local actualizada con la última versión de esta en el repositorio remoto para que no se pierdan las actualizaciones. 
+
+### Comandos Git ejecutados desde terminal y desde el IDE
+
+Para trabajar en el projecto los comandos de Git utilizados fueron los siguientes:
+
+ <ul>
+ <li>git clone 'url': para clonar el repositorio remoto</li>
+ <li>git status: muestra la rama en la que nos encontramos posicionados y el estado de los archivos, si hubo modificaciones, si estas se encuentran en el area de stage o no y si hay algo para commitear</li>
+ <li>git log: muestra el historial de commits de la rama actual </li>
+ <li>git branch 'rama': crea una nueva rama con el nombre especificado </li>
+ <li>git checkout 'rama': se posiciona en la rama especificada </li>
+ <li>git checkout -b 'rama': crea una nueva rama con el nombre especificado y se posiciona en ella </li>
+ <li>git add . : para agregar los archivos modificados al área de stage</li>
+ <li>git commit -m 'mensaje': para guardar los cambios de los archivos en el área de stage en el repositorio local</li>
+ <li>git push origin 'rama' : actualiza el repositorio remoto con los cambios locales</li>
+ <li>git pull: actualiza el repositorio local con los últimos cambios del repositorio remoto (realiza un fetch y merge de la rama)</li>
+ </ul>
+
+Los merges fueron realizados desde GitHub. 
 
 ## Versionado
 
