@@ -375,6 +375,15 @@ Desde el punto de vista del contenido del proyecto, siendo Contadora Pública en
 
 Por otra parte, me resultó sumamente interesante tener la posibilidad de participar en lo que sería todo el proceso de llevar a cabo un proyecto, desde analizar los intereses de los ususarios hasta pensar los requerimentos y definir cuáles serían aquellas funcionalidades interesantes de incorporar. 
 
+#### Reflexión Mauricio Mamrut:
+
+Realizar la tarea me gustó mucho por varios motivos. En primer lugar, siempre me ha interesado la temática de las finanzas personales y estoy convencido de los beneficios que trae utilizar una aplicación como la que se nos propuso diseñar. En el pasado he utilizado aplicaciones similares por lo que a la hora de pensar en el diseño y las funcionalidades tenía varias ideas sobre cosas para tener en cuenta y algunas otras a evitar.
+
+Dentro del equipo yo me centré principalmente en el diseño de la interfaz de usuario. Para ello tuve que aprender a utilizar la plataforma Figma que no conocía. Me pareció una muy buena herramienta y me resultó fácil aprender a usarla. Por otro lado, me resultaron muy útiles las sugerencias de como distribuir los colores que se encontraban en la página que nos fue dada en la propuesta.
+
+Por último, trabajar en el proyecto me sirvió para mejorar mi relación con Git. En el pasado había utilizado la plataforma pero no me sentía muy cómodo con ella. No terminaba de entender cómo funcionaba y la utilizaba con temor de cometer algún error y perder el trabajo. A lo largo del armado del proyecto, aplicando la base teórica que vimos en el curso, fui entendiendo cada vez mas el funcionamiento de las ramas y los commits. Actualmente me siento muy cómodo trabajando con Git y lo hago de forma mucho más fluida.
+
+
 ### Técnicas aplicadas y aprendizajes
 
 Como forma de organizar el trabajo de la manera más eficiente posible creamos un grupo de whatsapp para mantenernos el tanto de cada avance y coordinamos reuniones por Zoom periódicas para poder analizar los avances en el proyecto hasta el momento, organizar el contenido que deseábamos incorporar en cada sección y así distribuir las tareas de la mejor manera posible.
