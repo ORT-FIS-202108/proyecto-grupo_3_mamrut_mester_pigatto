@@ -4,7 +4,9 @@ Fecha de entrega: 18-oct-2021
 [Proyecto Mamrut, Mester, Pigatto](https://github.com/ORT-FIS-202108/proyecto-grupo_3_mamrut_mester_pigatto)
 
 Mauricio Mamrut: 266946
+
 Ivana Mester: 204318
+
 Ignacio Pigatto: 204386
 
 ## Repositorio Git
