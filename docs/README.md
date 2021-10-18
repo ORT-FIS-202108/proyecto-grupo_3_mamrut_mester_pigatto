@@ -390,9 +390,9 @@ Por último, trabajar en el proyecto me sirvió para mejorar mi relación con Gi
 
 #### Reflexión Ignacio Pigatto
 
-Considero que fue un trabajo con mucho aprendizaje personal, con conceptos que van a ser necesarios en el ambito laboral para los trabajos en equipos sobre un mismo proyecto. Al principio no me sentia muy comodo con el manejo de Git y sus comandos ya que no los conocia, pero al final del proyecto puedo decir que estoy bastante contento de haber aprendido esta herramienta y sus comandos para poder ponerlas en uso en el futuro.
+Considero que fue un trabajo con mucho aprendizaje personal, con conceptos que van a ser necesarios en el ámbito laboral para los trabajos en equipos sobre un mismo proyecto. Al principio no me sentía muy cómodo con el manejo de Git y sus comandos ya que no los conocía, pero al final del proyecto puedo decir que estoy bastante contento de haber aprendido esta herramienta y sus comandos para poder ponerlas en uso en el futuro.
 
-Con mis compañeros creo que encontramos un buen tema para trabajar, dandole un significado un poco mas imporante a la organizacion de gastos personales. Me senti muy comodo trabajando en equipo de esta forma que no conocia, me resulto mas facil la division de tareas y el trabajar dia a dia hizo que este proyecto fuera mucho mas divertido y sencillo.
+Con mis compañeros creo que encontramos un buen tema para trabajar, dándole un significado un poco más importante a la organización de gastos personales. Me sentí muy cómodo trabajando en equipo de esta forma que no conocía, me resulto más fácil la división de tareas y el trabajar día a día hizo que este proyecto fuera mucho más divertido y sencillo.
 
 
 ### Técnicas aplicadas y aprendizajes
