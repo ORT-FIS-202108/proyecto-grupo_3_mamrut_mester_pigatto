@@ -82,7 +82,12 @@ A continuación se encuentran disponibles los resultados obtenidos a partir la i
 
 [Evidencia investigación](./investigacion/README.md)
 
-Caracterización de usuarios: User Personas
+### User Personas
+
+<img src="./images/userPersona1.png" width="750">
+
+<img src="./images/userPersona2.png" width="750">
+
 
 ### Modelo conceptual del problema
 
