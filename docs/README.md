@@ -86,6 +86,11 @@ A continuación se encuentran disponibles los resultados obtenidos a partir la i
 
 <img src="./images/userPersona1.png" width="750">
 
+
+<img src="./images/userPersona2.png" width="750">
+
+
+
 ### Modelo conceptual del problema
 
 <img src="./images/modeloConceptual.png" width="350">
