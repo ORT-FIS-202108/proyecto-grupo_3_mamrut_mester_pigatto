@@ -7,11 +7,67 @@
 </head>
 
 <body>
-
-  <header class="mdc-top-app-bar">
+  <header class="mdc-top-app-bar app-bar" id="app-bar">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-        <span class="mdc-top-app-bar__title">Cartelera</span>
+        <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+        <span class="mdc-top-app-bar__title">Mis Gastos</span>
+      </section>
+    </div>
+  </header>
+  <aside class="mdc-drawer mdc-drawer--dismissible mdc-top-app-bar--fixed-adjust">
+    <div class="mdc-drawer__content">
+      <span class="profile-name">Juan Perez</span>
+      <div class="mdc-list">
+        <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+          <span class="mdc-list-item__text">Inicio</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+          <span class="mdc-list-item__text">Gastos</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+          <span class="mdc-list-item__text">Ingresos</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+          <span class="mdc-list-item__text">Recordatorios</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+          <span class="mdc-list-item__text">Medios de pago</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+          <span class="mdc-list-item__text">Conceptos</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">logout</i>
+          <span class="mdc-list-item__text">Cerrar sesión</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust">
+    <main class="main-content" id="main-content">
+      App Content
+    </main>
+  </div>
+</body>
+  <!-- <header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <span class="mdc-top-app-bar__title">Mis Gastos</span>
       </section>
     </div>
 
@@ -44,9 +100,9 @@
         </div>
       </div>
     </div>
-  </header>
+  </header> -->
 
-  <main class="mdc-top-app-bar--fixed-adjust">
+  <!-- <main class="mdc-top-app-bar--fixed-adjust">
     <section class="content">
       <h1>Películas</h1>
     </section>
@@ -144,7 +200,7 @@
     </div>
   </aside>
 
-</body>
+</body> -->
 <script src="bundle.js" async></script>
 
 </html>

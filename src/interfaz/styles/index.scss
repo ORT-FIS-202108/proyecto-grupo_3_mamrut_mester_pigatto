@@ -1,6 +1,6 @@
 @use "@material/theme" with (
-  $primary: #00bcd4,
-  $secondary: #f44336,
+  $primary: #512da8,
+  $secondary: #00796b,
   $background: #c7c7c7,
 );
 @use '@material/button/mdc-button';
@@ -34,6 +34,8 @@ html {
 body {
   font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0px auto;
+  display: flex;
+  height: 100vh;
 }
 
 .app-bar {
@@ -49,10 +51,15 @@ section {
   text-align: center;
 }
 
-.content {
-  margin: 10rem auto;
-  padding-bottom: 20rem;
-  text-align: center;
+// .content {
+//   margin: 10rem auto;
+//   padding-bottom: 20rem;
+//   text-align: center;
+// }
+
+.main-content {
+  overflow: auto;
+  height: 100%;
 }
 
 .sample-content--hidden {
@@ -69,6 +76,33 @@ section {
 
 .mdc-text-field {
     margin: 1rem auto;
+}
+
+.mdc-drawer-app-content {
+  flex: auto;
+  overflow: auto;
+  position: relative;
+  margin-left: 8px;
+}
+
+.mdc-list{
+  width: 100%;
+  border-right: 1px solid #e0e0e0;
+}
+
+.mdc-list-item{
+  background-color: #439889;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 6px;
+  color: white;
+}
+
+.profile-name{
+  margin-left: 8px;
+  font-size: medium;
 }
 
 .button {
