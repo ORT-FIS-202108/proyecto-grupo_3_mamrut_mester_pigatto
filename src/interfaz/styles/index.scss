@@ -85,9 +85,12 @@ section {
   margin-left: 8px;
 }
 
+.mdc-drawer__content{
+  border-right: 1px solid #e0e0e0;
+}
+
 .mdc-list{
   width: 100%;
-  border-right: 1px solid #e0e0e0;
 }
 
 .mdc-list-item{
@@ -100,9 +103,36 @@ section {
   color: white;
 }
 
-.profile-name{
+.material-icons{
+  color: white;
+}
+
+.mdc-list-item__text{
   margin-left: 8px;
+  color: white;
+  font-size: small;
+}
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-name{
   font-size: medium;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.avatar{
+  width: 150px;
+  height: 150px;
+}
+
+.avatar-img{
+  width: 100%;
+  height: 100%;
 }
 
 .button {
