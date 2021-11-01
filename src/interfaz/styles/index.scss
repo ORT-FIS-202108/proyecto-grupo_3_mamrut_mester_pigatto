@@ -74,10 +74,6 @@ section {
     color: black;
 }
 
-.mdc-text-field {
-    margin: 1rem auto;
-}
-
 .mdc-drawer-app-content {
   flex: auto;
   overflow: auto;
@@ -135,8 +131,60 @@ section {
   height: 100%;
 }
 
+.agregar-gasto{
+  margin-left: 25px;
+}
+
+.titulo-agregar{
+  text-align: start;
+  color: gray;
+  margin-left: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+.mdc-text-field{
+  width: 90%;
+  margin: 10px auto;
+}
+
+.mdc-text-field__input{
+  color: gray;
+  font-size: small;
+}
+
+.mdc-floating-label{
+  font-size: 14px;
+}
+
+.mdc-select{
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .button {
   margin-top: 1rem;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.mdc-button{
+  border-radius: 10px;
+  font-weight: bolder;
+  width: 35%;
+  height: 45px;
 }
 
 .mdc-snackbar__actions .mdc-button__label {
