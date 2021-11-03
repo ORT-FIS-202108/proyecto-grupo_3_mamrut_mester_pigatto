@@ -60,6 +60,7 @@ section {
 .main-content {
   overflow: auto;
   height: 100%;
+  padding-bottom: 2rem;
 }
 
 .sample-content--hidden {
@@ -131,7 +132,7 @@ section {
   height: 100%;
 }
 
-.agregar-gasto{
+.agregar{
   margin-left: 25px;
 }
 
@@ -189,4 +190,10 @@ section {
 
 .mdc-snackbar__actions .mdc-button__label {
   color: #67daff;
+}
+
+@media screen and (max-width: 768px) {
+  .mdc-button {
+      width: 100% !important;
+  }
 }

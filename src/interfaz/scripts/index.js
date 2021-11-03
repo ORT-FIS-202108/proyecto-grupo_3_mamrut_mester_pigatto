@@ -27,6 +27,9 @@ const topAppBar = new MDCTopAppBar(menuLateral);
 // const textFieldTitle = new MDCTextField(document.getElementById('title'));
 // const textFieldYear = new MDCTextField(document.getElementById('year'));
 // const selectGenre = new MDCSelect(document.querySelector('.mdc-select'));
+
+// --------------------VARIABLES GASTOS-----------------------
+
 const textFieldFecha = new MDCTextField(document.getElementById('fecha'));
 const textFieldPagos = new MDCTextField(document.getElementById('pagos'));
 const textFieldTotal = new MDCTextField(document.getElementById('total'));
@@ -36,6 +39,17 @@ const selectMediosDePago = new MDCSelect(document.getElementById('mediosDePago')
 const selectRepetirMensualmente = new MDCSelect(document.getElementById('repetirMensualmente'));
 
 const addButtonGastos = new MDCRipple(document.getElementById('addButtonGastos'));
+
+// --------------------VARIABLES INGRESOS-----------------------
+
+const textFieldFechaIngreso = new MDCTextField(document.getElementById('fechaIngreso'));
+const textFieldTotalIngreso = new MDCTextField(document.getElementById('totalIngreso'));
+const textFieldDescripcionIngreso = new MDCTextField(document.getElementById('descripcionIngreso'));
+const selectConceptoIngreso = new MDCSelect(document.getElementById('conceptoIngreso'));
+const selectMediosDePagoIngreso = new MDCSelect(document.getElementById('mediosDePagoIngreso'));
+
+const addButtonIngreso = new MDCRipple(document.getElementById('addButtonIngreso'));
+
 // const addButton = new MDCRipple(document.getElementById('addButton'));
 // addButton.listen('click', () => {
 //   let title = textFieldTitle.value;
