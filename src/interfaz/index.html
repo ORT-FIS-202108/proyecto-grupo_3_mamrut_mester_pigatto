@@ -16,7 +16,7 @@
     </div>
   </header>
 
-  <!-- MENU LATERAL -->
+  <!---- MENU LATERAL ---->
 
   <aside class="mdc-drawer mdc-drawer--dismissible mdc-top-app-bar--fixed-adjust">
     <div class="mdc-drawer__content">
@@ -66,16 +66,16 @@
     </div>
   </aside>
 
-  <!-- AGREGAR GASTO -->
-
   <div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust">
     <main class="main-content" id="main-content">
+
+      <!---- AGREGAR GASTO ---->
 
       <section class="agregar-gasto">
         <h2 class="titulo-agregar">Agregar Gasto</h2>
         <form action="" class="form">
 
-          <label class="mdc-text-field mdc-text-field--outlined" id="title">
+          <label class="mdc-text-field mdc-text-field--outlined" id="fecha">
             <span class="mdc-notched-outline">
               <span class="mdc-notched-outline__leading"></span>
               <span class="mdc-notched-outline__notch">
@@ -83,10 +83,10 @@
               </span>
               <span class="mdc-notched-outline__trailing"></span>
             </span>
-            <input type="text" class="mdc-text-field__input" aria-labelledby="title">
+            <input type="text" class="mdc-text-field__input" aria-labelledby="fecha">
           </label>
 
-          <div class="mdc-select mdc-select--outlined mdc-text-field--outlined">
+          <div class="mdc-select mdc-select--outlined mdc-text-field--outlined" id="concepto">
             <div class="mdc-select__anchor" aria-labelledby="outlined-select-label">
               <span class="mdc-notched-outline">
                 <span class="mdc-notched-outline__leading"></span>
@@ -112,19 +112,19 @@
     
             <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
               <ul class="mdc-list" role="listbox" aria-label="Genre picker listbox">
-                <li class="mdc-list-item" aria-selected="false" data-value="Aventura" role="option">
+                <li class="mdc-list-item" aria-selected="false" data-value="Alimentacion" role="option">
                   <span class="mdc-list-item__ripple"></span>
                   <span class="mdc-list-item__text">
                     Alimentación
                   </span>
                 </li>
-                <li class="mdc-list-item" aria-selected="false" data-value="Drama" role="option">
+                <li class="mdc-list-item" aria-selected="false" data-value="Transporte" role="option">
                   <span class="mdc-list-item__ripple"></span>
                   <span class="mdc-list-item__text">
                     Transporte
                   </span>
                 </li>
-                <li class="mdc-list-item" aria-selected="false" data-value="Comedia" role="option">
+                <li class="mdc-list-item" aria-selected="false" data-value="Vestimenta" role="option">
                   <span class="mdc-list-item__ripple"></span>
                   <span class="mdc-list-item__text">
                     Vestimenta
@@ -156,7 +156,7 @@
             <input type="text" class="mdc-text-field__input" aria-labelledby="descripcion">
           </label>
 
-          <div class="mdc-select mdc-select--outlined mdc-text-field--outlined">
+          <div class="mdc-select mdc-select--outlined mdc-text-field--outlined" id="mediosDePago">
             <div class="mdc-select__anchor" aria-labelledby="outlined-select-label">
               <span class="mdc-notched-outline">
                 <span class="mdc-notched-outline__leading"></span>
@@ -182,22 +182,19 @@
     
             <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
               <ul class="mdc-list" role="listbox" aria-label="Genre picker listbox">
-                <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="" role="option">
-                  <span class="mdc-list-item__ripple"></span>
-                </li>
-                <li class="mdc-list-item" aria-selected="false" data-value="Aventura" role="option">
+                <li class="mdc-list-item" aria-selected="false" data-value="Efectivo" role="option">
                   <span class="mdc-list-item__ripple"></span>
                   <span class="mdc-list-item__text">
                     Efectivo
                   </span>
                 </li>
-                <li class="mdc-list-item" aria-selected="false" data-value="Drama" role="option">
+                <li class="mdc-list-item" aria-selected="false" data-value="Debito Itau" role="option">
                   <span class="mdc-list-item__ripple"></span>
                   <span class="mdc-list-item__text">
                     Débito Itau
                   </span>
                 </li>
-                <li class="mdc-list-item" aria-selected="false" data-value="Comedia" role="option">
+                <li class="mdc-list-item" aria-selected="false" data-value="Debito Santander" role="option">
                   <span class="mdc-list-item__ripple"></span>
                   <span class="mdc-list-item__text">
                     Débito Santander
@@ -207,7 +204,7 @@
             </div>
           </div>
 
-          <label class="mdc-text-field mdc-text-field--outlined" id="year">
+          <label class="mdc-text-field mdc-text-field--outlined" id="pagos">
             <span class="mdc-notched-outline">
               <span class="mdc-notched-outline__leading"></span>
               <span class="mdc-notched-outline__notch">
@@ -215,10 +212,10 @@
               </span>
               <span class="mdc-notched-outline__trailing"></span>
             </span>
-            <input type="number" min="0" class="mdc-text-field__input" aria-labelledby="year">
+            <input type="number" min="0" class="mdc-text-field__input" aria-labelledby="pagos">
           </label>
 
-          <div class="mdc-select mdc-select--outlined mdc-text-field--outlined">
+          <div class="mdc-select mdc-select--outlined mdc-text-field--outlined" id="repetirMensualmente">
             <div class="mdc-select__anchor" aria-labelledby="outlined-select-label">
               <span class="mdc-notched-outline">
                 <span class="mdc-notched-outline__leading"></span>
@@ -244,16 +241,13 @@
     
             <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
               <ul class="mdc-list" role="listbox" aria-label="Genre picker listbox">
-                <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="" role="option">
-                  <span class="mdc-list-item__ripple"></span>
-                </li>
-                <li class="mdc-list-item" aria-selected="false" data-value="Aventura" role="option">
+                <li class="mdc-list-item" aria-selected="false" data-value="Si" role="option">
                   <span class="mdc-list-item__ripple"></span>
                   <span class="mdc-list-item__text">
                     Si
                   </span>
                 </li>
-                <li class="mdc-list-item" aria-selected="false" data-value="Drama" role="option">
+                <li class="mdc-list-item" aria-selected="false" data-value="No" role="option">
                   <span class="mdc-list-item__ripple"></span>
                   <span class="mdc-list-item__text">
                     No
@@ -264,7 +258,7 @@
           </div>
 
           <div class="button">
-            <button class="mdc-button mdc-button--ripple mdc-button--unelevated" id="addButton">
+            <button class="mdc-button mdc-button--ripple mdc-button--unelevated" id="addButtonGastos">
               <span class="mdc-button__label">AGREGAR</span>
             </button>
           </div>
@@ -275,21 +269,6 @@
   </main>
   </div>
 </body>
-
-
-<!-- SI SE BORRA ESTE CODIGO NO FUNCIONA EL SELECT MENU -->
-
-<header class="mdc-top-app-bar">
-
-  <div class="mdc-tab-bar" role="tablist">
-    <div class="mdc-tab-scroller">
-      <div class="mdc-tab-scroller__scroll-area">
-        <div class="mdc-tab-scroller__scroll-content">
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
 
 <!-- -------------------------------------------------- -->
 
