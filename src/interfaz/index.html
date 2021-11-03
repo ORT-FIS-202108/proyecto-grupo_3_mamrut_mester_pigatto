@@ -266,6 +266,149 @@
         </form>
       </section>
 
+      <!---- AGREGAR INGRESO ---->
+
+      <section class="agregar-gasto">
+        <h2 class="titulo-agregar">Agregar Ingreso</h2>
+        <form action="" class="form">
+
+          <label class="mdc-text-field mdc-text-field--outlined" id="fechaIngreso">
+            <span class="mdc-notched-outline">
+              <span class="mdc-notched-outline__leading"></span>
+              <span class="mdc-notched-outline__notch">
+                <span class="mdc-floating-label">Fecha</span>
+              </span>
+              <span class="mdc-notched-outline__trailing"></span>
+            </span>
+            <input type="text" class="mdc-text-field__input" aria-labelledby="fechaIngreso">
+          </label>
+
+          <div class="mdc-select mdc-select--outlined mdc-text-field--outlined" id="conceptoIngreso">
+            <div class="mdc-select__anchor" aria-labelledby="outlined-select-label">
+              <span class="mdc-notched-outline">
+                <span class="mdc-notched-outline__leading"></span>
+                <span class="mdc-notched-outline__notch">
+                  <span id="outlined-select-label" class="mdc-floating-label">Concepto</span>
+                </span>
+                <span class="mdc-notched-outline__trailing"></span>
+              </span>
+              <span class="mdc-select__selected-text-container">
+                <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+              </span>
+              <span class="mdc-select__dropdown-icon">
+                <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
+                  <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+                    points="7 10 12 15 17 10">
+                  </polygon>
+                  <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
+                    points="7 15 12 10 17 15">
+                  </polygon>
+                </svg>
+              </span>
+            </div>
+    
+            <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+              <ul class="mdc-list" role="listbox" aria-label="Genre picker listbox">
+                <li class="mdc-list-item" aria-selected="false" data-value="Alimentacion" role="option">
+                  <span class="mdc-list-item__ripple"></span>
+                  <span class="mdc-list-item__text">
+                    Sueldo
+                  </span>
+                </li>
+                <li class="mdc-list-item" aria-selected="false" data-value="Transporte" role="option">
+                  <span class="mdc-list-item__ripple"></span>
+                  <span class="mdc-list-item__text">
+                    Renta
+                  </span>
+                </li>
+                <li class="mdc-list-item" aria-selected="false" data-value="Vestimenta" role="option">
+                  <span class="mdc-list-item__ripple"></span>
+                  <span class="mdc-list-item__text">
+                    Transferencias por gastos compartidos
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <label class="mdc-text-field mdc-text-field--outlined" id="totalIngreso">
+            <span class="mdc-notched-outline">
+              <span class="mdc-notched-outline__leading"></span>
+              <span class="mdc-notched-outline__notch">
+                <span class="mdc-floating-label">Total</span>
+              </span>
+              <span class="mdc-notched-outline__trailing"></span>
+            </span>
+            <input type="text" class="mdc-text-field__input" aria-labelledby="totalIngreso">
+          </label>
+
+          <label class="mdc-text-field mdc-text-field--outlined" id="descripcionIngreso">
+            <span class="mdc-notched-outline">
+              <span class="mdc-notched-outline__leading"></span>
+              <span class="mdc-notched-outline__notch">
+                <span class="mdc-floating-label">Descripción</span>
+              </span>
+              <span class="mdc-notched-outline__trailing"></span>
+            </span>
+            <input type="text" class="mdc-text-field__input" aria-labelledby="descripcionIngreso">
+          </label>
+
+          <div class="mdc-select mdc-select--outlined mdc-text-field--outlined" id="mediosDePagoIngreso">
+            <div class="mdc-select__anchor" aria-labelledby="outlined-select-label">
+              <span class="mdc-notched-outline">
+                <span class="mdc-notched-outline__leading"></span>
+                <span class="mdc-notched-outline__notch">
+                  <span id="outlined-select-label" class="mdc-floating-label">Medios de pago</span>
+                </span>
+                <span class="mdc-notched-outline__trailing"></span>
+              </span>
+              <span class="mdc-select__selected-text-container">
+                <span id="demo-selected-text-mediosDePago" class="mdc-select__selected-text"></span>
+              </span>
+              <span class="mdc-select__dropdown-icon">
+                <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
+                  <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+                    points="7 10 12 15 17 10">
+                  </polygon>
+                  <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
+                    points="7 15 12 10 17 15">
+                  </polygon>
+                </svg>
+              </span>
+            </div>
+    
+            <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+              <ul class="mdc-list" role="listbox" aria-label="Genre picker listbox">
+                <li class="mdc-list-item" aria-selected="false" data-value="Efectivo" role="option">
+                  <span class="mdc-list-item__ripple"></span>
+                  <span class="mdc-list-item__text">
+                    Efectivo
+                  </span>
+                </li>
+                <li class="mdc-list-item" aria-selected="false" data-value="Debito Itau" role="option">
+                  <span class="mdc-list-item__ripple"></span>
+                  <span class="mdc-list-item__text">
+                    Transferencia Itau
+                  </span>
+                </li>
+                <li class="mdc-list-item" aria-selected="false" data-value="Debito Santander" role="option">
+                  <span class="mdc-list-item__ripple"></span>
+                  <span class="mdc-list-item__text">
+                    Transferencia Santander
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="button">
+            <button class="mdc-button mdc-button--ripple mdc-button--unelevated" id="addButtonIngreso">
+              <span class="mdc-button__label">AGREGAR</span>
+            </button>
+          </div>
+
+        </form>
+      </section>
   </main>
   </div>
 </body>
