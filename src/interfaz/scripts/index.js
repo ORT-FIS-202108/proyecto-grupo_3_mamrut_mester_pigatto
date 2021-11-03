@@ -54,7 +54,15 @@ const addButtonIngreso = new MDCRipple(document.getElementById('addButtonIngreso
 
 const textFieldFechaRecordatorio = new MDCTextField(document.getElementById('fechaRecordatorio'));
 const textFieldRecordatorio = new MDCTextField(document.getElementById('recordatorio'));
+
 const addButtonRecordatorio = new MDCRipple(document.getElementById('addButtonRecordatorio'));
+
+// --------------------VARIABLES MEDIOS DE PAGO----------------------
+
+const textFieldNombreMedioDePago = new MDCTextField(document.getElementById('nombreMedioDePago'));
+const selectAdmitePagos = new MDCSelect(document.getElementById('admitePagos'));
+
+const addButtonMedioDePago = new MDCRipple(document.getElementById('addButtonMedioDePago'));
 
 // const addButton = new MDCRipple(document.getElementById('addButton'));
 // addButton.listen('click', () => {
