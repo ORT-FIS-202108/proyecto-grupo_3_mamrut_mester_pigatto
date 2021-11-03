@@ -9,38 +9,47 @@ import Pelicula from '../../dominio/pelicula.mjs';
 
 const listaPeliculas = new ListaPeliculas();
 
-const topAppBarElement = document.querySelector('.mdc-top-app-bar');
-const topAppBar = new MDCTopAppBar(topAppBarElement);
+// const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+const menuLateral = document.getElementById('app-bar');
+// const topAppBar = new MDCTopAppBar(topAppBarElement);
+const topAppBar = new MDCTopAppBar(menuLateral);
 
-const tabBar = new MDCTabBar(document.querySelector(".mdc-tab-bar"));
-tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
-  document.querySelectorAll(".content").forEach((element, index) => {
-    if (index === activatedEvent.detail.index) {
-      element.classList.remove("sample-content--hidden");
-    } else {
-      element.classList.add("sample-content--hidden");
-    }
-  });
-});
+// const tabBar = new MDCTabBar(document.querySelector(".mdc-tab-bar"));
+// tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
+//   document.querySelectorAll(".content").forEach((element, index) => {
+//     if (index === activatedEvent.detail.index) {
+//       element.classList.remove("sample-content--hidden");
+//     } else {
+//       element.classList.add("sample-content--hidden");
+//     }
+//   });
+// });
+// const textFieldTitle = new MDCTextField(document.getElementById('title'));
+// const textFieldYear = new MDCTextField(document.getElementById('year'));
+// const selectGenre = new MDCSelect(document.querySelector('.mdc-select'));
+const textFieldFecha = new MDCTextField(document.getElementById('fecha'));
+const textFieldPagos = new MDCTextField(document.getElementById('pagos'));
+const textFieldTotal = new MDCTextField(document.getElementById('total'));
+const textFieldDescripcion = new MDCTextField(document.getElementById('descripcion'));
+const selectConcepto = new MDCSelect(document.getElementById('concepto'));
+const selectMediosDePago = new MDCSelect(document.getElementById('mediosDePago'));
+const selectRepetirMensualmente = new MDCSelect(document.getElementById('repetirMensualmente'));
 
-const textFieldTitle = new MDCTextField(document.getElementById('title'));
-const textFieldYear = new MDCTextField(document.getElementById('year'));
-const selectGenre = new MDCSelect(document.querySelector('.mdc-select'));
-
-const addButton = new MDCRipple(document.getElementById('addButton'));
-addButton.listen('click', () => {
-  let title = textFieldTitle.value;
-  let year = textFieldYear.value;
-  let genre = selectGenre.value;
-  try {
-    let newPelicula = new Pelicula(title, genre, year);
-    listaPeliculas.agregar(newPelicula);
-  } catch (error) {
-    const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
-    snackbar.labelText = error.message;
-    snackbar.open();
-  } finally {
-    let peliculas = listaPeliculas.getPeliculas();
-    console.log(peliculas);
-  }
-})
+const addButtonGastos = new MDCRipple(document.getElementById('addButtonGastos'));
+// const addButton = new MDCRipple(document.getElementById('addButton'));
+// addButton.listen('click', () => {
+//   let title = textFieldTitle.value;
+//   let year = textFieldYear.value;
+//   let genre = selectGenre.value;
+//   try {
+//     let newPelicula = new Pelicula(title, genre, year);
+//     listaPeliculas.agregar(newPelicula);
+//   } catch (error) {
+//     const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
+//     snackbar.labelText = error.message;
+//     snackbar.open();
+//   } finally {
+//     let peliculas = listaPeliculas.getPeliculas();
+//     console.log(peliculas);
+//   }
+// })
