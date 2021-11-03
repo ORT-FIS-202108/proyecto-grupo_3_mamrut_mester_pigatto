@@ -10,8 +10,8 @@ import Pelicula from '../../dominio/pelicula.mjs';
 const listaPeliculas = new ListaPeliculas();
 
 // const topAppBarElement = document.querySelector('.mdc-top-app-bar');
-const menuLateral = document.getElementById('app-bar');
 // const topAppBar = new MDCTopAppBar(topAppBarElement);
+const menuLateral = document.getElementById('app-bar');
 const topAppBar = new MDCTopAppBar(menuLateral);
 
 // const tabBar = new MDCTabBar(document.querySelector(".mdc-tab-bar"));
@@ -63,6 +63,13 @@ const textFieldNombreMedioDePago = new MDCTextField(document.getElementById('nom
 const selectAdmitePagos = new MDCSelect(document.getElementById('admitePagos'));
 
 const addButtonMedioDePago = new MDCRipple(document.getElementById('addButtonMedioDePago'));
+
+// --------------------VARIABLES CONCEPTOS-----------------------
+
+const textFieldNombreConcepto = new MDCTextField(document.getElementById('nombreConcepto'));
+const textFieldTopeMensual = new MDCTextField(document.getElementById('topeMensual'));
+
+const addButtonConcepto = new MDCRipple(document.getElementById('addButtonConcepto'));
 
 // const addButton = new MDCRipple(document.getElementById('addButton'));
 // addButton.listen('click', () => {
