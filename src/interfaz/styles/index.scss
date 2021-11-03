@@ -190,3 +190,9 @@ section {
 .mdc-snackbar__actions .mdc-button__label {
   color: #67daff;
 }
+
+@media screen and (max-width: 768px) {
+  .mdc-button {
+      width: 100% !important;
+  }
+}
