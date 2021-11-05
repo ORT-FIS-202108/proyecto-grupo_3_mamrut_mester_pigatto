@@ -4,10 +4,13 @@ import { MDCTabBar } from '@material/tab-bar';
 import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
 import {MDCSnackbar} from '@material/snackbar';
-import ListaPeliculas from '../../dominio/lista-peliculas.mjs';
-import Pelicula from '../../dominio/pelicula.mjs';
+import {Sistema} from '../../dominio/sistema.mjs';
+import {Gasto, Ingreso, Redordatorio, MedioDePago, Concepto} from '../../dominio/clases.mjs';
 
-const listaPeliculas = new ListaPeliculas();
+
+
+//const listaPeliculas = new ListaPeliculas();
+const s = new Sistema();
 
 // const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 // const topAppBar = new MDCTopAppBar(topAppBarElement);
@@ -70,6 +73,30 @@ const textFieldNombreConcepto = new MDCTextField(document.getElementById('nombre
 const textFieldTopeMensual = new MDCTextField(document.getElementById('topeMensual'));
 
 const addButtonConcepto = new MDCRipple(document.getElementById('addButtonConcepto'));
+
+console.log("prueba inicio");
+
+topAppBar.listen('MDCTopAppBar:nav', () => {
+  console.log("Prueba barra");
+});
+
+
+
+addButtonGastos.listen('click', () => {
+    console.log("prueba");
+    let fecha = textFieldFecha.value;
+    let concepto = selectConcepto.value;
+    let monto = textFieldTotal.value;
+    let descrip = textFieldDescripcion.value;
+    let medioPago = selectMediosDePago.value;
+    let cantPagos = textFieldPagos.value;
+    let repetir = selectRepetirMensualmente.value;
+    let gasto = new Gasto(fecha, concepto, monto, descrip, medioPago, cantPagos, repetir);
+    s.agregarGasto(gasto);
+    console.log(s.gastos);
+  
+})
+
 
 // const addButton = new MDCRipple(document.getElementById('addButton'));
 // addButton.listen('click', () => {
