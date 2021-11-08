@@ -1,22 +1,4 @@
 
-
-// export default class Pelicula {
-
-//   constructor(titulo, genero, anio) {
-//     this.titulo = titulo;
-//     this.genero = genero;
-//     this.setAnio(anio);
-//   }
-
-//   setAnio(anio) {
-//     if (anio >= MIN_ANIO && anio <= MAX_ANIO) {
-//       this.anio = anio;
-//     } else {
-//       throw new Error(`El año ingresado es incorrecto. La pelicula debe ser de los años entre ${MIN_ANIO} y ${MAX_ANIO}`);
-//     }
-//   }
-// }
-
 export class Gasto {
   constructor(fecha, concepto, monto, descrip, medioPago, cantPagos, repetir) {
     this.fecha = fecha;
@@ -30,11 +12,10 @@ export class Gasto {
 }
 
 export class Ingreso {
-  constructor(fecha, concepto, monto, moneda, descrip, medioPago) {
+  constructor(fecha, concepto, monto, descrip, medioPago) {
     this.fecha = fecha;
     this.concepto = concepto;
     this.monto = monto;
-    this.moneda = moneda;
     this.descrip = descrip;
     this.medioPago = medioPago;
   }
