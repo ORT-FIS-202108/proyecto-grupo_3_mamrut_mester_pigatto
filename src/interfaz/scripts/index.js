@@ -97,6 +97,12 @@ const textFieldTopeMensual = new MDCTextField(document.getElementById('topeMensu
 
 const addButtonConcepto = new MDCRipple(document.getElementById('addButtonConcepto'));
 
+// --------------------VARIABLES LISTADO GASTOS-----------------------
+
+//Ver bien como hacer para generar un boton por elemento de la lista que se crea
+
+const iconButtonRipple = new MDCRipple(document.querySelector('.mdc-icon-button'));
+iconButtonRipple.unbounded = true;
 
 // --------------------AGREGAR GASTO-----------------------
 addButtonGastos.listen('click', () => { 
