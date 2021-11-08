@@ -4,8 +4,6 @@ import { MDCTabBar } from '@material/tab-bar';
 import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
 import {MDCDrawer} from "@material/drawer";
-import ListaPeliculas from '../../dominio/lista-peliculas.mjs';
-import Pelicula from '../../dominio/pelicula.mjs';
 import { MDCSnackbar } from '@material/snackbar';
 import { Sistema } from '../../dominio/sistema.mjs';
 import { Gasto, Ingreso, Recordatorio, MedioDePago, Concepto } from '../../dominio/clases.mjs';
