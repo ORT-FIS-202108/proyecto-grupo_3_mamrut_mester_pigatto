@@ -3,19 +3,42 @@ import { MDCTopAppBar } from '@material/top-app-bar';
 import { MDCTabBar } from '@material/tab-bar';
 import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
+import {MDCDrawer} from "@material/drawer";
 import { MDCSnackbar } from '@material/snackbar';
 import { Sistema } from '../../dominio/sistema.mjs';
 import { Gasto, Ingreso, Recordatorio, MedioDePago, Concepto } from '../../dominio/clases.mjs';
-
-
 
 //const listaPeliculas = new ListaPeliculas();
 const s = new Sistema();
 
 // const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 // const topAppBar = new MDCTopAppBar(topAppBarElement);
-const menuLateral = document.getElementById('app-bar');
-const topAppBar = new MDCTopAppBar(menuLateral);
+// const menuLateral = document.getElementById('app-bar');
+// const topAppBar = new MDCTopAppBar(menuLateral);
+const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+const topAppBar = new MDCTopAppBar(topAppBarElement);
+const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+
+// --------------------ABRIR Y CERRAR MENU LATERAL-----------------------
+
+// La funcionalidad no funciona por lo que se reporto issue correspondiente (#46)
+
+const listEl = document.querySelector('.mdc-drawer .mdc-list');
+const mainContentEl = document.querySelector('.main-content');
+
+listEl.addEventListener('click', (event) => {
+  mainContentEl.querySelector('input, button').focus();
+});
+
+document.body.addEventListener('MDCDrawer:closed', () => {
+  mainContentEl.querySelector('input, button').focus();
+});
+
+topAppBar.listen('MDCTopAppBar:nav', () => {
+  drawer.open = !drawer.open;
+});
+
+// ------------------------------------------------------------------------
 
 // const tabBar = new MDCTabBar(document.querySelector(".mdc-tab-bar"));
 // tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
@@ -73,8 +96,6 @@ const textFieldNombreConcepto = new MDCTextField(document.getElementById('nombre
 const textFieldTopeMensual = new MDCTextField(document.getElementById('topeMensual'));
 
 const addButtonConcepto = new MDCRipple(document.getElementById('addButtonConcepto'));
-
-
 
 
 // --------------------AGREGAR GASTO-----------------------
