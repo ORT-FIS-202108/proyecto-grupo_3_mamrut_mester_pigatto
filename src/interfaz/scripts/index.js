@@ -4,6 +4,7 @@ import { MDCTabBar } from '@material/tab-bar';
 import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
 import {MDCSnackbar} from '@material/snackbar';
+import {MDCDrawer} from "@material/drawer";
 import ListaPeliculas from '../../dominio/lista-peliculas.mjs';
 import Pelicula from '../../dominio/pelicula.mjs';
 
@@ -11,8 +12,32 @@ const listaPeliculas = new ListaPeliculas();
 
 // const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 // const topAppBar = new MDCTopAppBar(topAppBarElement);
-const menuLateral = document.getElementById('app-bar');
-const topAppBar = new MDCTopAppBar(menuLateral);
+// const menuLateral = document.getElementById('app-bar');
+// const topAppBar = new MDCTopAppBar(menuLateral);
+const topAppBarElement = document.querySelector('.mdc-top-app-bar');
+const topAppBar = new MDCTopAppBar(topAppBarElement);
+const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+
+// --------------------ABRIR Y CERRAR MENU LATERAL-----------------------
+
+// La funcionalidad no funciona por lo que se reporto issue correspondiente (#46)
+
+const listEl = document.querySelector('.mdc-drawer .mdc-list');
+const mainContentEl = document.querySelector('.main-content');
+
+listEl.addEventListener('click', (event) => {
+  mainContentEl.querySelector('input, button').focus();
+});
+
+document.body.addEventListener('MDCDrawer:closed', () => {
+  mainContentEl.querySelector('input, button').focus();
+});
+
+topAppBar.listen('MDCTopAppBar:nav', () => {
+  drawer.open = !drawer.open;
+});
+
+// ------------------------------------------------------------------------
 
 // const tabBar = new MDCTabBar(document.querySelector(".mdc-tab-bar"));
 // tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
