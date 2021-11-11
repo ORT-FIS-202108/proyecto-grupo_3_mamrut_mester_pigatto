@@ -28,6 +28,7 @@
 @include textfield.core-styles;
 
 html {
+
   scroll-behavior: smooth;
 }
 
@@ -36,6 +37,8 @@ body {
   margin: 0px auto;
   display: flex;
   height: 100vh;
+  //background-image: url("./images/fondo.png");
+  //background-image: url("fondo.png");
 }
 
 .app-bar {
