@@ -27,8 +27,16 @@ export class Sistema {
       this.conceptos.push(concepto);
     }
   
-    ordenarGastosPorFecha() {
-      this.gastos.sort(function (g1, g2) { return g1.fecha - g2.fecha });
+    ordenarGastosPorFecha() { //Ordena de mas recientes a mas antiguos
+      this.gastos.sort(function (g1, g2) { return g2.fecha - g1.fecha });
+    }
+
+    ordenarIngresosPorFecha() { //Ordena de mas recientes a mas antiguos
+      this.ingresos.sort(function (g1, g2) { return g2.fecha - g1.fecha });
+    }
+
+    ordenarRecordatoriosPorFecha() { //Ordena de mas recientes a mas antiguos
+      this.recordatorios.sort(function (g1, g2) { return g2.fecha - g1.fecha });
     }
 
     borrarElemento(lista, pos){

@@ -28,6 +28,7 @@
 @include textfield.core-styles;
 
 html {
+
   scroll-behavior: smooth;
 }
 
@@ -36,6 +37,8 @@ body {
   margin: 0px auto;
   display: flex;
   height: 100vh;
+  //background-image: url("./images/fondo.png");
+  //background-image: url("fondo.png");
 }
 
 .app-bar {
@@ -144,7 +147,7 @@ section {
   margin-bottom: 30px;
 }
 
-.form{
+.formulario{
   display: flex;
   flex-direction: column;
   align-items: center;

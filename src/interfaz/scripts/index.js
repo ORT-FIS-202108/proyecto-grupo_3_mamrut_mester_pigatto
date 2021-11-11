@@ -127,6 +127,7 @@ addButtonGastos.listen('click', () => {
     textFieldPagos.value = "";
     selectRepetirMensualmente.value = "";
   }
+  s.ordenarGastosPorFecha();
   actualizarListaGastos();
 })
 
@@ -160,6 +161,7 @@ addButtonIngreso.listen('click', () => {
     textFieldDescripcionIngreso.value = "";
     selectMediosDePagoIngreso.value = "";
   }
+  s.ordenarIngresosPorFecha();
   actualizarListaIngresos();
 })
 
@@ -185,6 +187,8 @@ addButtonRecordatorio.listen('click', () => {
     textFieldFechaRecordatorio.value = "";
     textFieldRecordatorio.value = "";
   }
+  s.ordenarRecordatoriosPorFecha();
+  actualizarListaRecordatorios();
 })
 
 function recordatorioValido(recordatorio) {
@@ -208,6 +212,7 @@ addButtonMedioDePago.listen('click', () => {
     textFieldNombreMedioDePago.value = "";
     selectAdmitePagos.value = "";
   }
+  actualizarListaMediosDePago();
 })
 
 function medioDePagoValido(medioDePago) {
@@ -232,6 +237,7 @@ addButtonConcepto.listen('click', () => {
     textFieldNombreConcepto.value = "";
     textFieldTopeMensual.value = "";
   }
+  actualizarListaConceptos();
 })
 
 function conceptoValido(concepto) {
@@ -382,5 +388,154 @@ function borrarIngreso(btn) {
       const itemLista = btn.getAttribute('item');
       s.borrarElemento(s.ingresos,itemLista);
       actualizarListaIngresos();
+  });
+}
+
+//------------------------- LISTA DE RECORDATORIOS -----------------------
+
+function actualizarListaRecordatorios(){
+  const lista = document.getElementById('listado-recordatorios');
+    lista.innerHTML = '';
+    const listaRecordatorios = s.recordatorios;
+    for (let i = 0; i < listaRecordatorios.length; i++) {
+        const item = generarLiRecordatorios(listaRecordatorios[i],i);
+        lista.appendChild(item);
+    }
+}
+
+function generarLiRecordatorios(recordatorio, pos) {
+  const li = document.createElement('li');
+  const span1 = document.createElement('span');
+  const div1 = document.createElement('div');
+  const span2 = document.createElement('span');
+  const span3 = document.createElement('span');
+  const btn1 = document.createElement('button');
+  const div2 = document.createElement('div');
+  span2.appendChild(document.createTextNode(recordatorio.recordatorio));
+  let mes = parseInt(recordatorio.fecha.getMonth())+1;
+  let texto = recordatorio.fecha.getDate() + "/" + recordatorio.fecha.getDate() + mes + "/" + recordatorio.fecha.getFullYear();  
+  span3.appendChild(document.createTextNode(texto));
+  btn1.appendChild(document.createTextNode("delete"));
+  btn1.setAttribute('item', pos);  
+  span1.className = 'mdc-list-item__ripple';
+  span2.className = 'titulo-item-listado-text mdc-list-item__text';
+  span3.className = 'item-listado-text mdc-list-item__text';
+  btn1.className = 'mdc-icon-button material-icons';
+  div1.className = 'titulo-item-listado';
+  div2.className = 'mdc-icon-button__ripple';
+  borrarRecordatorio(btn1);
+  li.appendChild(span1);
+  div1.appendChild(span2);
+  div1.appendChild(span3);
+  btn1.appendChild(div2);
+  li.appendChild(div1);
+  li.appendChild(btn1);
+  li.className = 'item-listado mdc-list-item';
+  return li;
+}
+
+function borrarRecordatorio(btn) {
+  btn.addEventListener('click', () => {
+      const itemLista = btn.getAttribute('item');
+      s.borrarElemento(s.recordatorios,itemLista);
+      actualizarListaRecordatorios();
+  });
+}
+
+//------------------------- LISTA DE MEDIOS DE PAGO -----------------------
+
+function actualizarListaMediosDePago(){
+  const lista = document.getElementById('listado-medioDePago');
+    lista.innerHTML = '';
+    const listaMediosDePago = s.mediosDePago;
+    for (let i = 0; i < listaMediosDePago.length; i++) {
+        const item = generarLiMedioDePago(listaMediosDePago[i],i);
+        lista.appendChild(item);
+    }
+}
+
+function generarLiMedioDePago(medioDePago, pos) {
+  const li = document.createElement('li');
+  const span1 = document.createElement('span');
+  const div1 = document.createElement('div');
+  const span2 = document.createElement('span');
+  const span3 = document.createElement('span');
+  const btn1 = document.createElement('button');
+  const div2 = document.createElement('div');
+  span2.appendChild(document.createTextNode(medioDePago.nombre));
+  span3.appendChild(document.createTextNode(medioDePago.pagoEnCuotas + " admite pago en cuotas"));
+  btn1.appendChild(document.createTextNode("delete"));
+  btn1.setAttribute('item', pos);  
+  span1.className = 'mdc-list-item__ripple';
+  span2.className = 'titulo-item-listado-text mdc-list-item__text';
+  span3.className = 'item-listado-text mdc-list-item__text';
+  btn1.className = 'mdc-icon-button material-icons';
+  div1.className = 'titulo-item-listado';
+  div2.className = 'mdc-icon-button__ripple';
+  borrarMedioDePago(btn1);
+  li.appendChild(span1);
+  div1.appendChild(span2);
+  div1.appendChild(span3);
+  btn1.appendChild(div2);
+  li.appendChild(div1);
+  li.appendChild(btn1);
+  li.className = 'item-listado mdc-list-item';
+  return li;
+}
+
+function borrarMedioDePago(btn) {
+  btn.addEventListener('click', () => {
+      const itemLista = btn.getAttribute('item');
+      s.borrarElemento(s.mediosDePago,itemLista);
+      actualizarListaMediosDePago();
+  });
+}
+
+//------------------------- LISTA DE CONCEPTOS -----------------------
+
+function actualizarListaConceptos(){
+  const lista = document.getElementById('listado-conceptos');
+    lista.innerHTML = '';
+    const listaConceptos = s.conceptos;
+    for (let i = 0; i < listaConceptos.length; i++) {
+        const item = generarLiConceptos(listaConceptos[i],i);
+        lista.appendChild(item);
+    }
+}
+
+function generarLiConceptos(concepto, pos) {
+  const li = document.createElement('li');
+  const span1 = document.createElement('span');
+  const div1 = document.createElement('div');
+  const span2 = document.createElement('span');
+  const span3 = document.createElement('span');
+  const btn1 = document.createElement('button');
+  const div2 = document.createElement('div');
+  span2.appendChild(document.createTextNode(concepto.nombre)); 
+  span3.appendChild(document.createTextNode("Objetivo tope mensual: " + concepto.topeMensual));
+  btn1.appendChild(document.createTextNode("delete"));
+  btn1.setAttribute('item', pos);  
+  span1.className = 'mdc-list-item__ripple';
+  span2.className = 'titulo-item-listado-text mdc-list-item__text';
+  span3.className = 'item-listado-text mdc-list-item__text';
+  btn1.className = 'mdc-icon-button material-icons';
+  div1.className = 'titulo-item-listado';
+  div2.className = 'mdc-icon-button__ripple';
+  borrarConcepto(btn1);
+  li.appendChild(span1);
+  div1.appendChild(span2);
+  div1.appendChild(span3);
+  btn1.appendChild(div2);
+  li.appendChild(div1);
+  li.appendChild(btn1);
+  li.className = 'item-listado mdc-list-item';
+  return li;
+}
+
+function borrarConcepto(btn) {
+  btn.addEventListener('click', () => {
+      const itemLista = btn.getAttribute('item');
+      s.borrarElemento(s.conceptos,itemLista);
+      actualizarListaConceptos();
   });
 }
