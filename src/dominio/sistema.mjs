@@ -30,6 +30,10 @@ export class Sistema {
     ordenarGastosPorFecha() {
       this.gastos.sort(function (g1, g2) { return g1.fecha - g2.fecha });
     }
+
+    borrarElemento(lista, pos){
+      lista.splice(pos,1);
+    }
   
     //Hacer funciones para ordenar ingresos y recordatorios cuando veamos que funciona la de gasto
   

@@ -126,6 +126,7 @@ addButtonGastos.listen('click', () => {
     textFieldPagos.value = "";
     selectRepetirMensualmente.value = "";
   }
+  actualizarListaGastos();
 })
 
 
@@ -272,20 +273,58 @@ function validarFecha(strFecha) {
   }
   return fecha;
 }
-// const addButton = new MDCRipple(document.getElementById('addButton'));
-// addButton.listen('click', () => {
-  //   let title = textFieldTitle.value;
-  //   let year = textFieldYear.value;
-  //   let genre = selectGenre.value;
-  //   try {
-    //     let newPelicula = new Pelicula(title, genre, year);
-    //     listaPeliculas.agregar(newPelicula);
-    //   } catch (error) {
-      //     const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
-      //     snackbar.labelText = error.message;
-      //     snackbar.open();
-      //   } finally {
-//     let peliculas = listaPeliculas.getPeliculas();
-//     console.log(peliculas);
-//   }
-// })
+
+//------------------------- LISTA DE GASTOS -----------------------
+
+function actualizarListaGastos(){
+  const lista = document.getElementById('listado-gastos');
+    lista.innerHTML = '';
+    const listaGastos = s.gastos;
+    for (let i = 0; i < listaGastos.length; i++) {
+        const item = generarLi(listaGastos[i],i);
+        lista.appendChild(item);
+    }
+}
+
+function generarLi(gasto, pos) {
+  const li = document.createElement('li');
+  const span1 = document.createElement('span');
+  const div1 = document.createElement('div');
+  const span2 = document.createElement('span');
+  const span3 = document.createElement('span');
+  const span4 = document.createElement('span');
+  const btn1 = document.createElement('button');
+  const div2 = document.createElement('div');
+  span2.appendChild(document.createTextNode(gasto.concepto));
+  span3.appendChild(document.createTextNode(gasto.descrip));
+  let mes = parseInt(gasto.fecha.getMonth())+1;
+  let texto = "$ " + gasto.medioPago + " - " + gasto.fecha.getDate() + "/" + gasto.fecha.getDate() + mes + "/" + gasto.fecha.getFullYear();  
+  span4.appendChild(document.createTextNode(texto));
+  btn1.appendChild(document.createTextNode("delete"));
+  btn1.setAttribute('item', pos);  
+  span1.className = 'mdc-list-item__ripple';
+  span2.className = 'titulo-item-listado-text mdc-list-item__text';
+  span3.className = 'item-listado-text mdc-list-item__text';
+  span4.className = 'item-listado-text mdc-list-item__text';
+  btn1.className = 'mdc-icon-button material-icons';
+  div1.className = 'titulo-item-listado';
+  div2.className = 'mdc-icon-button__ripple';
+  borrarGasto(btn1);
+  li.appendChild(span1);
+  div1.appendChild(span2);
+  div1.appendChild(span3);
+  div1.appendChild(span4);
+  btn1.appendChild(div2);
+  li.appendChild(div1);
+  li.appendChild(btn1);
+  li.className = 'item-listado mdc-list-item';
+  return li;
+}
+
+function borrarGasto(btn) {
+  btn.addEventListener('click', () => {
+      const itemLista = btn.getAttribute('item');
+      s.borrarElemento(s.gastos,itemLista);
+      actualizarListaGastos();
+  });
+}
