@@ -100,6 +100,7 @@ const addButtonConcepto = new MDCRipple(document.getElementById('addButtonConcep
 // --------------------VARIABLES LISTADO GASTOS-----------------------
 
 //Ver bien como hacer para generar un boton por elemento de la lista que se crea
+//ver si esto es necesario, si no borrar
 
 const iconButtonRipple = new MDCRipple(document.querySelector('.mdc-icon-button'));
 iconButtonRipple.unbounded = true;
@@ -159,7 +160,7 @@ addButtonIngreso.listen('click', () => {
     textFieldDescripcionIngreso.value = "";
     selectMediosDePagoIngreso.value = "";
   }
-  console.log(s.ingresos); //BORRAR
+  actualizarListaIngresos();
 })
 
 function ingresoValido(ingreso) {
@@ -326,5 +327,60 @@ function borrarGasto(btn) {
       const itemLista = btn.getAttribute('item');
       s.borrarElemento(s.gastos,itemLista);
       actualizarListaGastos();
+  });
+}
+
+//------------------------- LISTA DE INGRESOS -----------------------
+
+function actualizarListaIngresos(){
+  const lista = document.getElementById('listado-ingresos');
+    lista.innerHTML = '';
+    const listaIngresos = s.ingresos;
+    for (let i = 0; i < listaIngresos.length; i++) {
+        const item = generarLiIngresos(listaIngresos[i],i);
+        lista.appendChild(item);
+    }
+}
+
+function generarLiIngresos(ingreso, pos) {
+  const li = document.createElement('li');
+  const span1 = document.createElement('span');
+  const div1 = document.createElement('div');
+  const span2 = document.createElement('span');
+  const span3 = document.createElement('span');
+  const span4 = document.createElement('span');
+  const btn1 = document.createElement('button');
+  const div2 = document.createElement('div');
+  span2.appendChild(document.createTextNode(ingreso.concepto));
+  span3.appendChild(document.createTextNode(ingreso.descrip));
+  let mes = parseInt(ingreso.fecha.getMonth())+1;
+  let texto = "$ " + ingreso.medioPago + " - " + ingreso.fecha.getDate() + "/" + ingreso.fecha.getDate() + mes + "/" + ingreso.fecha.getFullYear();  
+  span4.appendChild(document.createTextNode(texto));
+  btn1.appendChild(document.createTextNode("delete"));
+  btn1.setAttribute('item', pos);  
+  span1.className = 'mdc-list-item__ripple';
+  span2.className = 'titulo-item-listado-text mdc-list-item__text';
+  span3.className = 'item-listado-text mdc-list-item__text';
+  span4.className = 'item-listado-text mdc-list-item__text';
+  btn1.className = 'mdc-icon-button material-icons';
+  div1.className = 'titulo-item-listado';
+  div2.className = 'mdc-icon-button__ripple';
+  borrarIngreso(btn1);
+  li.appendChild(span1);
+  div1.appendChild(span2);
+  div1.appendChild(span3);
+  div1.appendChild(span4);
+  btn1.appendChild(div2);
+  li.appendChild(div1);
+  li.appendChild(btn1);
+  li.className = 'item-listado mdc-list-item';
+  return li;
+}
+
+function borrarIngreso(btn) {
+  btn.addEventListener('click', () => {
+      const itemLista = btn.getAttribute('item');
+      s.borrarElemento(s.ingresos,itemLista);
+      actualizarListaIngresos();
   });
 }
