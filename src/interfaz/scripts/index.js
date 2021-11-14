@@ -10,6 +10,8 @@ import { Gasto, Ingreso, Recordatorio, MedioDePago, Concepto } from '../../domin
 
 //const listaPeliculas = new ListaPeliculas();
 const s = new Sistema();
+ocultarFuncionesAgregar();
+ocultarFuncionesListado();
 
 // const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 // const topAppBar = new MDCTopAppBar(topAppBarElement);
@@ -40,6 +42,10 @@ topAppBar.listen('MDCTopAppBar:nav', () => {
 
 // --------------------BOTONES MENU LATERAL-----------------------
 
+function ocultarInicio(){
+  document.getElementById('idInicio').style.display = "none";
+}
+
 function ocultarFuncionesAgregar(){
   document.getElementById('idAgregarGasto').style.display = "none";
   document.getElementById('idAgregarIngreso').style.display = "none";
@@ -62,12 +68,15 @@ const btnMenuInicio = document.getElementById('btnMenuInicio');
 btnMenuInicio.addEventListener('click', (event) => {
   ocultarFuncionesAgregar();
   ocultarFuncionesListado();
+
+  document.getElementById('idInicio').style.display = "block";
   
 });
 
 const btnMenuGastos = document.getElementById('btnMenuGastos');
 
 btnMenuGastos.addEventListener('click', (event) => {
+  ocultarInicio();
   ocultarFuncionesAgregar();
   document.getElementById('idListadoIngresos').style.display = "none";
   document.getElementById('idListadoRecordatorios').style.display = "none";
@@ -81,6 +90,7 @@ btnMenuGastos.addEventListener('click', (event) => {
 const btnMenuIngresos = document.getElementById('btnMenuIngresos');
 
 btnMenuIngresos.addEventListener('click', (event) => {
+  ocultarInicio();
   ocultarFuncionesAgregar();
   document.getElementById('idListadoGastos').style.display = "none";
   document.getElementById('idListadoRecordatorios').style.display = "none";
@@ -94,6 +104,7 @@ btnMenuIngresos.addEventListener('click', (event) => {
 const btnMenuRecordatorios = document.getElementById('btnMenuRecordatorios');
 
 btnMenuRecordatorios.addEventListener('click', (event) => {
+  ocultarInicio();
   ocultarFuncionesAgregar();
   document.getElementById('idListadoGastos').style.display = "none";
   document.getElementById('idListadoIngresos').style.display = "none";
@@ -107,6 +118,7 @@ btnMenuRecordatorios.addEventListener('click', (event) => {
 const btnMenuMediosDePago = document.getElementById('btnMenuMediosDePago');
 
 btnMenuMediosDePago.addEventListener('click', (event) => {
+  ocultarInicio();
   ocultarFuncionesAgregar();
   document.getElementById('idListadoGastos').style.display = "none";
   document.getElementById('idListadoIngresos').style.display = "none";
@@ -120,6 +132,7 @@ btnMenuMediosDePago.addEventListener('click', (event) => {
 const btnMenuConceptos = document.getElementById('btnMenuConceptos');
 
 btnMenuConceptos.addEventListener('click', (event) => {
+  ocultarInicio();
   ocultarFuncionesAgregar();
   document.getElementById('idListadoGastos').style.display = "none";
   document.getElementById('idListadoIngresos').style.display = "none";
@@ -127,6 +140,78 @@ btnMenuConceptos.addEventListener('click', (event) => {
   document.getElementById('idListadoMediosDePago').style.display = "none";
 
   document.getElementById('idListadoConceptos').style.display = "block";
+  
+});
+
+// --------------------BOTONES INICIO-----------------------
+
+const btnInicioGasto = document.getElementById('btnInicioGasto');
+
+btnInicioGasto.addEventListener('click', (event) => {
+  ocultarInicio();
+  ocultarFuncionesListado();
+  document.getElementById('idAgregarIngreso').style.display = "none";
+  document.getElementById('idAgregarRecordatorio').style.display = "none";
+  document.getElementById('idAgregarMedioDePago').style.display = "none";
+  document.getElementById('idAgregarConcepto').style.display = "none";
+
+  document.getElementById('idAgregarGasto').style.display = "block";
+  
+});
+
+const btnInicioIngreso = document.getElementById('btnInicioIngreso');
+
+btnInicioIngreso.addEventListener('click', (event) => {
+  ocultarInicio();
+  ocultarFuncionesListado();
+  document.getElementById('idAgregarGasto').style.display = "none";
+  document.getElementById('idAgregarRecordatorio').style.display = "none";
+  document.getElementById('idAgregarMedioDePago').style.display = "none";
+  document.getElementById('idAgregarConcepto').style.display = "none";
+
+  document.getElementById('idAgregarIngreso').style.display = "block";
+  
+});
+
+const btnInicioRecordatorio = document.getElementById('btnInicioRecordatorio');
+
+btnInicioRecordatorio.addEventListener('click', (event) => {
+  ocultarInicio();
+  ocultarFuncionesListado();
+  document.getElementById('idAgregarGasto').style.display = "none";
+  document.getElementById('idAgregarIngreso').style.display = "none";
+  document.getElementById('idAgregarMedioDePago').style.display = "none";
+  document.getElementById('idAgregarConcepto').style.display = "none";
+
+  document.getElementById('idAgregarRecordatorio').style.display = "block";
+  
+});
+
+const btnInicioMedioDePago = document.getElementById('btnInicioMedioDePago');
+
+btnInicioMedioDePago.addEventListener('click', (event) => {
+  ocultarInicio();
+  ocultarFuncionesListado();
+  document.getElementById('idAgregarGasto').style.display = "none";
+  document.getElementById('idAgregarIngreso').style.display = "none";
+  document.getElementById('idAgregarRecordatorio').style.display = "none";
+  document.getElementById('idAgregarConcepto').style.display = "none";
+
+  document.getElementById('idAgregarMedioDePago').style.display = "block";
+  
+});
+
+const btnInicioConcepto = document.getElementById('btnInicioConcepto');
+
+btnInicioConcepto.addEventListener('click', (event) => {
+  ocultarInicio();
+  ocultarFuncionesListado();
+  document.getElementById('idAgregarGasto').style.display = "none";
+  document.getElementById('idAgregarIngreso').style.display = "none";
+  document.getElementById('idAgregarRecordatorio').style.display = "none";
+  document.getElementById('idAgregarMedioDePago').style.display = "none";
+
+  document.getElementById('idAgregarConcepto').style.display = "block";
   
 });
 
