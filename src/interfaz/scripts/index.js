@@ -38,6 +38,98 @@ topAppBar.listen('MDCTopAppBar:nav', () => {
   drawer.open = !drawer.open;
 });
 
+// --------------------BOTONES MENU LATERAL-----------------------
+
+function ocultarFuncionesAgregar(){
+  document.getElementById('idAgregarGasto').style.display = "none";
+  document.getElementById('idAgregarIngreso').style.display = "none";
+  document.getElementById('idAgregarRecordatorio').style.display = "none";
+  document.getElementById('idAgregarMedioDePago').style.display = "none";
+  document.getElementById('idAgregarConcepto').style.display = "none";
+}
+
+
+function ocultarFuncionesListado(){
+  document.getElementById('idListadoGastos').style.display = "none";
+  document.getElementById('idListadoIngresos').style.display = "none";
+  document.getElementById('idListadoRecordatorios').style.display = "none";
+  document.getElementById('idListadoMediosDePago').style.display = "none";
+  document.getElementById('idListadoConceptos').style.display = "none";
+}
+
+const btnMenuInicio = document.getElementById('btnMenuInicio');
+
+btnMenuInicio.addEventListener('click', (event) => {
+  ocultarFuncionesAgregar();
+  ocultarFuncionesListado();
+  
+});
+
+const btnMenuGastos = document.getElementById('btnMenuGastos');
+
+btnMenuGastos.addEventListener('click', (event) => {
+  ocultarFuncionesAgregar();
+  document.getElementById('idListadoIngresos').style.display = "none";
+  document.getElementById('idListadoRecordatorios').style.display = "none";
+  document.getElementById('idListadoMediosDePago').style.display = "none";
+  document.getElementById('idListadoConceptos').style.display = "none";
+
+  document.getElementById('idListadoGastos').style.display = "block";
+  
+});
+
+const btnMenuIngresos = document.getElementById('btnMenuIngresos');
+
+btnMenuIngresos.addEventListener('click', (event) => {
+  ocultarFuncionesAgregar();
+  document.getElementById('idListadoGastos').style.display = "none";
+  document.getElementById('idListadoRecordatorios').style.display = "none";
+  document.getElementById('idListadoMediosDePago').style.display = "none";
+  document.getElementById('idListadoConceptos').style.display = "none";
+
+  document.getElementById('idListadoIngresos').style.display = "block";
+  
+});
+
+const btnMenuRecordatorios = document.getElementById('btnMenuRecordatorios');
+
+btnMenuRecordatorios.addEventListener('click', (event) => {
+  ocultarFuncionesAgregar();
+  document.getElementById('idListadoGastos').style.display = "none";
+  document.getElementById('idListadoIngresos').style.display = "none";
+  document.getElementById('idListadoMediosDePago').style.display = "none";
+  document.getElementById('idListadoConceptos').style.display = "none";
+
+  document.getElementById('idListadoRecordatorios').style.display = "block";
+  
+});
+
+const btnMenuMediosDePago = document.getElementById('btnMenuMediosDePago');
+
+btnMenuMediosDePago.addEventListener('click', (event) => {
+  ocultarFuncionesAgregar();
+  document.getElementById('idListadoGastos').style.display = "none";
+  document.getElementById('idListadoIngresos').style.display = "none";
+  document.getElementById('idListadoRecordatorios').style.display = "none";
+  document.getElementById('idListadoConceptos').style.display = "none";
+
+  document.getElementById('idListadoMediosDePago').style.display = "block";
+  
+});
+
+const btnMenuConceptos = document.getElementById('btnMenuConceptos');
+
+btnMenuConceptos.addEventListener('click', (event) => {
+  ocultarFuncionesAgregar();
+  document.getElementById('idListadoGastos').style.display = "none";
+  document.getElementById('idListadoIngresos').style.display = "none";
+  document.getElementById('idListadoRecordatorios').style.display = "none";
+  document.getElementById('idListadoMediosDePago').style.display = "none";
+
+  document.getElementById('idListadoConceptos').style.display = "block";
+  
+});
+
 // ------------------------------------------------------------------------
 
 // const tabBar = new MDCTabBar(document.querySelector(".mdc-tab-bar"));
