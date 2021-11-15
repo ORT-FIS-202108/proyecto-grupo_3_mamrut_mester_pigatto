@@ -10,7 +10,7 @@
   <header class="mdc-top-app-bar app-bar" id="app-bar">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-        <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+        <button id="btnSidebarMenu" class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
         <span class="mdc-top-app-bar__title">Mis Gastos</span>
       </section>
     </div>
@@ -19,7 +19,7 @@
   <!---- MENU LATERAL ---->
 
   <aside class="mdc-drawer mdc-drawer--dismissible mdc-top-app-bar--fixed-adjust">
-    <div class="mdc-drawer__content">
+    <div id="sidenav" class="mdc-drawer__content">
       <div class="profile">
         <div class="avatar">
           <img src="./images/avatar.png" alt="" class="avatar-img" />
@@ -57,6 +57,21 @@
           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">add_shopping_cart</i>
           <span class="mdc-list-item__text">Conceptos</span>
         </a>
+        <a class="mdc-list-item" href="#" id="btnResultados">
+        <span class="mdc-list-item__ripple"></span>
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">assessment</i>
+        <span class="mdc-list-item__text">Resultados</span>
+      </a>
+      <a class="mdc-list-item" href="#" id="btnResumenGastos">
+        <span class="mdc-list-item__ripple"></span>
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">donut_small</i>
+        <span class="mdc-list-item__text">Resumen Gastos</span>
+      </a>
+      <a class="mdc-list-item" href="#" id="btnResumenIngresos">
+        <span class="mdc-list-item__ripple"></span>
+        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">donut_small</i>
+        <span class="mdc-list-item__text">Resumen Ingresos</span>
+      </a>
         <a class="mdc-list-item" href="#">
           <span class="mdc-list-item__ripple"></span>
           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">logout</i>
@@ -673,6 +688,32 @@
 
         <ul class="mdc-list" id="listado-conceptos"></ul>
 
+      </section>
+      
+      <!---- RESULTADOS ---->
+      <section class="agregar" id="idResultados">
+        <h2 class="titulo-section">Resultados</h2>
+        <div class="contenedor-grafico">
+          <canvas id="chartResultados" width="300" height="300"></canvas>
+      </div>
+      </section>
+
+      <!---- RESUMEN GASTOS ---->
+
+      <section class="agregar" id="idResumenGastos">
+        <h2 class="titulo-section">Resumen Gastos</h2>
+        <div class="contenedor-grafico">
+          <canvas id="donutGastos" width="300" height="300"></canvas>
+      </div>
+      </section>
+
+      <!---- RESUMEN INGRESOS ---->
+
+      <section class="agregar" id="idResumenIngresos">
+        <h2 class="titulo-section">Resumen Ingresos</h2>
+        <div class="contenedor-grafico">
+          <canvas id="donutIngresos" width="300" height="300"></canvas>
+      </div>
       </section>
 
     </main>

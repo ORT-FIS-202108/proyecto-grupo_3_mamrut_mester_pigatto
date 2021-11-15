@@ -8,10 +8,67 @@ import { MDCSnackbar } from '@material/snackbar';
 import { Sistema } from '../../dominio/sistema.mjs';
 import { Gasto, Ingreso, Recordatorio, MedioDePago, Concepto } from '../../dominio/clases.mjs';
 
+import {
+  Chart,
+  ArcElement,
+  LineElement,
+  BarElement,
+  PointElement,
+  BarController,
+  BubbleController,
+  DoughnutController,
+  LineController,
+  PieController,
+  PolarAreaController,
+  RadarController,
+  ScatterController,
+  CategoryScale,
+  LinearScale,
+  LogarithmicScale,
+  RadialLinearScale,
+  TimeScale,
+  TimeSeriesScale,
+  Decimation,
+  Filler,
+  Legend,
+  Title,
+  Tooltip,
+  SubTitle
+} from 'chart.js';
+
+Chart.register(
+  ArcElement,
+  LineElement,
+  BarElement,
+  PointElement,
+  BarController,
+  BubbleController,
+  DoughnutController,
+  LineController,
+  PieController,
+  PolarAreaController,
+  RadarController,
+  ScatterController,
+  CategoryScale,
+  LinearScale,
+  LogarithmicScale,
+  RadialLinearScale,
+  TimeScale,
+  TimeSeriesScale,
+  Decimation,
+  Filler,
+  Legend,
+  Title,
+  Tooltip,
+  SubTitle
+);
+document.body.style.backgroundImage = "url('../styles/images/fondo.png')";
+
 //const listaPeliculas = new ListaPeliculas();
 const s = new Sistema();
 ocultarFuncionesAgregar();
 ocultarFuncionesListado();
+ocultarResumen();
 
 // const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 // const topAppBar = new MDCTopAppBar(topAppBarElement);
@@ -40,6 +97,17 @@ topAppBar.listen('MDCTopAppBar:nav', () => {
   drawer.open = !drawer.open;
 });
 
+const btnMenuCostado = document.getElementById('btnSidebarMenu');
+const sideMenu = document.getElementById('sidenav');
+
+btnMenuCostado.addEventListener('click', () => {
+  if (sideMenu.style.display == "none") {
+    sideMenu.style.display = "block";
+  } else {
+    sideMenu.style.display = "none";
+  }
+});
+
 // --------------------BOTONES MENU LATERAL-----------------------
 
 function ocultarInicio(){
@@ -63,11 +131,18 @@ function ocultarFuncionesListado(){
   document.getElementById('idListadoConceptos').style.display = "none";
 }
 
+function ocultarResumen(){
+  document.getElementById('idResultados').style.display = "none";
+  document.getElementById('idResumenGastos').style.display = "none";
+  document.getElementById('idResumenIngresos').style.display = "none";
+}
+
 const btnMenuInicio = document.getElementById('btnMenuInicio');
 
 btnMenuInicio.addEventListener('click', (event) => {
   ocultarFuncionesAgregar();
   ocultarFuncionesListado();
+  ocultarResumen();
 
   document.getElementById('idInicio').style.display = "block";
   
@@ -78,13 +153,12 @@ const btnMenuGastos = document.getElementById('btnMenuGastos');
 btnMenuGastos.addEventListener('click', (event) => {
   ocultarInicio();
   ocultarFuncionesAgregar();
+  ocultarResumen();
   document.getElementById('idListadoIngresos').style.display = "none";
   document.getElementById('idListadoRecordatorios').style.display = "none";
   document.getElementById('idListadoMediosDePago').style.display = "none";
   document.getElementById('idListadoConceptos').style.display = "none";
-
   document.getElementById('idListadoGastos').style.display = "block";
-  
 });
 
 const btnMenuIngresos = document.getElementById('btnMenuIngresos');
@@ -92,13 +166,12 @@ const btnMenuIngresos = document.getElementById('btnMenuIngresos');
 btnMenuIngresos.addEventListener('click', (event) => {
   ocultarInicio();
   ocultarFuncionesAgregar();
+  ocultarResumen();
   document.getElementById('idListadoGastos').style.display = "none";
   document.getElementById('idListadoRecordatorios').style.display = "none";
   document.getElementById('idListadoMediosDePago').style.display = "none";
   document.getElementById('idListadoConceptos').style.display = "none";
-
   document.getElementById('idListadoIngresos').style.display = "block";
-  
 });
 
 const btnMenuRecordatorios = document.getElementById('btnMenuRecordatorios');
@@ -106,13 +179,12 @@ const btnMenuRecordatorios = document.getElementById('btnMenuRecordatorios');
 btnMenuRecordatorios.addEventListener('click', (event) => {
   ocultarInicio();
   ocultarFuncionesAgregar();
+  ocultarResumen();
   document.getElementById('idListadoGastos').style.display = "none";
   document.getElementById('idListadoIngresos').style.display = "none";
   document.getElementById('idListadoMediosDePago').style.display = "none";
   document.getElementById('idListadoConceptos').style.display = "none";
-
   document.getElementById('idListadoRecordatorios').style.display = "block";
-  
 });
 
 const btnMenuMediosDePago = document.getElementById('btnMenuMediosDePago');
@@ -120,13 +192,12 @@ const btnMenuMediosDePago = document.getElementById('btnMenuMediosDePago');
 btnMenuMediosDePago.addEventListener('click', (event) => {
   ocultarInicio();
   ocultarFuncionesAgregar();
+  ocultarResumen();
   document.getElementById('idListadoGastos').style.display = "none";
   document.getElementById('idListadoIngresos').style.display = "none";
   document.getElementById('idListadoRecordatorios').style.display = "none";
   document.getElementById('idListadoConceptos').style.display = "none";
-
   document.getElementById('idListadoMediosDePago').style.display = "block";
-  
 });
 
 const btnMenuConceptos = document.getElementById('btnMenuConceptos');
@@ -134,13 +205,12 @@ const btnMenuConceptos = document.getElementById('btnMenuConceptos');
 btnMenuConceptos.addEventListener('click', (event) => {
   ocultarInicio();
   ocultarFuncionesAgregar();
+  ocultarResumen();
   document.getElementById('idListadoGastos').style.display = "none";
   document.getElementById('idListadoIngresos').style.display = "none";
   document.getElementById('idListadoRecordatorios').style.display = "none";
   document.getElementById('idListadoMediosDePago').style.display = "none";
-
   document.getElementById('idListadoConceptos').style.display = "block";
-  
 });
 
 // --------------------BOTONES INICIO-----------------------
@@ -150,6 +220,7 @@ const btnInicioGasto = document.getElementById('btnInicioGasto');
 btnInicioGasto.addEventListener('click', (event) => {
   ocultarInicio();
   ocultarFuncionesListado();
+  ocultarResumen();
   document.getElementById('idAgregarIngreso').style.display = "none";
   document.getElementById('idAgregarRecordatorio').style.display = "none";
   document.getElementById('idAgregarMedioDePago').style.display = "none";
@@ -164,6 +235,7 @@ const btnInicioIngreso = document.getElementById('btnInicioIngreso');
 btnInicioIngreso.addEventListener('click', (event) => {
   ocultarInicio();
   ocultarFuncionesListado();
+  ocultarResumen();
   document.getElementById('idAgregarGasto').style.display = "none";
   document.getElementById('idAgregarRecordatorio').style.display = "none";
   document.getElementById('idAgregarMedioDePago').style.display = "none";
@@ -178,6 +250,7 @@ const btnInicioRecordatorio = document.getElementById('btnInicioRecordatorio');
 btnInicioRecordatorio.addEventListener('click', (event) => {
   ocultarInicio();
   ocultarFuncionesListado();
+  ocultarResumen();
   document.getElementById('idAgregarGasto').style.display = "none";
   document.getElementById('idAgregarIngreso').style.display = "none";
   document.getElementById('idAgregarMedioDePago').style.display = "none";
@@ -192,6 +265,7 @@ const btnInicioMedioDePago = document.getElementById('btnInicioMedioDePago');
 btnInicioMedioDePago.addEventListener('click', (event) => {
   ocultarInicio();
   ocultarFuncionesListado();
+  ocultarResumen();
   document.getElementById('idAgregarGasto').style.display = "none";
   document.getElementById('idAgregarIngreso').style.display = "none";
   document.getElementById('idAgregarRecordatorio').style.display = "none";
@@ -206,6 +280,7 @@ const btnInicioConcepto = document.getElementById('btnInicioConcepto');
 btnInicioConcepto.addEventListener('click', (event) => {
   ocultarInicio();
   ocultarFuncionesListado();
+  ocultarResumen();
   document.getElementById('idAgregarGasto').style.display = "none";
   document.getElementById('idAgregarIngreso').style.display = "none";
   document.getElementById('idAgregarRecordatorio').style.display = "none";
@@ -213,6 +288,132 @@ btnInicioConcepto.addEventListener('click', (event) => {
 
   document.getElementById('idAgregarConcepto').style.display = "block";
   
+});
+
+const btnResultados = document.getElementById('btnResultados');
+
+btnResultados.addEventListener('click', (event) => {
+  ocultarInicio();
+  ocultarFuncionesAgregar();
+  ocultarFuncionesListado();
+  document.getElementById('idResumenGastos').style.display = "none";
+  document.getElementById('idResumenIngresos').style.display = "none";
+  document.getElementById('idResultados').style.display = "block";
+});
+
+const btnResumenGastos = document.getElementById('btnResumenGastos');
+
+btnResumenGastos.addEventListener('click', (event) => {
+  ocultarInicio();
+  ocultarFuncionesAgregar();
+  ocultarFuncionesListado();
+  document.getElementById('idResultados').style.display = "none";
+  document.getElementById('idResumenIngresos').style.display = "none";
+  document.getElementById('idResumenGastos').style.display = "block";
+  
+});
+
+const btnResumenIngresos = document.getElementById('btnResumenIngresos');
+
+btnResumenIngresos.addEventListener('click', (event) => {
+  ocultarInicio();
+  ocultarFuncionesAgregar();
+  ocultarFuncionesListado();
+  document.getElementById('idResultados').style.display = "none";
+  document.getElementById('idResumenGastos').style.display = "none";
+  document.getElementById('idResumenIngresos').style.display = "block";
+  
+  
+});
+
+// ---------------------------- GRAFICOS -------------------------------
+
+const barChartContext = document.getElementById('chartResultados').getContext('2d');
+const barChart = new Chart(barChartContext, {
+    type: 'bar',
+    data: {
+        labels: ['Ingresos', 'Gastos'],
+        datasets: [{
+            label: 'Resultados',
+            data: [12, 8],
+            backgroundColor: [
+              'rgba(72, 181, 5, 0.5)',
+              'rgba(239, 93, 168, 0.5)',
+              ],
+              borderColor: [
+                'rgba(72, 181, 5, 1)',
+                'rgba(239, 93, 168, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+      responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+const donutIngresosContext = document.getElementById('donutIngresos').getContext('2d');
+const donutIngresos = new Chart(donutIngresosContext, {
+    type: 'doughnut',
+    data: {
+      labels: [
+        'Ingreso1',
+        'Ingreso2',
+        'Ingreso3'
+      ],
+      datasets: [{
+        label: 'Gastos',
+        data: [300, 50, 100],
+        backgroundColor: [
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)'
+        ],
+        hoverOffset: 4
+      }]
+    },
+    options: {
+      responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+const donutGastosContext = document.getElementById('donutGastos').getContext('2d');
+const donutGastos = new Chart(donutGastosContext, {
+    type: 'doughnut',
+    data: {
+      labels: [
+        'Gasto1',
+        'Gasto2',
+        'Gasto3'
+      ],
+      datasets: [{
+        label: 'Gastos',
+        data: [300, 50, 100],
+        backgroundColor: [
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)'
+        ],
+        hoverOffset: 4
+      }]
+    },
+    options: {
+      responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
 });
 
 // ------------------------------------------------------------------------
