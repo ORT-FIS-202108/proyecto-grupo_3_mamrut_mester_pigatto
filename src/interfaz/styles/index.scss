@@ -48,6 +48,10 @@ body {
   @include icon-button.core-styles;
 }
 
+.mdc-top-app-bar__title{
+  cursor: pointer;
+}
+
 section {
   text-align: center;
 }

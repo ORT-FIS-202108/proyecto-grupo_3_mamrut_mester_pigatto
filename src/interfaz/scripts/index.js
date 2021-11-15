@@ -103,6 +103,18 @@ btnMenuCostado.addEventListener('click', () => {
   }
 });
 
+// --------------------VOLVER AL INICIO CON BOTON SUPERIOR IZQ-----------------------
+
+const tituloMisGastos = document.getElementById('tituloMisGastos');
+
+tituloMisGastos.addEventListener('click', () => {
+  ocultarFuncionesAgregar();
+  ocultarFuncionesListado();
+  ocultarResumen();
+
+  document.getElementById('idInicio').style.display = "block";
+});
+
 // --------------------BOTONES MENU LATERAL-----------------------
 
 function ocultarInicio(){
