@@ -78,6 +78,10 @@ section {
     color: black;
 }
 
+.mdc-drawer {
+  background-color: white;
+}
+
 .mdc-drawer-app-content {
   flex: auto;
   overflow: auto;
@@ -277,12 +281,21 @@ section {
   color: grey;
 }
 
+.contenedor-grafico{
+  width: 40%;
+  height: 40%;
+}
+
 // .mdc-icon-button{
 //   height: 100%;
 // }
 
 @media screen and (max-width: 768px) {
   .mdc-button {
-      width: 100% !important;
+      width: 90% !important;
+  }
+
+  .mdc-drawer__content{
+    display: none;
   }
 }
