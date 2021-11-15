@@ -62,6 +62,7 @@ Chart.register(
   Tooltip,
   SubTitle
 );
+
 document.body.style.backgroundImage = "url('../styles/images/fondo.png')";
 
 //const listaPeliculas = new ListaPeliculas();
@@ -70,17 +71,11 @@ ocultarFuncionesAgregar();
 ocultarFuncionesListado();
 ocultarResumen();
 
-// const topAppBarElement = document.querySelector('.mdc-top-app-bar');
-// const topAppBar = new MDCTopAppBar(topAppBarElement);
-// const menuLateral = document.getElementById('app-bar');
-// const topAppBar = new MDCTopAppBar(menuLateral);
 const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 const topAppBar = new MDCTopAppBar(topAppBarElement);
 const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
 
 // --------------------ABRIR Y CERRAR MENU LATERAL-----------------------
-
-// La funcionalidad no funciona por lo que se reporto issue correspondiente (#46)
 
 const listEl = document.querySelector('.mdc-drawer .mdc-list');
 const mainContentEl = document.querySelector('.main-content');
@@ -485,15 +480,8 @@ const textFieldTopeMensual = new MDCTextField(document.getElementById('topeMensu
 
 const addButtonConcepto = new MDCRipple(document.getElementById('addButtonConcepto'));
 
-// --------------------VARIABLES LISTADO GASTOS-----------------------
-
-//Ver bien como hacer para generar un boton por elemento de la lista que se crea
-//ver si esto es necesario, si no borrar
-
-const iconButtonRipple = new MDCRipple(document.querySelector('.mdc-icon-button'));
-iconButtonRipple.unbounded = true;
-
 // --------------------AGREGAR GASTO-----------------------
+
 addButtonGastos.listen('click', () => { 
   let strFecha = textFieldFecha.value;
   let fecha = validarFecha(strFecha);
@@ -532,6 +520,7 @@ function gastoValido(gasto) {
 }
 
 // --------------------AGREGAR INGRESO -----------------------
+
 addButtonIngreso.listen('click', () => { 
   let strFecha = textFieldFechaIngreso.value;
   let fecha = validarFecha(strFecha);
@@ -565,6 +554,7 @@ function ingresoValido(ingreso) {
 }
 
 // --------------------AGREGAR RECORDATORIO -----------------------
+
 addButtonRecordatorio.listen('click', () => {
   let strFecha = textFieldFechaRecordatorio.value;
   let fecha = validarFecha(strFecha);
@@ -591,6 +581,7 @@ function recordatorioValido(recordatorio) {
 }
 
 // --------------------AGREGAR MEDIO DE PAGO -----------------------
+
 addButtonMedioDePago.listen('click', () => {
   let nombre = textFieldNombreMedioDePago.value;
   let pagoEnCuotas = selectAdmitePagos.value;
@@ -615,6 +606,7 @@ function medioDePagoValido(medioDePago) {
 }
 
 // --------------------AGREGAR CONCEPTO -----------------------
+
 addButtonConcepto.listen('click', () => {
   let nombre = textFieldNombreConcepto.value;
   let strMonto = textFieldTopeMensual.value;
