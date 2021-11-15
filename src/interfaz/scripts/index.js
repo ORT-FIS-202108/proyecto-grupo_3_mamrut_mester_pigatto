@@ -213,6 +213,52 @@ btnMenuConceptos.addEventListener('click', (event) => {
   document.getElementById('idListadoConceptos').style.display = "block";
 });
 
+const btnResultados = document.getElementById('btnResultados');
+
+btnResultados.addEventListener('click', (event) => {
+  ocultarInicio();
+  ocultarFuncionesAgregar();
+  ocultarFuncionesListado();
+  document.getElementById('idResumenGastos').style.display = "none";
+  document.getElementById('idResumenIngresos').style.display = "none";
+  document.getElementById('idResultados').style.display = "block";
+});
+
+const btnResumenGastos = document.getElementById('btnResumenGastos');
+
+btnResumenGastos.addEventListener('click', (event) => {
+  ocultarInicio();
+  ocultarFuncionesAgregar();
+  ocultarFuncionesListado();
+  document.getElementById('idResultados').style.display = "none";
+  document.getElementById('idResumenIngresos').style.display = "none";
+  document.getElementById('idResumenGastos').style.display = "block";
+  
+});
+
+const btnResumenIngresos = document.getElementById('btnResumenIngresos');
+
+btnResumenIngresos.addEventListener('click', (event) => {
+  ocultarInicio();
+  ocultarFuncionesAgregar();
+  ocultarFuncionesListado();
+  document.getElementById('idResultados').style.display = "none";
+  document.getElementById('idResumenGastos').style.display = "none";
+  document.getElementById('idResumenIngresos').style.display = "block";
+  
+  
+});
+
+const btnCerrarSesion = document.getElementById('btnCerrarSesion');
+
+btnCerrarSesion.addEventListener('click', (event) => {
+  ocultarFuncionesAgregar();
+  ocultarFuncionesListado();
+  ocultarResumen();
+
+  document.getElementById('idInicio').style.display = "block";
+});
+
 // --------------------BOTONES INICIO-----------------------
 
 const btnInicioGasto = document.getElementById('btnInicioGasto');
@@ -287,42 +333,6 @@ btnInicioConcepto.addEventListener('click', (event) => {
   document.getElementById('idAgregarMedioDePago').style.display = "none";
 
   document.getElementById('idAgregarConcepto').style.display = "block";
-  
-});
-
-const btnResultados = document.getElementById('btnResultados');
-
-btnResultados.addEventListener('click', (event) => {
-  ocultarInicio();
-  ocultarFuncionesAgregar();
-  ocultarFuncionesListado();
-  document.getElementById('idResumenGastos').style.display = "none";
-  document.getElementById('idResumenIngresos').style.display = "none";
-  document.getElementById('idResultados').style.display = "block";
-});
-
-const btnResumenGastos = document.getElementById('btnResumenGastos');
-
-btnResumenGastos.addEventListener('click', (event) => {
-  ocultarInicio();
-  ocultarFuncionesAgregar();
-  ocultarFuncionesListado();
-  document.getElementById('idResultados').style.display = "none";
-  document.getElementById('idResumenIngresos').style.display = "none";
-  document.getElementById('idResumenGastos').style.display = "block";
-  
-});
-
-const btnResumenIngresos = document.getElementById('btnResumenIngresos');
-
-btnResumenIngresos.addEventListener('click', (event) => {
-  ocultarInicio();
-  ocultarFuncionesAgregar();
-  ocultarFuncionesListado();
-  document.getElementById('idResultados').style.display = "none";
-  document.getElementById('idResumenGastos').style.display = "none";
-  document.getElementById('idResumenIngresos').style.display = "block";
-  
   
 });
 
