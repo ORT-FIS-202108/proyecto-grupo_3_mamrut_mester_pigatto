@@ -37,8 +37,6 @@ body {
   margin: 0px auto;
   display: flex;
   height: 100vh;
-  //background-image: url("./images/fondo.png");
-  //background-image: url("fondo.png");
 }
 
 .app-bar {
@@ -53,12 +51,6 @@ body {
 section {
   text-align: center;
 }
-
-// .content {
-//   margin: 10rem auto;
-//   padding-bottom: 20rem;
-//   text-align: center;
-// }
 
 .main-content {
   overflow: auto;
@@ -227,33 +219,6 @@ section {
   width: 40%;
 }
 
-// .mdc-card {
-//   text-align: start;
-//   padding: 10px;
-//   color: gray;
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   justify-content: space-between;
-//   margin-bottom: 10px;
-// }
-
-// .titulo-card{
-//   font-size: 18px;
-//   margin-bottom: 2px;
-// }
-
-// .titulo-card{
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-// }
-
-// .span-card{
-//   font-size: small;
-//   margin-left: 1px;
-// }
-
 .item-listado{
   border-radius: 6px;
   background-color:white;
@@ -285,10 +250,6 @@ section {
   width: 40%;
   height: 40%;
 }
-
-// .mdc-icon-button{
-//   height: 100%;
-// }
 
 @media screen and (max-width: 768px) {
   .mdc-button {
