@@ -1,17 +1,9 @@
-// import Pelicula from './pelicula.mjs';
 import {
   Gasto,
   Ingreso,
   Recordatorio,
   MedioDePago,
   Concepto} from './clases.mjs';
-
-// test('creación de una película', () => {
-//   let unaPelicula = new Pelicula("Indiana Jones", "Aventura", 1981);
-//   expect(unaPelicula.titulo).toBe("Indiana Jones");
-//   expect(unaPelicula.genero).toBe("Aventura");
-//   expect(unaPelicula.anio).toBe(1981);
-// });
 
 test('creación de un gasto', () => {
   const unGasto = new Gasto('20/02/2020', 'Vestimenta', 2500, 'Compra vestido casamiento Ana', 'Efectivo', 1, 'No');
