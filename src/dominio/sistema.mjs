@@ -27,24 +27,29 @@ export class Sistema {
 
   agregarConcepto(concepto) {
     this.conceptos.push(concepto);
-    if (concepto.tipo == "Gasto") {
+    if (concepto.tipo == 'Gasto') {
       this.conceptosGasto.push(concepto);
-    }
-    else {
+    } else {
       this.conceptosIngreso.push(concepto);
     }
   }
 
-  ordenarGastosPorFecha() { //Ordena de mas recientes a mas antiguos
-    this.gastos.sort(function (g1, g2) { return g2.fecha - g1.fecha });
+  ordenarGastosPorFecha() { // Ordena de mas recientes a mas antiguos
+    this.gastos.sort(function(g1, g2) {
+      return g2.fecha - g1.fecha;
+    });
   }
 
-  ordenarIngresosPorFecha() { //Ordena de mas recientes a mas antiguos
-    this.ingresos.sort(function (g1, g2) { return g2.fecha - g1.fecha });
+  ordenarIngresosPorFecha() { // Ordena de mas recientes a mas antiguos
+    this.ingresos.sort(function(g1, g2) {
+      return g2.fecha - g1.fecha;
+    });
   }
 
-  ordenarRecordatoriosPorFecha() { //Ordena de mas recientes a mas antiguos
-    this.recordatorios.sort(function (g1, g2) { return g2.fecha - g1.fecha });
+  ordenarRecordatoriosPorFecha() { // Ordena de mas recientes a mas antiguos
+    this.recordatorios.sort(function(g1, g2) {
+      return g2.fecha - g1.fecha;
+    });
   }
 
   borrarElemento(lista, pos) {
@@ -55,7 +60,6 @@ export class Sistema {
     let total = 0;
     for (let i = 0; i < (this.ingresos).length; i++) {
       total += this.ingresos[i].monto;
-
     }
     return total;
   }
@@ -64,13 +68,12 @@ export class Sistema {
     let total = 0;
     for (let i = 0; i < (this.gastos).length; i++) {
       total += this.gastos[i].monto;
-
     }
     return total;
   }
 
   ingresosPorConceptos() {
-    let lista = new Array(this.conceptosIngreso.length);
+    const lista = new Array(this.conceptosIngreso.length);
     for (let i = 0; i < lista.length; i++) {
       lista[i]=0;
     }
@@ -85,7 +88,7 @@ export class Sistema {
   }
 
   gastosPorConceptos() {
-    let lista = new Array(this.conceptosGasto.length);
+    const lista = new Array(this.conceptosGasto.length);
     for (let i = 0; i < lista.length; i++) {
       lista[i]=0;
     }
@@ -100,7 +103,7 @@ export class Sistema {
   }
 
   nombresConceptosGasto() {
-    let lista = new Array(this.conceptosGasto.length);
+    const lista = new Array(this.conceptosGasto.length);
     for (let i = 0; i < this.conceptosGasto.length; i++) {
       lista[i] = this.conceptosGasto[i].nombre;
     }
@@ -108,11 +111,10 @@ export class Sistema {
   }
 
   nombresConceptosIngreso() {
-    let lista = new Array(this.conceptosIngreso.length);
+    const lista = new Array(this.conceptosIngreso.length);
     for (let i = 0; i < this.conceptosIngreso.length; i++) {
       lista[i] = this.conceptosIngreso[i].nombre;
     }
     return lista;
   }
-
 }
