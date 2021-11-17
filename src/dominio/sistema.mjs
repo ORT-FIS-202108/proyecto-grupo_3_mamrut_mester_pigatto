@@ -27,12 +27,12 @@ export class Sistema {
 
   agregarConcepto(concepto) {
     this.conceptos.push(concepto);
-    if(concepto.tipo == "Gasto"){
+    if (concepto.tipo == "Gasto") {
       this.conceptosGasto.push(concepto);
     }
-    else{
+    else {
       this.conceptosIngreso.push(concepto);
-    }    
+    }
   }
 
   ordenarGastosPorFecha() { //Ordena de mas recientes a mas antiguos
@@ -69,34 +69,48 @@ export class Sistema {
     return total;
   }
 
-  ingresosPorConceptos(){
+  ingresosPorConceptos() {
     let lista = new Array(this.conceptosIngreso.length);
+    for (let i = 0; i < lista.length; i++) {
+      lista[i]=0;
+    }
     for (let i = 0; i < this.conceptosIngreso.length; i++) {
       for (let l = 0; l < this.ingresos.length; l++) {
-        if(this.ingresos[l].concepto == this.conceptosIngreso[i].nombre){
-          lista[i]+=this.ingresos[l].monto;
-        } 
+        if (this.ingresos[l].concepto === this.conceptosIngreso[i].nombre) {
+          lista[i] += this.ingresos[l].monto;
+        }
       }
     }
     return lista;
   }
 
-  gastosPorConceptos(){
+  gastosPorConceptos() {
     let lista = new Array(this.conceptosGasto.length);
+    for (let i = 0; i < lista.length; i++) {
+      lista[i]=0;
+    }
     for (let i = 0; i < this.conceptosGasto.length; i++) {
       for (let l = 0; l < this.gastos.length; l++) {
-        if(this.gastos[l].concepto == this.conceptosGasto[i].nombre){
-          lista[i]+=this.gastos[l].monto;
-        } 
+        if (this.gastos[l].concepto === this.conceptosGasto[i].nombre) {
+          lista[i] += this.gastos[l].monto;
+        }
       }
     }
     return lista;
   }
 
-  nombresConceptosGasto(){
+  nombresConceptosGasto() {
     let lista = new Array(this.conceptosGasto.length);
     for (let i = 0; i < this.conceptosGasto.length; i++) {
-      lista[i]=this.conceptosGasto[i].nombre;
+      lista[i] = this.conceptosGasto[i].nombre;
+    }
+    return lista;
+  }
+
+  nombresConceptosIngreso() {
+    let lista = new Array(this.conceptosIngreso.length);
+    for (let i = 0; i < this.conceptosIngreso.length; i++) {
+      lista[i] = this.conceptosIngreso[i].nombre;
     }
     return lista;
   }

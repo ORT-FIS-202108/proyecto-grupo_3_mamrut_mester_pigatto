@@ -69,6 +69,7 @@ const s = new Sistema();
 ocultarFuncionesAgregar();
 ocultarFuncionesListado();
 ocultarResumen();
+setValoresPorDefecto();
 
 const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 const topAppBar = new MDCTopAppBar(topAppBarElement);
@@ -113,6 +114,30 @@ tituloMisGastos.addEventListener('click', () => {
 
   document.getElementById('idInicio').style.display = "block";
 });
+
+//-------------------- SET VALORES PREDETERMINADOS --------------
+
+function setValoresPorDefecto(){
+  let m1 = new MedioDePago("Efectivo", "No");
+  s.agregarMedioDePago(m1);
+  let m2 = new MedioDePago("Débito", "No");
+  s.agregarMedioDePago(m2);
+  let m3 = new MedioDePago("Crédito", "Si");
+  s.agregarMedioDePago(m3);
+
+  let cG1 = new Concepto("Alimentacion", 0, "Gasto");
+  s.agregarConcepto(cG1);
+  let cG2 = new Concepto("Transporte", 0, "Gasto");
+  s.agregarConcepto(cG2);
+  let cG3 = new Concepto("Vestimenta", 0, "Gasto");
+  s.agregarConcepto(cG3);
+  let cI1 = new Concepto("Sueldo", 0, "Ingreso");
+  s.agregarConcepto(cI1);
+  let cI2 = new Concepto("Renta", 0, "Ingreso");
+  s.agregarConcepto(cI2);
+  let cI3 = new Concepto("Transferencias por gastos compartidos", 0, "Ingreso");
+  s.agregarConcepto(cI3);
+}
 
 // --------------------BOTONES MENU LATERAL-----------------------
 
@@ -199,6 +224,7 @@ btnMenuMediosDePago.addEventListener('click', (event) => {
   ocultarInicio();
   ocultarFuncionesAgregar();
   ocultarResumen();
+  actualizarListaMediosDePago();
   document.getElementById('idListadoGastos').style.display = "none";
   document.getElementById('idListadoIngresos').style.display = "none";
   document.getElementById('idListadoRecordatorios').style.display = "none";
@@ -212,6 +238,7 @@ btnMenuConceptos.addEventListener('click', (event) => {
   ocultarInicio();
   ocultarFuncionesAgregar();
   ocultarResumen();
+  actualizarListaConceptos();
   document.getElementById('idListadoGastos').style.display = "none";
   document.getElementById('idListadoIngresos').style.display = "none";
   document.getElementById('idListadoRecordatorios').style.display = "none";
@@ -250,6 +277,7 @@ btnResumenIngresos.addEventListener('click', (event) => {
   ocultarInicio();
   ocultarFuncionesAgregar();
   ocultarFuncionesListado();
+  setDatosIngresos();
   document.getElementById('idResultados').style.display = "none";
   document.getElementById('idResumenGastos').style.display = "none";
   document.getElementById('idResumenIngresos').style.display = "block";
@@ -352,11 +380,15 @@ function setDatosResultados(){
 }
 
 function setDatosGastos(){
-  console.log(s.nombresConceptosGasto());
-  console.log(s.gastosPorConceptos());
   donutGastos.data.labels = s.nombresConceptosGasto();
-  donutGastos.data.datasets.data = [s.gastosPorConceptos()];
+  donutGastos.data.datasets[0].data = s.gastosPorConceptos();
   donutGastos.update();
+}
+
+function setDatosIngresos(){
+  donutIngresos.data.labels = s.nombresConceptosIngreso();
+  donutIngresos.data.datasets[0].data = s.ingresosPorConceptos();
+  donutIngresos.update();
 }
 
 const barChartContext = document.getElementById('chartResultados').getContext('2d');
@@ -394,14 +426,10 @@ const donutIngresosContext = document.getElementById('donutIngresos').getContext
 const donutIngresos = new Chart(donutIngresosContext, {
   type: 'doughnut',
   data: {
-    labels: [
-      'Ingreso1',
-      'Ingreso2',
-      'Ingreso3'
-    ],
+    labels: [],
     datasets: [{
-      label: 'Gastos',
-      data: [300, 50, 100],
+      label: 'Ingresos',
+      data: [0, 0, 0],
       backgroundColor: [
         'rgb(255, 99, 132)',
         'rgb(54, 162, 235)',
@@ -427,7 +455,7 @@ const donutGastos = new Chart(donutGastosContext, {
     labels: [],
     datasets: [{
       label: 'Gastos',
-      data: [],
+      data: [0,0,0],
       backgroundColor: [
         'rgb(255, 99, 132)',
         'rgb(54, 162, 235)',
@@ -909,35 +937,22 @@ function actualizarListaConceptos() {
     const item = generarLiConceptos(listaConceptos[i], i);
     lista.appendChild(item);
   }
-  actualizarListaConceptosGasto();
+  //actualizarListaConceptosGasto();
 }
 
-//Actualiza lista conceptos en agregarIngreso
-function actualizarListaConceptosGasto(){
-  const lista = document.getElementById('listaConceptosGasto');
-  lista.innerHTML = '';
-  const listaConceptos = s.conceptosGasto;
-  for (let i = 0; i < listaConceptos.length; i++) {
-    const item = generarLiConceptosGastos(listaConceptos[i]);
-    lista.appendChild(item);
-  }
-}
+//Actualiza lista conceptos en agregarGasto
+// function actualizarListaConceptosGasto(){
+//   const lista = document.getElementById('listaConceptosGasto');
+//   lista.innerHTML = '';
+//   const listaConceptos = s.conceptosGasto;
+//   for (let i = 0; i < listaConceptos.length; i++) {
+//     const item = generarLiConceptosGastos(listaConceptos[i]);
+//     lista.appendChild(item);
+//   }
+// }
 
 
-function generarLiConceptos(concepto) {
-  const li = document.createElement('li');
-  const span1 = document.createElement('span');
-  const span2 = document.createElement('span');
-  span2.appendChild(document.createTextNode(concepto.nombre));
-  span1.className = 'mdc-list-item__ripple';
-  span2.className = 'mdc-list-item__text';
-  li.appendChild(span1);
-  li.appendChild(span2);
-  li.className = 'mdc-list-item';
-  return li;
-}
-
-function generarLiConceptosGastos(concepto, pos) {
+function generarLiConceptos(concepto, pos) {
   const li = document.createElement('li');
   const span1 = document.createElement('span');
   const div1 = document.createElement('div');
@@ -965,6 +980,24 @@ function generarLiConceptosGastos(concepto, pos) {
   li.className = 'item-listado mdc-list-item';
   return li;
 }
+
+/*
+function generarLiConceptosGastos(concepto) {
+  const li = document.createElement('li');
+  const span1 = document.createElement('span');
+  const span2 = document.createElement('span');
+  span2.appendChild(document.createTextNode(concepto.nombre));
+  span1.className = 'mdc-list-item__ripple';
+  span2.className = 'mdc-list-item__text';
+  li.dataset.value = "concepto.nombre";
+  li.ariaSelected = "false";
+  li.setAttribute('role', "option");
+  li.appendChild(span1);
+  li.appendChild(span2);
+  li.className = 'mdc-list-item';
+  return li;
+}
+*/
 
 function borrarConcepto(btn) {
   btn.addEventListener('click', () => {
