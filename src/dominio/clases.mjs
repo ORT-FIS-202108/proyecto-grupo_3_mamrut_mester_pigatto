@@ -36,9 +36,10 @@ export class MedioDePago {
 }
 
 export class Concepto {
-  constructor(nombre, topeMensual) {
+  constructor(nombre, topeMensual, tipo) {
     this.nombre = nombre;
     this.topeMensual = topeMensual;
+    this.tipo = tipo;
   }
 }
 
