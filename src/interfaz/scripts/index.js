@@ -1,10 +1,8 @@
 import { MDCRipple } from '@material/ripple';
 import { MDCTopAppBar } from '@material/top-app-bar';
-import { MDCTabBar } from '@material/tab-bar';
 import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
 import { MDCDrawer } from "@material/drawer";
-import { MDCSnackbar } from '@material/snackbar';
 import { Sistema } from '../../dominio/sistema.mjs';
 import { Gasto, Ingreso, Recordatorio, MedioDePago, Concepto } from '../../dominio/clases.mjs';
 
@@ -474,22 +472,6 @@ const donutGastos = new Chart(donutGastosContext, {
   }
 });
 
-// ------------------------------------------------------------------------
-
-// const tabBar = new MDCTabBar(document.querySelector(".mdc-tab-bar"));
-// tabBar.listen("MDCTabBar:activated", (activatedEvent) => {
-//   document.querySelectorAll(".content").forEach((element, index) => {
-//     if (index === activatedEvent.detail.index) {
-//       element.classList.remove("sample-content--hidden");
-//     } else {
-//       element.classList.add("sample-content--hidden");
-//     }
-//   });
-// });
-// const textFieldTitle = new MDCTextField(document.getElementById('title'));
-// const textFieldYear = new MDCTextField(document.getElementById('year'));
-// const selectGenre = new MDCSelect(document.querySelector('.mdc-select'));
-
 // --------------------VARIABLES GASTOS-----------------------
 
 const textFieldFecha = new MDCTextField(document.getElementById('fecha'));
@@ -937,20 +919,7 @@ function actualizarListaConceptos() {
     const item = generarLiConceptos(listaConceptos[i], i);
     lista.appendChild(item);
   }
-  //actualizarListaConceptosGasto();
 }
-
-//Actualiza lista conceptos en agregarGasto
-// function actualizarListaConceptosGasto(){
-//   const lista = document.getElementById('listaConceptosGasto');
-//   lista.innerHTML = '';
-//   const listaConceptos = s.conceptosGasto;
-//   for (let i = 0; i < listaConceptos.length; i++) {
-//     const item = generarLiConceptosGastos(listaConceptos[i]);
-//     lista.appendChild(item);
-//   }
-// }
-
 
 function generarLiConceptos(concepto, pos) {
   const li = document.createElement('li');
@@ -980,24 +949,6 @@ function generarLiConceptos(concepto, pos) {
   li.className = 'item-listado mdc-list-item';
   return li;
 }
-
-/*
-function generarLiConceptosGastos(concepto) {
-  const li = document.createElement('li');
-  const span1 = document.createElement('span');
-  const span2 = document.createElement('span');
-  span2.appendChild(document.createTextNode(concepto.nombre));
-  span1.className = 'mdc-list-item__ripple';
-  span2.className = 'mdc-list-item__text';
-  li.dataset.value = "concepto.nombre";
-  li.ariaSelected = "false";
-  li.setAttribute('role', "option");
-  li.appendChild(span1);
-  li.appendChild(span2);
-  li.className = 'mdc-list-item';
-  return li;
-}
-*/
 
 function borrarConcepto(btn) {
   btn.addEventListener('click', () => {
