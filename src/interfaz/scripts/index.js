@@ -519,17 +519,20 @@ const addButtonConcepto = new MDCRipple(document.getElementById('addButtonConcep
 // --------------------AGREGAR GASTO-----------------------
 
 addButtonGastos.listen('click', () => {
-  let strFecha = textFieldFecha.value;
-  let fecha = validarFecha(strFecha);
-  let concepto = selectConcepto.value;
-  let strMonto = textFieldTotal.value;
-  let monto = validarMonto(strMonto);
-  let descrip = textFieldDescripcion.value;
-  let medioPago = selectMediosDePago.value;
-  let cantPagos = textFieldPagos.value;
-  let repetir = selectRepetirMensualmente.value;
-  let gasto = new Gasto(fecha, concepto, monto, descrip, medioPago, cantPagos, repetir);
-  if (gastoValido(gasto)) {
+  if(textFieldFecha.value == "" || selectConcepto.value == "" || textFieldTotal.value == "" || textFieldDescripcion.value == "" || selectMediosDePago.value == "" || textFieldPagos.value == "" || selectRepetirMensualmente.value == ""){
+    alert('Por favor, complete todos los campos');
+  }
+  else{
+    let strFecha = textFieldFecha.value;
+    let fecha = validarFecha(strFecha);
+    let concepto = selectConcepto.value;
+    let strMonto = textFieldTotal.value;
+    let monto = validarMonto(strMonto);
+    let descrip = textFieldDescripcion.value;
+    let medioPago = selectMediosDePago.value;
+    let cantPagos = textFieldPagos.value;
+    let repetir = selectRepetirMensualmente.value;
+    let gasto = new Gasto(fecha, concepto, monto, descrip, medioPago, cantPagos, repetir);
     s.agregarGasto(gasto);
     textFieldFecha.value = "";
     selectConcepto.value = "";
@@ -538,136 +541,90 @@ addButtonGastos.listen('click', () => {
     selectMediosDePago.value = "";
     textFieldPagos.value = "";
     selectRepetirMensualmente.value = "";
+    s.ordenarGastosPorFecha();
+    actualizarListaGastos();
   }
-  s.ordenarGastosPorFecha();
-  actualizarListaGastos();
 })
-
-
-function gastoValido(gasto) {
-  let valido = true;
-  if (gasto.concepto == "" || gasto.monto == "" || gasto.descrip == "" || gasto.medioPago == "" || gasto.cantPagos == 0 || gasto.repetir == "") {
-    valido = false;
-  }
-  if (!valido) {
-    alert("Complete todos los campos");
-  }
-  return valido;
-}
 
 // --------------------AGREGAR INGRESO -----------------------
 
 addButtonIngreso.listen('click', () => {
-  let strFecha = textFieldFechaIngreso.value;
-  let fecha = validarFecha(strFecha);
-  let concepto = selectConceptoIngreso.value;
-  let strMonto = textFieldTotalIngreso.value;
-  let monto = validarMonto(strMonto);
-  let descrip = textFieldDescripcionIngreso.value;
-  let medioPago = selectMediosDePagoIngreso.value;
-  let ingreso = new Ingreso(fecha, concepto, monto, descrip, medioPago);
-  if (ingresoValido(ingreso)) {
+  if(textFieldFechaIngreso.value == "" || selectConceptoIngreso.value == "" || textFieldTotalIngreso.value == "" || textFieldDescripcionIngreso.value == "" || selectMediosDePagoIngreso.value == ""){
+    alert('Por favor, complete todos los campos');
+  }else{
+    let strFecha = textFieldFechaIngreso.value;
+    let fecha = validarFecha(strFecha);
+    let concepto = selectConceptoIngreso.value;
+    let strMonto = textFieldTotalIngreso.value;
+    let monto = validarMonto(strMonto);
+    let descrip = textFieldDescripcionIngreso.value;
+    let medioPago = selectMediosDePagoIngreso.value;
+    let ingreso = new Ingreso(fecha, concepto, monto, descrip, medioPago);
     s.agregarIngreso(ingreso);
     textFieldFechaIngreso.value = "";
     selectConceptoIngreso.value = "";
     textFieldTotalIngreso.value = "";
     textFieldDescripcionIngreso.value = "";
     selectMediosDePagoIngreso.value = "";
+    s.ordenarIngresosPorFecha();
+    actualizarListaIngresos();
   }
-  s.ordenarIngresosPorFecha();
-  actualizarListaIngresos();
 })
-
-function ingresoValido(ingreso) {
-  let valido = true;
-  if (ingreso.concepto == "" || ingreso.monto == "" || ingreso.descrip == "" || ingreso.medioPago == "") {
-    valido = false;
-  }
-  if (!valido) {
-    alert("Complete todos los campos");
-  }
-  return valido;
-}
 
 // --------------------AGREGAR RECORDATORIO -----------------------
 
 addButtonRecordatorio.listen('click', () => {
-  let strFecha = textFieldFechaRecordatorio.value;
-  let fecha = validarFecha(strFecha);
-  let texto = textFieldRecordatorio.value;
-  let rec = new Recordatorio(fecha, texto);
-  if (recordatorioValido(rec)) {
+  if (textFieldFechaRecordatorio.value == "" || textFieldRecordatorio.value == ""){
+    alert('Por favor, complete todos los campos');
+  }
+  else{
+    let strFecha = textFieldFechaRecordatorio.value;
+    let fecha = validarFecha(strFecha);
+    let texto = textFieldRecordatorio.value;
+    let rec = new Recordatorio(fecha, texto);
     s.agregarRecordatorio(rec);
     textFieldFechaRecordatorio.value = "";
     textFieldRecordatorio.value = "";
+    s.ordenarRecordatoriosPorFecha();
+    actualizarListaRecordatorios();
   }
-  s.ordenarRecordatoriosPorFecha();
-  actualizarListaRecordatorios();
 })
-
-function recordatorioValido(recordatorio) {
-  let valido = true;
-  if (recordatorio.recordatorio == "") {
-    valido = false;
-  }
-  if (!valido) {
-    alert("Complete todos los campos");
-  }
-  return valido;
-}
 
 // --------------------AGREGAR MEDIO DE PAGO -----------------------
 
 addButtonMedioDePago.listen('click', () => {
+  if (textFieldNombreMedioDePago.value == "" || selectAdmitePagos.value == ""){
+    alert('Por favor, complete todos los campos');
+  }
   let nombre = textFieldNombreMedioDePago.value;
   let pagoEnCuotas = selectAdmitePagos.value;
   let medioDePago = new MedioDePago(nombre, pagoEnCuotas);
-  if (medioDePagoValido(medioDePago)) {
-    s.agregarMedioDePago(medioDePago);
-    textFieldNombreMedioDePago.value = "";
-    selectAdmitePagos.value = "";
-  }
+  s.agregarMedioDePago(medioDePago);
+  textFieldNombreMedioDePago.value = "";
+  selectAdmitePagos.value = "";
   actualizarListaMediosDePago();
 })
-
-function medioDePagoValido(medioDePago) {
-  let valido = true;
-  if (medioDePago.nombre == "" || medioDePago.pagoEnCuotas == "") {
-    valido = false;
-  }
-  if (!valido) {
-    alert("Complete todos los campos");
-  }
-  return valido;
-}
 
 // --------------------AGREGAR CONCEPTO -----------------------
 
 addButtonConcepto.listen('click', () => {
-  let nombre = textFieldNombreConcepto.value;
-  let strMonto = textFieldTopeMensual.value;
-  let topeMensual = validarMonto(strMonto);
-  let tipo = selectTipoConcepto.value;
-  let concepto = new Concepto(nombre, topeMensual, tipo);
-  if (conceptoValido(concepto)) {
+  if (textFieldNombreConcepto.value == "" || textFieldTopeMensual.value == "" || selectTipoConcepto.value == ""){
+    alert('Por favor, complete todos los campos');
+  }
+  else{
+    let nombre = textFieldNombreConcepto.value;
+    let strMonto = textFieldTopeMensual.value;
+    let topeMensual = validarMonto(strMonto);
+    let tipo = selectTipoConcepto.value;
+    let concepto = new Concepto(nombre, topeMensual, tipo);
     s.agregarConcepto(concepto);
     textFieldNombreConcepto.value = "";
     textFieldTopeMensual.value = "";
     selectTipoConcepto.value = "";
+    actualizarListaConceptos();
   }
-  actualizarListaConceptos();
+  
 })
-
-function conceptoValido(concepto) {
-  let valido = true;
-  if (concepto.nombre == "" || concepto.topeMensual == "" || concepto.tipo == "") {
-    valido = false;
-  }
-  if (!valido) {
-    alert("Complete todos los campos");
-  }
-  return valido;
-}
 
 function validarMonto(strMonto) { //que sea un número no negativo
   let monto = null;
