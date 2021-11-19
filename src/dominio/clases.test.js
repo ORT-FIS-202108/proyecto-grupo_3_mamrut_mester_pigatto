@@ -38,7 +38,8 @@ test('creación de un Medio de Pago', () => {
 });
 
 test('creación de un Concepto', () => {
-  const unConcepto = new Concepto('Mudanza', '22000');
+  const unConcepto = new Concepto('Mudanza', '22000', 'Gasto');
   expect(unConcepto.nombre).toBe('Mudanza');
   expect(unConcepto.topeMensual).toBe('22000');
+  expect(unConcepto.tipo).toBe('Gasto');
 });
