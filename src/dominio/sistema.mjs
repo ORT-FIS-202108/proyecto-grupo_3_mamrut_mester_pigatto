@@ -1,4 +1,4 @@
-export class Sistema {
+export default class Sistema {
   constructor() {
     this.gastos = [];
     this.ingresos = [];
@@ -53,7 +53,9 @@ export class Sistema {
   }
 
   borrarElemento(lista, pos) {
-    lista.splice(pos, 1);
+    if (lista.length > pos) {
+      lista.splice(pos, 1);
+    }
   }
 
   totalIngresos() {

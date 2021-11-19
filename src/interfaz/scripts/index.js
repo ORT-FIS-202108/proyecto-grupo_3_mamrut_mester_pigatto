@@ -3,7 +3,7 @@ import { MDCTopAppBar } from '@material/top-app-bar';
 import { MDCTextField } from '@material/textfield';
 import { MDCSelect } from '@material/select';
 import { MDCDrawer } from "@material/drawer";
-import { Sistema } from '../../dominio/sistema.mjs';
+import Sistema from '../../dominio/sistema.mjs';
 import { Gasto, Ingreso, Recordatorio, MedioDePago, Concepto } from '../../dominio/clases.mjs';
 
 import {
