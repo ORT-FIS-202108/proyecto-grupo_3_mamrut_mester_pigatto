@@ -608,13 +608,16 @@ addButtonMedioDePago.listen('click', () => {
 // --------------------AGREGAR CONCEPTO -----------------------
 
 addButtonConcepto.listen('click', () => {
-  if (textFieldNombreConcepto.value == "" || textFieldTopeMensual.value == "" || selectTipoConcepto.value == ""){
+  if (textFieldNombreConcepto.value == "" || selectTipoConcepto.value == ""){
     alert('Por favor, complete todos los campos');
   }
   else{
     let nombre = textFieldNombreConcepto.value;
     let strMonto = textFieldTopeMensual.value;
-    let topeMensual = validarMonto(strMonto);
+    let topeMensual = 0;
+    if(strMonto !== ""){
+      topeMensual = validarMonto(strMonto);
+    }
     let tipo = selectTipoConcepto.value;
     let concepto = new Concepto(nombre, topeMensual, tipo);
     s.agregarConcepto(concepto);
