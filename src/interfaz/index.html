@@ -10,7 +10,8 @@
   <header class="mdc-top-app-bar app-bar" id="app-bar">
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-        <button id="btnSidebarMenu" class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+        <button id="btnSidebarMenu"
+          class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
         <span class="mdc-top-app-bar__title" id="tituloMisGastos">Mis Gastos</span>
       </section>
     </div>
@@ -58,24 +59,19 @@
           <span class="mdc-list-item__text">Conceptos</span>
         </a>
         <a class="mdc-list-item" href="#" id="btnResultados">
-        <span class="mdc-list-item__ripple"></span>
-        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">assessment</i>
-        <span class="mdc-list-item__text">Resultados</span>
-      </a>
-      <a class="mdc-list-item" href="#" id="btnResumenGastos">
-        <span class="mdc-list-item__ripple"></span>
-        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">donut_small</i>
-        <span class="mdc-list-item__text">Resumen Gastos</span>
-      </a>
-      <a class="mdc-list-item" href="#" id="btnResumenIngresos">
-        <span class="mdc-list-item__ripple"></span>
-        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">donut_small</i>
-        <span class="mdc-list-item__text">Resumen Ingresos</span>
-      </a>
-        <a class="mdc-list-item" href="#" id="btnCerrarSesion">
           <span class="mdc-list-item__ripple"></span>
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">logout</i>
-          <span class="mdc-list-item__text">Cerrar sesión</span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">assessment</i>
+          <span class="mdc-list-item__text">Resultados</span>
+        </a>
+        <a class="mdc-list-item" href="#" id="btnResumenGastos">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">donut_small</i>
+          <span class="mdc-list-item__text">Resumen Gastos</span>
+        </a>
+        <a class="mdc-list-item" href="#" id="btnResumenIngresos">
+          <span class="mdc-list-item__ripple"></span>
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">donut_small</i>
+          <span class="mdc-list-item__text">Resumen Ingresos</span>
         </a>
       </div>
     </div>
@@ -369,7 +365,8 @@
                     Renta
                   </span>
                 </li>
-                <li class="mdc-list-item" aria-selected="false" data-value="Transferencia por gastos compartidos" role="option">
+                <li class="mdc-list-item" aria-selected="false" data-value="Transferencia por gastos compartidos"
+                  role="option">
                   <span class="mdc-list-item__ripple"></span>
                   <span class="mdc-list-item__text">
                     Transferencias por gastos compartidos
@@ -647,32 +644,9 @@
         <h2 class="titulo-section">Lista Gastos</h2>
 
         <ul class="mdc-list" id="listado-gastos">
-          <li class="item-listado mdc-list-item" tabindex="0">
-            <span class="mdc-list-item__ripple"></span>
-            <div class="titulo-item-listado">
-              <span class="titulo-item-listado-text mdc-list-item__text">Vestimenta</span>
-              <span class="item-listado-text mdc-list-item__text">Compra Zara</span>
-              <span class="item-listado-text mdc-list-item__text">$ Santander - 26/10/2021</span>
-            </div>
-            <button class="mdc-icon-button material-icons">
-              <div class="mdc-icon-button__ripple"></div>
-              edit
-            </button>
+          <li>
+            <h3 class="titulo-listas-vacias">Aún no hay gastos ingresados!</h3>
           </li>
-
-          <li class="item-listado mdc-list-item" tabindex="0">
-            <span class="mdc-list-item__ripple"></span>
-            <div class="titulo-item-listado">
-              <span class="titulo-item-listado-text mdc-list-item__text">Transporte</span>
-              <span class="item-listado-text mdc-list-item__text">Pago Nafta</span>
-              <span class="item-listado-text mdc-list-item__text">$ Itau - 20/10/2021</span>
-            </div>
-            <button class="mdc-icon-button material-icons">
-              <div class="mdc-icon-button__ripple"></div>
-              edit
-            </button>
-          </li>
-
         </ul>
 
       </section>
@@ -682,7 +656,11 @@
 
         <h2 class="titulo-section">Lista Ingresos</h2>
 
-        <ul class="mdc-list" id="listado-ingresos"></ul>
+        <ul class="mdc-list" id="listado-ingresos">
+          <li>
+            <h3 class="titulo-listas-vacias">Aún no hay ingresos ingresados!</h3>
+          </li>
+        </ul>
 
       </section>
 
@@ -691,7 +669,11 @@
 
         <h2 class="titulo-section">Lista Recordatorios</h2>
 
-        <ul class="mdc-list" id="listado-recordatorios"></ul>
+        <ul class="mdc-list" id="listado-recordatorios">
+          <li>
+            <h3 class="titulo-listas-vacias">Aún no hay recordatorios ingresados!</h3>
+          </li>
+        </ul>
 
       </section>
 
@@ -707,18 +689,22 @@
       <!---- LISTADO CONCEPTOS ---->
       <section class="listado" id="idListadoConceptos">
 
-        <h2 class="titulo-section">Lista Conceptos</h2>
+        <h2 class="titulo-section">Lista Conceptos Gastos</h2>
 
-        <ul class="mdc-list" id="listado-conceptos"></ul>
+        <ul class="mdc-list" id="listado-conceptos-gasto"></ul>
+
+        <h2 class="titulo-section">Lista Conceptos Ingresos</h2>
+
+        <ul class="mdc-list" id="listado-conceptos-ingreso"></ul>
 
       </section>
-      
+
       <!---- RESULTADOS ---->
       <section class="agregar" id="idResultados">
         <h2 class="titulo-section">Resultados</h2>
         <div class="contenedor-grafico">
           <canvas id="chartResultados" width="300" height="300"></canvas>
-      </div>
+        </div>
       </section>
 
       <!---- RESUMEN GASTOS ---->
@@ -727,7 +713,7 @@
         <h2 class="titulo-section">Resumen Gastos</h2>
         <div class="contenedor-grafico">
           <canvas id="donutGastos" width="300" height="300"></canvas>
-      </div>
+        </div>
       </section>
 
       <!---- RESUMEN INGRESOS ---->
@@ -736,7 +722,7 @@
         <h2 class="titulo-section">Resumen Ingresos</h2>
         <div class="contenedor-grafico">
           <canvas id="donutIngresos" width="300" height="300"></canvas>
-      </div>
+        </div>
       </section>
 
     </main>

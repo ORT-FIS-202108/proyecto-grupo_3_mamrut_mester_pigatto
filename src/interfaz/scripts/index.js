@@ -236,7 +236,8 @@ btnMenuConceptos.addEventListener('click', (event) => {
   ocultarInicio();
   ocultarFuncionesAgregar();
   ocultarResumen();
-  actualizarListaConceptos();
+  actualizarListaConceptosGasto();
+  actualizarListaConceptosIngreso();
   document.getElementById('idListadoGastos').style.display = "none";
   document.getElementById('idListadoIngresos').style.display = "none";
   document.getElementById('idListadoRecordatorios').style.display = "none";
@@ -281,16 +282,6 @@ btnResumenIngresos.addEventListener('click', (event) => {
   document.getElementById('idResumenIngresos').style.display = "block";
 
 
-});
-
-const btnCerrarSesion = document.getElementById('btnCerrarSesion');
-
-btnCerrarSesion.addEventListener('click', (event) => {
-  ocultarFuncionesAgregar();
-  ocultarFuncionesListado();
-  ocultarResumen();
-
-  document.getElementById('idInicio').style.display = "block";
 });
 
 // --------------------BOTONES INICIO-----------------------
@@ -608,13 +599,16 @@ addButtonMedioDePago.listen('click', () => {
 // --------------------AGREGAR CONCEPTO -----------------------
 
 addButtonConcepto.listen('click', () => {
-  if (textFieldNombreConcepto.value == "" || textFieldTopeMensual.value == "" || selectTipoConcepto.value == ""){
+  if (textFieldNombreConcepto.value == "" || selectTipoConcepto.value == ""){
     alert('Por favor, complete todos los campos');
   }
   else{
     let nombre = textFieldNombreConcepto.value;
     let strMonto = textFieldTopeMensual.value;
-    let topeMensual = validarMonto(strMonto);
+    let topeMensual = 0;
+    if(strMonto !== ""){
+      topeMensual = validarMonto(strMonto);
+    }
     let tipo = selectTipoConcepto.value;
     let concepto = new Concepto(nombre, topeMensual, tipo);
     s.agregarConcepto(concepto);
@@ -679,9 +673,7 @@ function generarLi(gasto, pos) {
   const div2 = document.createElement('div');
   span2.appendChild(document.createTextNode(gasto.concepto));
   span3.appendChild(document.createTextNode(gasto.descrip));
-  let mes = parseInt(gasto.fecha.getMonth()) + 1;
-  let texto = "$ " + gasto.medioPago + " - " + gasto.fecha.getDate() + "/" + gasto.fecha.getDate() + mes + "/" + gasto.fecha.getFullYear();
-  span4.appendChild(document.createTextNode(texto));
+  span4.appendChild(document.createTextNode(gasto.fecha.toLocaleDateString()));
   btn1.appendChild(document.createTextNode("delete"));
   btn1.setAttribute('item', pos);
   span1.className = 'mdc-list-item__ripple';
@@ -734,9 +726,7 @@ function generarLiIngresos(ingreso, pos) {
   const div2 = document.createElement('div');
   span2.appendChild(document.createTextNode(ingreso.concepto));
   span3.appendChild(document.createTextNode(ingreso.descrip));
-  let mes = parseInt(ingreso.fecha.getMonth()) + 1;
-  let texto = "$ " + ingreso.medioPago + " - " + ingreso.fecha.getDate() + "/" + ingreso.fecha.getDate() + mes + "/" + ingreso.fecha.getFullYear();
-  span4.appendChild(document.createTextNode(texto));
+  span4.appendChild(document.createTextNode(ingreso.fecha.toLocaleDateString()));
   btn1.appendChild(document.createTextNode("delete"));
   btn1.setAttribute('item', pos);
   span1.className = 'mdc-list-item__ripple';
@@ -787,9 +777,7 @@ function generarLiRecordatorios(recordatorio, pos) {
   const btn1 = document.createElement('button');
   const div2 = document.createElement('div');
   span2.appendChild(document.createTextNode(recordatorio.recordatorio));
-  let mes = parseInt(recordatorio.fecha.getMonth()) + 1;
-  let texto = recordatorio.fecha.getDate() + "/" + recordatorio.fecha.getDate() + mes + "/" + recordatorio.fecha.getFullYear();
-  span3.appendChild(document.createTextNode(texto));
+  span3.appendChild(document.createTextNode(recordatorio.fecha.toLocaleDateString()));
   btn1.appendChild(document.createTextNode("delete"));
   btn1.setAttribute('item', pos);
   span1.className = 'mdc-list-item__ripple';
@@ -868,10 +856,20 @@ function borrarMedioDePago(btn) {
 
 //------------------------- LISTA DE CONCEPTOS -----------------------
 
-function actualizarListaConceptos() {
-  const lista = document.getElementById('listado-conceptos');
+function actualizarListaConceptosGasto() {
+  const lista = document.getElementById('listado-conceptos-gasto');
   lista.innerHTML = '';
-  const listaConceptos = s.conceptos;
+  const listaConceptos = s.conceptosGasto;
+  for (let i = 0; i < listaConceptos.length; i++) {
+    const item = generarLiConceptos(listaConceptos[i], i);
+    lista.appendChild(item);
+  }
+}
+
+function actualizarListaConceptosIngreso() {
+  const lista = document.getElementById('listado-conceptos-ingreso');
+  lista.innerHTML = '';
+  const listaConceptos = s.conceptosIngreso;
   for (let i = 0; i < listaConceptos.length; i++) {
     const item = generarLiConceptos(listaConceptos[i], i);
     lista.appendChild(item);
