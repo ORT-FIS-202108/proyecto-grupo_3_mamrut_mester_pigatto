@@ -8,6 +8,8 @@ test('Creación de un sistema', () => {
   expect(unSistema.recordatorios).toEqual([]);
   expect(unSistema.mediosDePago).toEqual([]);
   expect(unSistema.conceptos).toEqual([]);
+  expect(unSistema.conceptosGasto).toEqual([]);
+  expect(unSistema.conceptosIngreso).toEqual([]);
 });
 
 test('Agregar nuevo gasto a sistema', () => {
@@ -54,25 +56,29 @@ test('Agregar nuevo concepto de ingreso a sistema', () => {
   expect(unSistema.conceptosIngreso).toEqual([unConcepto]);
 });
 
-// test('Ordenar gastos por fecha', () => {
-//   const unSistema = new Sistema();
-//   const gasto1 = new Gasto('20/01/2020', 'Vestimenta', 2500, 'Compra vestido casamiento Ana', 'Efectivo', 1, 'No');
-//   const gasto2 = new Gasto('20/02/2021', 'Vestimenta', 2500, 'Compra vestido casamiento Ana', 'Efectivo', 1, 'No');
-//   unSistema.agregarGasto(gasto1);
-//   unSistema.agregarGasto(gasto2);
-//   unSistema.ordenarGastosPorFecha();
-//   expect(unSistema.gastos).toEqual([gasto2, gasto1]);
-// });
+// -------------------- ver issue #75 -------------------------
 
-// test('Ordenar ingresos por fecha', () => {
-//   const unSistema = new Sistema();
-//   const ingreso1 = new Ingreso('28/02/2020', 'Sueldo', 10500, 'Sueldo febrero', 'Efectivo');
-//   const ingreso2 = new Ingreso('28/02/2021', 'Sueldo', 10500, 'Sueldo febrero', 'Efectivo');
-//   unSistema.agregarIngreso(ingreso1);
-//   unSistema.agregarIngreso(ingreso2);
-//   unSistema.ordenarIngresosPorFecha();
-//   expect(unSistema.ingresos).toEqual([ingreso2, ingreso1]);
-// });
+test('Ordenar gastos por fecha', () => {
+  const unSistema = new Sistema();
+  const gasto1 = new Gasto('20/01/2020', 'Vestimenta', 2500, 'Compra vestido casamiento Ana', 'Efectivo', 1, 'No');
+  const gasto2 = new Gasto('20/02/2021', 'Vestimenta', 2500, 'Compra vestido casamiento Ana', 'Efectivo', 1, 'No');
+  unSistema.agregarGasto(gasto1);
+  unSistema.agregarGasto(gasto2);
+  unSistema.ordenarGastosPorFecha();
+  expect(unSistema.gastos).toEqual([gasto2, gasto1]);
+});
+
+test('Ordenar ingresos por fecha', () => {
+  const unSistema = new Sistema();
+  const ingreso1 = new Ingreso('28/02/2020', 'Sueldo', 10500, 'Sueldo febrero', 'Efectivo');
+  const ingreso2 = new Ingreso('28/02/2021', 'Sueldo', 10500, 'Sueldo febrero', 'Efectivo');
+  unSistema.agregarIngreso(ingreso1);
+  unSistema.agregarIngreso(ingreso2);
+  unSistema.ordenarIngresosPorFecha();
+  expect(unSistema.ingresos).toEqual([ingreso2, ingreso1]);
+});
+
+// ---------------------------------------------------------------
 
 test('Ordenar recordatorios por fecha', () => {
   const unSistema = new Sistema();
