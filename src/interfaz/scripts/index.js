@@ -236,7 +236,8 @@ btnMenuConceptos.addEventListener('click', (event) => {
   ocultarInicio();
   ocultarFuncionesAgregar();
   ocultarResumen();
-  actualizarListaConceptos();
+  actualizarListaConceptosGasto();
+  actualizarListaConceptosIngreso();
   document.getElementById('idListadoGastos').style.display = "none";
   document.getElementById('idListadoIngresos').style.display = "none";
   document.getElementById('idListadoRecordatorios').style.display = "none";
@@ -865,10 +866,20 @@ function borrarMedioDePago(btn) {
 
 //------------------------- LISTA DE CONCEPTOS -----------------------
 
-function actualizarListaConceptos() {
-  const lista = document.getElementById('listado-conceptos');
+function actualizarListaConceptosGasto() {
+  const lista = document.getElementById('listado-conceptos-gasto');
   lista.innerHTML = '';
-  const listaConceptos = s.conceptos;
+  const listaConceptos = s.conceptosGasto;
+  for (let i = 0; i < listaConceptos.length; i++) {
+    const item = generarLiConceptos(listaConceptos[i], i);
+    lista.appendChild(item);
+  }
+}
+
+function actualizarListaConceptosIngreso() {
+  const lista = document.getElementById('listado-conceptos-ingreso');
+  lista.innerHTML = '';
+  const listaConceptos = s.conceptosIngreso;
   for (let i = 0; i < listaConceptos.length; i++) {
     const item = generarLiConceptos(listaConceptos[i], i);
     lista.appendChild(item);
