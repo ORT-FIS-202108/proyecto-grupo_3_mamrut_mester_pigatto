@@ -56,6 +56,8 @@ test('Agregar nuevo concepto de ingreso a sistema', () => {
   expect(unSistema.conceptosIngreso).toEqual([unConcepto]);
 });
 
+// -------------------- ver issue #75 -------------------------
+
 test('Ordenar gastos por fecha', () => {
   const unSistema = new Sistema();
   const gasto1 = new Gasto('20/01/2020', 'Vestimenta', 2500, 'Compra vestido casamiento Ana', 'Efectivo', 1, 'No');
@@ -75,6 +77,8 @@ test('Ordenar ingresos por fecha', () => {
   unSistema.ordenarIngresosPorFecha();
   expect(unSistema.ingresos).toEqual([ingreso2, ingreso1]);
 });
+
+// ---------------------------------------------------------------
 
 test('Ordenar recordatorios por fecha', () => {
   const unSistema = new Sistema();
