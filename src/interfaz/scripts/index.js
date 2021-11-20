@@ -284,16 +284,6 @@ btnResumenIngresos.addEventListener('click', (event) => {
 
 });
 
-const btnCerrarSesion = document.getElementById('btnCerrarSesion');
-
-btnCerrarSesion.addEventListener('click', (event) => {
-  ocultarFuncionesAgregar();
-  ocultarFuncionesListado();
-  ocultarResumen();
-
-  document.getElementById('idInicio').style.display = "block";
-});
-
 // --------------------BOTONES INICIO-----------------------
 
 const btnInicioGasto = document.getElementById('btnInicioGasto');
