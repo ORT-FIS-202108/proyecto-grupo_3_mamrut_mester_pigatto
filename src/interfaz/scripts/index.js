@@ -682,9 +682,7 @@ function generarLi(gasto, pos) {
   const div2 = document.createElement('div');
   span2.appendChild(document.createTextNode(gasto.concepto));
   span3.appendChild(document.createTextNode(gasto.descrip));
-  let mes = parseInt(gasto.fecha.getMonth()) + 1;
-  let texto = "$ " + gasto.medioPago + " - " + gasto.fecha.getDate() + "/" + gasto.fecha.getDate() + mes + "/" + gasto.fecha.getFullYear();
-  span4.appendChild(document.createTextNode(texto));
+  span4.appendChild(document.createTextNode(gasto.fecha.toLocaleDateString()));
   btn1.appendChild(document.createTextNode("delete"));
   btn1.setAttribute('item', pos);
   span1.className = 'mdc-list-item__ripple';
@@ -737,9 +735,7 @@ function generarLiIngresos(ingreso, pos) {
   const div2 = document.createElement('div');
   span2.appendChild(document.createTextNode(ingreso.concepto));
   span3.appendChild(document.createTextNode(ingreso.descrip));
-  let mes = parseInt(ingreso.fecha.getMonth()) + 1;
-  let texto = "$ " + ingreso.medioPago + " - " + ingreso.fecha.getDate() + "/" + ingreso.fecha.getDate() + mes + "/" + ingreso.fecha.getFullYear();
-  span4.appendChild(document.createTextNode(texto));
+  span4.appendChild(document.createTextNode(ingreso.fecha.toLocaleDateString()));
   btn1.appendChild(document.createTextNode("delete"));
   btn1.setAttribute('item', pos);
   span1.className = 'mdc-list-item__ripple';
@@ -790,9 +786,7 @@ function generarLiRecordatorios(recordatorio, pos) {
   const btn1 = document.createElement('button');
   const div2 = document.createElement('div');
   span2.appendChild(document.createTextNode(recordatorio.recordatorio));
-  let mes = parseInt(recordatorio.fecha.getMonth()) + 1;
-  let texto = recordatorio.fecha.getDate() + "/" + recordatorio.fecha.getDate() + mes + "/" + recordatorio.fecha.getFullYear();
-  span3.appendChild(document.createTextNode(texto));
+  span3.appendChild(document.createTextNode(recordatorio.fecha.toLocaleDateString()));
   btn1.appendChild(document.createTextNode("delete"));
   btn1.setAttribute('item', pos);
   span1.className = 'mdc-list-item__ripple';
