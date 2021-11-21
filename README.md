@@ -6,6 +6,12 @@
 ID M4A - Docente: Alejandro Adorjan
 Estudiantes: 
 
+Mauricio Mamrut: 266946
+
+Ivana Mester: 204318
+
+Ignacio Pigatto: 204386
+
 Lectura: 30-ago-2021
 
 Entrega 1: 18-oct-2021
