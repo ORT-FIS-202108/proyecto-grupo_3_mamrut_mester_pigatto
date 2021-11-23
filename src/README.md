@@ -29,6 +29,16 @@ Para comenzar a trabajar  partimos del template proporcionado en la propuesta e 
 
 ### Documentación del uso de librerías externas (package.json)
 
+Para llevar a cabo el proyecto utilizamos diferentes librerías externas. Algunas de ellas son Jest, para la realización de tests unitarios sobre las clases del dominio, Material Design para el diseño de la interfaz, y ESLint para la revisión del código de JavaScript. Además, como facilitador para realizar los gráficos de resultados, ingresos y gastos, planteados en una primera etapa en el boceto de la interfaz, utilizamos la libreria Chart.js. Las distintas dependencias utilizadas en dominio e interfaz pueden verse en sus correspondientes archivos package.json.
+
+#### package.json dominio
+
+<img src="./images/packageJsonDominio.png">
+
+#### package.json interfaz
+
+<img src="./images/packageJsonInterfaz.png">
+
 ## Interfaz de usuario
 
 ### Interfaz de usuario web / mobile (responsive)
