@@ -25,7 +25,7 @@ Para la realización de la tarea decidimos implementar las funciones principales
 
 ### Configuración de plataforma tecnológica para desarrollo y producción
 
-Para comenzar a trabajar partimos del template proporcionado en la propuesta e instalamos node en nuestras respectivas computadoras. Luego ejecutamos el comando 'npm install' para instalar los módulos en el proyecto. Mediante el comando 'npm run start' en la terminal ejecutamos la aplicación en el servidor local para emplezar a trabajar.
+Para comenzar a trabajar  partimos del template proporcionado en la propuesta e instalamos node en nuestras respectivas computadoras. Luego ejecutamos el comando 'npm install' para instalar los módulos en el proyecto. Mediante el comando 'npm run start' en la terminal ejecutamos la aplicación en el servidor local para emplezar a trabajar.
 
 ### Documentación del uso de librerías externas (package.json)
 
