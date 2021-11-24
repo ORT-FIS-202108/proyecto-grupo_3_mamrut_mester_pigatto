@@ -84,11 +84,17 @@ const addButtonGastos = new MDCRipple(document.getElementById('addButtonGastos')
 const textFieldFechaIngreso = new MDCTextField(document.getElementById('fechaIngreso'));
 ```
 
-Un ejemplo de componente de Material Design utilizado en nuestra aplicación es el del TextField. El mismo ya provee el formato que incluye un placeholder que indica qué dato se espera, y luego, una vez los datos son ingresados, se visualiza una label a modo indicativo por sobre el TextField. Además, al ser clickeado para ingresar los datos, el TextField cambia de color automáticamente, para mostrarse seleccionado. 
+Un ejemplo de componente de Material Design utilizado en nuestra aplicación es el del TextField. El mismo ya provee el formato que incluye un placeholder que indica qué dato se espera, y luego, una vez los datos son ingresados, se visualiza una label a modo indicativo por sobre el TextField. Además, al ser clickeado para ingresar los datos, el TextField cambia de color automáticamente, para mostrarse seleccionado.
+
+#### Ejemplo TextField vacío
 
 <img src="./images/textField/textFieldVacio.png">
 
+#### Ejemplo TextField seleccionado
+
 <img src="./images/textField/textFieldSeleccionado.png">
+
+#### Ejemplo TextField completado
 
 <img src="./images/textField/textFieldCompletado.png">
 
