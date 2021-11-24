@@ -100,6 +100,11 @@ Un ejemplo de componente de Material Design utilizado en nuestra aplicación es 
 
 ### Aplicar un sistema de diseño y principios de usabilidad
 
+Para evaluar la usabilidad utilizamos el template que vimos en clase:
+
+<img src="./images/heuristicas1.JPG">
+<img src="./images/heuristicas2.JPG">
+
 ### Cumplimiento de estándar de accesibilidad WCAG
 
 ### Seguir especificación de estilo
