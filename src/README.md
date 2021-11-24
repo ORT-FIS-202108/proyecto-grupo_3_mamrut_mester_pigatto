@@ -49,6 +49,11 @@ Para llevar a cabo el proyecto utilizamos diferentes librerías externas. Alguna
 
 ### Aplicar un sistema de diseño y principios de usabilidad
 
+Para evaluar la usabilidad utilizamos el template que vimos en clase:
+
+<img src="./images/heuristicas1.jpg">
+<img src="./images/heuristicas2.jpg">
+
 ### Cumplimiento de estándar de accesibilidad WCAG
 
 ### Seguir especificación de estilo
