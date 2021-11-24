@@ -43,9 +43,60 @@ Para llevar a cabo el proyecto utilizamos diferentes librerías externas. Alguna
 
 ### Interfaz de usuario web / mobile (responsive)
 
+Al crear nuestra aplicación intentamos contemplar los distintos tamaños de pantalla posibles, para hacer que la misma se adapte a ellos, acomodando el diseño cuando sea necesario. Un ejemplo de esto es que el menu lateral se oculta automáticante cuando el tamaño de la pantalla es menor a determinados pixeles, indicado en el index.scss. Además, en los casos posibles intentamos definir los tamaños de los distintos elementos dispuestos en la aplicación como porcentajes del tamaño de su componente padre, esto genera que al hacer variar el tamaño de la pantalla, los mismos se acomoden a este. 
+
 ### Página única con navegación entre secciones
 
+Para el desarrollo de nuestra aplicación implementamos una página única (index.html) con navegación entre secciones. Utilizamos la tag 'section' de HTML para crear las distinas secciones de nuestra aplicación que queríamos mostrar y dependiendo las diferentes acciones del usuario al utilizarla, qué secciones se despliegan y cuáles no. 
+
+Para poder lograr esto, en el index.js obtenemos la sección que queremos mostrar u ocultar y la ocultamos mediante la siguiente línea de código: 
+
+```
+document.getElementById('idDelComponente').style.display = "none";
+```
+
+O la mostramos mediante:
+
+```
+document.getElementById('idDelComponente').style.display = "block";
+```
+
+Existen distintos botones en la aplicación que generan este tipo de acción. Un ejemplo es el botón de la top bar, con el texto 'Mis Gastos'. Al hacer click en este botón se vuelve a la página de inicio sin importar en qué sección se encuentre el usuario. 
+
 ### Implementación: Material Design Web Components
+
+Para realizar un diseño más dinámico y sencillo de implementar, utilizamos como sistema de diseño Material Design Web Components. Basándonos en nuestros bocetos iniciales y viendo la variedad de componentes disponibles en Material Design, es que fuimos creando nuestra aplicación. Material Design provee una gran cantidad de componentes ya armados y costumizables, lo que facilitó y agilizó el proceso de diseño de interfaz. 
+
+Para poder estilar los diferentes componentes es necesario importarlos en el archivo de estilos (index.scss), utilizando @use. A continuación un ejemplo de dos componentes utilizados en nuestra aplicación. 
+
+``` 
+@use '@material/button';
+@use "@material/textfield";
+```
+
+Por su parte para poder darle funcionalidad a estos componentes es necesario, a su vez, realizar el import correspondiente en el archivo index.js. Una vez que se realizó la importación, los componentes deberán ser inicializados para poder ser utilizados. 
+
+```
+import { MDCRipple } from '@material/ripple';
+import { MDCTextField } from '@material/textfield';
+
+const addButtonGastos = new MDCRipple(document.getElementById('addButtonGastos'));
+const textFieldFechaIngreso = new MDCTextField(document.getElementById('fechaIngreso'));
+```
+
+Un ejemplo de componente de Material Design utilizado en nuestra aplicación es el del TextField. El mismo ya provee el formato que incluye un placeholder que indica qué dato se espera, y luego, una vez los datos son ingresados, se visualiza una label a modo indicativo por sobre el TextField. Además, al ser clickeado para ingresar los datos, el TextField cambia de color automáticamente, para mostrarse seleccionado.
+
+#### Ejemplo TextField vacío
+
+<img src="./images/textField/textFieldVacio.png">
+
+#### Ejemplo TextField seleccionado
+
+<img src="./images/textField/textFieldSeleccionado.png">
+
+#### Ejemplo TextField completado
+
+<img src="./images/textField/textFieldCompletado.png">
 
 ### Aplicar un sistema de diseño y principios de usabilidad
 
