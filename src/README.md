@@ -118,11 +118,83 @@ Un ejemplo de componente de Material Design utilizado en nuestra aplicación es 
 
 ### Test unitarios en Jest
 
+Para realizar las pruebas unitarias en nuestro proyecto utilizamos el framework Jest. Para ellos creamos un archivo para realizar estos tests por cada archivo de clases del dominio. En nuestro caso eran dos. Para testear el archivo clases.mjs, creamos el archivo clases.test.js con los tests correspondientes, y para el archivo sistema.mjs, creamos sistema.test.js, también con sus tests correspondientes. Cada función de cada clase es evaluada por un test. Intentamos cubirir todos los casos positivos, pero también incluimos tests negativos, es decis, casos que serían erroneos. 
+
+A continuación se presentan dos ejemplos de dos tests de la misma función de la clase sistema, uno positivo y uno negativo. 
+
+```
+test('Borrar elemento lista', () => {
+  const unSistema = new Sistema();
+  const recordatorio1 = new Recordatorio('28/02/2020', 'Llamar Juan');
+  const recordatorio2 = new Recordatorio('28/02/2021', 'Llamar Juan');
+  unSistema.agregarRecordatorio(recordatorio1);
+  unSistema.agregarRecordatorio(recordatorio2);
+  unSistema.borrarElemento(unSistema.recordatorios, 1);
+  expect(unSistema.recordatorios).toEqual([recordatorio1]);
+});
+
+test('Borrar elemento lista pasando como parámetro una posición que no existe', () => {
+  const unSistema = new Sistema();
+  const recordatorio1 = new Recordatorio('28/02/2020', 'Llamar Juan');
+  const recordatorio2 = new Recordatorio('28/02/2021', 'Llamar Juan');
+  unSistema.agregarRecordatorio(recordatorio1);
+  unSistema.agregarRecordatorio(recordatorio2);
+  unSistema.borrarElemento(unSistema.recordatorios, 2);
+  expect(unSistema.recordatorios).toEqual([recordatorio1, recordatorio2]);
+});
+
+// ----------------------------------------------------------------------------------------
+
+test('Calcular total ingresos', () => {
+  const unSistema = new Sistema();
+  const ingreso1 = new Ingreso('28/01/2020', 'Sueldo', 7500, 'Sueldo enero', 'Efectivo');
+  const ingreso2 = new Ingreso('28/02/2021', 'Sueldo', 10500, 'Sueldo febrero', 'Efectivo');
+  unSistema.agregarIngreso(ingreso1);
+  unSistema.agregarIngreso(ingreso2);
+  expect(unSistema.totalIngresos()).toBe(18000);
+});
+
+test('Calcular total ingresos cuando no hay ingresos', () => {
+  const unSistema = new Sistema();
+  expect(unSistema.totalIngresos()).toBe(0);
+});
+```
+
 ### 100% cobertura en clases de dominio
 
+Al momento de realizar los tests unitarios, tuvimos en cuenta que los mismos testearan el 100% de nuestras clases del dominio. Como evidencia de esto se puede ver el resumen que arroja jest al correr los tests. 
 
-| En la semana previa a la entrega se debe congelar el desarrollo (22-nov-2021).
-A partir de este punto solo se realizan actividades de test de sistema, reporte de issues y generación del informe académico.
+<img src="./images/jest/coberturaJest.png">
+
+Es importante destacar que de los 29 tests realizados, 2 no dan resultados correctos. Los mismos son los tests de las funciones de la clase Sistema ordenarGastosPorFecha() y ordenarIngresosPorFecha(). Luego de haber investigado estos errores e intentar solucionarlos, no logramos encontrar la falla. Sin embargo, a pesar que el test falla, las funciones parecerían funcionar adecuadamente en la aplicación. Se puede observar que al ingresar gastos e ingresos al sistema, los mismos luego se despliegan correctamente, ordenados por fecha, de más reciente a más antiguo. Esto defecto quedó adecuadamente reportado como el issue #75. 
+
+Los tests que presentan fallas son los siguientes:
+
+```
+// -------------------- ver issue #75 -------------------------
+
+test('Ordenar gastos por fecha', () => {
+  const unSistema = new Sistema();
+  const gasto1 = new Gasto('20/01/2020', 'Vestimenta', 2500, 'Compra vestido casamiento Ana', 'Efectivo', 1, 'No');
+  const gasto2 = new Gasto('20/02/2021', 'Vestimenta', 2500, 'Compra vestido casamiento Ana', 'Efectivo', 1, 'No');
+  unSistema.agregarGasto(gasto1);
+  unSistema.agregarGasto(gasto2);
+  unSistema.ordenarGastosPorFecha();
+  expect(unSistema.gastos).toEqual([gasto2, gasto1]);
+});
+
+test('Ordenar ingresos por fecha', () => {
+  const unSistema = new Sistema();
+  const ingreso1 = new Ingreso('28/02/2020', 'Sueldo', 10500, 'Sueldo febrero', 'Efectivo');
+  const ingreso2 = new Ingreso('28/02/2021', 'Sueldo', 10500, 'Sueldo febrero', 'Efectivo');
+  unSistema.agregarIngreso(ingreso1);
+  unSistema.agregarIngreso(ingreso2);
+  unSistema.ordenarIngresosPorFecha();
+  expect(unSistema.ingresos).toEqual([ingreso2, ingreso1]);
+});
+
+// ---------------------------------------------------------------
+```
 
 ## Test de sistema
 
