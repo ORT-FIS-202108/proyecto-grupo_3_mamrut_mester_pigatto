@@ -51,8 +51,8 @@ Para llevar a cabo el proyecto utilizamos diferentes librerías externas. Alguna
 
 Para evaluar la usabilidad utilizamos el template que vimos en clase:
 
-<img src="./images/heuristicas1.jpg">
-<img src="./images/heuristicas2.jpg">
+<img src="./images/heuristicas1.JPG">
+<img src="./images/heuristicas2.JPG">
 
 ### Cumplimiento de estándar de accesibilidad WCAG
 
