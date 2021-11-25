@@ -207,6 +207,8 @@ test('Ordenar ingresos por fecha', () => {
 
 ### Generar casos de prueba aplicando técnica partición equivalente
 
+<img src="./images/CasoDePrueba1.png"> <img src="./images/CasoDePrueba2.png">
+
 ### Detallar sesiones de prueba exploratoria
 
 ## Reporte de issues
