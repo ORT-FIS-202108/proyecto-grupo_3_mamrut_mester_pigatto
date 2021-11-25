@@ -151,7 +151,7 @@ A continuación presentamos evidencia de algunos problemas resueltos con esLint.
 
 <img src="./images/esLint/testConEslint.png" width="350">
 
-<img src="./images/esLint/importConEslint.png" width="350">
+<img src="./images/esLint/importConEslint.png" width="300">
 
 <img src="./images/esLint/funcionOrdenarConEslint.png">
 
