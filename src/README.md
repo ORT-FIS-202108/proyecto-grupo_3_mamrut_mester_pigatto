@@ -141,17 +141,17 @@ A continuación presentamos evidencia de algunos problemas resueltos con esLint.
 
 #### Funciones con problemas
 
-<img src="./images/esLint/testSinEslint.png">
+<img src="./images/esLint/testSinEslint.png" width="300">
 
-<img src="./images/esLint/importSinEslint.png">
+<img src="./images/esLint/importSinEslint.png" width="750">
 
 <img src="./images/esLint/funcionOrdenarSinEslint.png">
 
 #### Resolución
 
-<img src="./images/esLint/testConEslint.png">
+<img src="./images/esLint/testConEslint.png" width="300">
 
-<img src="./images/esLint/importConEslint.png">
+<img src="./images/esLint/importConEslint.png" width="750">
 
 <img src="./images/esLint/funcionOrdenarConEslint.png">
 
