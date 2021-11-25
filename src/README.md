@@ -107,7 +107,13 @@ Para evaluar la usabilidad utilizamos el template que vimos en clase:
 
 ### Cumplimiento de estándar de accesibilidad WCAG
 
+Dentro del alcance de nuestra aplicación, en esta primera instancia, intentamos cumplir con los estándares de accesibilidad WCAG. Nuestra aplicación tiene poco contenido, que es relevante y claro, con títulos indicativos. Se intentó no agregar gran cantidad de texto, para que sea fácilmente legible y comprensible a la vista. Los botones tienen textos claros, y en los casos pertimentes los textos están acompañados de íconos representativos. Se utilizan colores que contrastan para resaltar aspectos importantes. En los casos en que el usuario puede cometer errores, se emite una alerta con un texto claro sobre cuál es el error para que el usuario pueda corregirlo rápidamente. Además, se incorporó el uso de gráficos para mostrar los resultados de forma clara y sencilla. Se intenta que el flujo para navegar sea sencillo de seguir.
+
+En esta primera instancia, no fue posible incorporar funcionalidades desde el teclado, ya que se atacaron las funcionalidades básicas. 
+
 ### Seguir especificación de estilo
+
+Para llevar a cabo nuestro proyecto consideramos las especificaciones de estilo proporcionadas por la cátedra. Estas se referían principalmente al nombre de la aplicación, "Mis Gastos", a la fuente, "Roboto" y a los colores a utilizar en la implementación de la aplicación. 
 
 ## Codificación
 
