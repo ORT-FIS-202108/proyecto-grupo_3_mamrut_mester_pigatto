@@ -119,11 +119,41 @@ Para llevar a cabo nuestro proyecto consideramos las especificaciones de estilo 
 
 ### IDE Visual Studio Code: configuración común del equipo
 
+Para realizar la aplicación utilizamos el IDE Visual Studio Code. Considerando que este IDE ya había sido utilizado para materias anteriores de la carrera, no fue necesario realizar una configuración común, aunque sí realizamos en conjunto la instalación de node JS, ya que no lo habíamos utilizado previamente, e hicimos una primera reunión para definir ciertos estándares para seguir, con el objetivo de facilitar el trabajo en equipo. 
+
 ### Estándares de codificación Google (HTML, CSS, JavaScript)
+
+Para asegurar los estándares de codificación de Google en nuestro código JavaScript utilizamos esLint. El mismo, al instalarlo, permite seleccionar la opción correspondiente para seguir los estándares de Google, que fue lo que hicimos. Una vez instalado esLint en el dominio, el mismo se encargaba de marcar aquellos errores que debíamos corregir para cumplir con los estándares. 
+
+En cuanto al código HTML y CSS, considerando que no contábamos con una solución disponible como esLint, fue necesario buscar los principales estándares de Google para aplicarlos. Un ejemplo puede ser la indentación del código. VSC permite predefinir la indentación que se quiere mantener, según estándares de Google, la misma es de dos espacios. Además, pasamos nuestro código por un validador de código HTML para validar posibles errores o mejoras.
 
 ### Buenas prácticas de OOP: separación de lógica e interfaz
 
+Nuestro proyecto tiene claramente separada la lógica de la interfaz. Para ello, dividimos el código en dos carpetas, "dominio" e "interfaz". Cada una de ella tiene instalado los módulos de Node por separado, para poder instalar las distintas librerías y dependencias donde fueran a ser utilizadas. 
+
+Dentro del dominio definimos dos archivos de clases, "sistema.mjs" y "clases.mjs", cada uno de estos archivos tiene su correspondiente archivo de pruebas unitarias. Por su parte, dentro de la carpeta interfaz encontramos el archivo index.html, con el diseño de nuestra interfaz, el archivo de estilos, index.scss, y el archivo index.js, responsable de la integración del dominio con la interfaz. 
+
 ### Análisis estático de código: mostrar reducción de problemas
+
+Para realizar el análisis estático de código utilizamos esLint, que sin necesidad de correr el programa, indica posibles errores y estándares que no se están siguiendo correctamente.
+
+A continuación presentamos evidencia de algunos problemas resueltos con esLint.
+
+#### Funciones con problemas
+
+<img src="./images/esLint/testSinEslint.png" width="350">
+
+<img src="./images/esLint/importSinEslint.png" width="700">
+
+<img src="./images/esLint/funcionOrdenarSinEslint.png">
+
+#### Resolución
+
+<img src="./images/esLint/testConEslint.png" width="350">
+
+<img src="./images/esLint/importConEslint.png" width="300">
+
+<img src="./images/esLint/funcionOrdenarConEslint.png">
 
 ## Test unitario
 
