@@ -292,4 +292,16 @@ Una vez solucionados estos issues con prioridad alta, quedarían algunos abierto
 
 ### Detalle del trabajo individual
 
+#### Reflexión Ivana
+
+Me resultó sumamente interesante realizar este proyecto, ya que me ayudó a obtener un entendimiento global de lo que es trabajar en un proyecto de principio a fin, abarcando todas sus etapas. Desde el lado de la interfaz pude conocer Material Design, que, a pesar que tener cierto grado de complejidad y que en ocasiones los componentes no resultan tan sencillos de implementar, considero que fue un gran aporte a la interfaz de la aplicación, también teniendo en cuenta que contábamos con tiempo limitado para realizarla, y de no contar con Material Design todo debería haber sido creado desde cero. En cuanto al dominio, a pesar que ya habíamos tenido la oportunidad de codificar con JavaScript, personalmente nunca había trabajado con pruebas unitarias y creo que incorporarlas resultó de gran ayuda para identificar errores y obtener un mejor entendimiento del código. Finalmente, al trabajar en la parte de testing creo que tuvimos la oportunidad de chequear nuestro trabajo y entender que quizás algunos elementos hubieran sido más sencillos de llevar a cabo si el proceso de planificación hubiera sido diferente en algunos aspectos, lo que resultó ser un aprendizaje para futuros proyectos.
+
+Por su parte, trabajar con GitHub para realizar el trabajo en equipo fue un gran facilitador en relación a cómo trabajábmos en materias anteriores, que trabajar en paralelo no resultaba tan sencillo. 
+
+Creo que como equipo tuvimos el desafío de enfretarnos a nuevas tecnologías que ninguno conocía, lo que representaba ciertos obstáculos. En algunos casos se resolvían consultándonos entre nosotros, o realizando videollamadas para intentar resolver problemas en conjunto. En otros casos era necesario recurrir a la documentación de las tecnologías utilizadas, principalmente en el caso de Material Design, o realizar la correspondiente búsqueda en internet para obtener las soluciones buscadas. 
+
+#### Reflexión Mauricio
+
+#### Reflexión Ignacio
+
 ### Técnicas aplicadas y aprendizajes
