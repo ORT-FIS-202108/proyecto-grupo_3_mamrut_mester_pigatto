@@ -254,8 +254,8 @@ Se presenta la documentación de tres sesiones de testing exploratorio
 
 #### Sesión 2:
 
-<img src="./images/testingExploratorio/testExp2.1.PNG">
-<img src="./images/testingExploratorio/testExp2.2.PNG">
+<img src="./images/testingExploratorio/testExp2.1.png">
+<img src="./images/testingExploratorio/testExp2.2.png">
 
 #### Sesión 3:
 
