@@ -247,8 +247,17 @@ test('Ordenar ingresos por fecha', () => {
 
 Se presenta la documentación de tres sesiones de testing exploratorio
 
-<img src="./images/testExp1.PNG">
-<img src="./images/testExp1.2.PNG">
+#### Sesión 1:
+
+<img src="./images/testingExploratorio/testExp1.1.PNG">
+<img src="./images/testingExploratorio/testExp1.2.PNG">
+
+#### Sesión 2:
+
+<img src="./images/testingExploratorio/testExp2.1.PNG">
+<img src="./images/testingExploratorio/testExp2.2.PNG">
+
+#### Sesión 3:
 
 ## Reporte de issues
 
