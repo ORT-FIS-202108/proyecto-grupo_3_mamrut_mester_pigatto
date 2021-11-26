@@ -245,6 +245,11 @@ test('Ordenar ingresos por fecha', () => {
 
 ### Detallar sesiones de prueba exploratoria
 
+Se presenta la documentación de tres sesiones de testing exploratorio
+
+<img src="./images/jest/testExp1.PNG">
+<img src="./images/jest/testExp1.2.PNG">
+
 ## Reporte de issues
 
 ### Reportar issues (bugs, improvements, missing features) en GitHub 
