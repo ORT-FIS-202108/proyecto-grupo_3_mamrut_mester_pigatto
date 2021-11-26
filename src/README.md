@@ -254,15 +254,39 @@ Se presenta la documentación de tres sesiones de testing exploratorio
 
 ### Reportar issues (bugs, improvements, missing features) en GitHub 
 
+Durante todo el proceso de creación del proyecto fuimos reportando issues en GitHub sobre aquellos defectos o posibles mejoras que ibamos encontrando. Gran parte de los issues reportados durante la etapa de codificación se fueron solucionando, aunque algunos quedaron abiertos para una segunda versión de la aplicación. Posteriormente, durante el proceso de testing, fue que se reportó la mayor cantidad de issues, ya que en ese tiempo el equipo se concentró en probar el sistema para encontrar defectos. 
+
+También se encuentran reportadas como issues aquellas funcionalidades que en esta primera instancia no fueron incluidas en la aplicación pero si habría intención de incorporarlas en un futuro.
+
 ### Aplicar buenas prácticas de reporte de issues
+
+Se intentó aplicar buenas prácticas de reporte de issues al crearlos, ya que esto facilita su posterior resolución. Los issues creados tienen un título descriptivo del defecto, etiquetas para indicar la temática, un resumen que explica con mayor detalle el problema, la prioridad del mismo y, en los casos en que correponde, los pasos para reproducirlo. 
 
 ### Definir labels para tipos de issue y niveles de severidad
 
+Las principales labels que utilizamos para categorizar los issues son las siguientes.
+
+<ul><li>bug: algo no funciona correctamente</li><li>frontend: problema en el diseño de la interfaz </li><li>enhancement: no es un error, pero podría funcionar o verse mejor</li><li>proxima etapa: funcionalidades que no se implementaron en la primera versión de la aplicación pero se deberían implementar en la siguiente</li></ul>
+
+Algunas de estas labels son proporcionadas por GitHub, otras las definimos nosotros de acuerdo a las necesidades de nuestro proyecto.
+
+En relación a los niveles de severidad, definimos tres posibles categorías. 
+
+<ul><li>Prioridad Alta: debería solucionarse antes de lanzar la aplicación a un ambiente de producción</li><li>Prioridad Media: No es urgente pero debería solucionarse en el corto o mediano plazo </li><li>Prioridad Baja: Se puede resolver en una segunda versión de la aplicación</li></ul>
+
 ### Dejar issues abiertos para correcciones o mejoras futuras
+
+Como se mencionó anteriormente, a lo largo del desarrollo del proyecto fuimos reportando distintos issues, algunos de ellos fueron solucionados y correctamente cerrados, otros quedaron abiertos para ser solucionados en una segunda instancia. Entre los issues que quedaron abiertos se encuentran definidas aquellas funcionalidades que no se implementaron en esta primera versión de la aplicación. También hay defectos abiertos que surgieron a partir de la etapa de testing. 
+
+Estos issues se encuentran en la pestaña de "issues" de GitHub, figuran como "open issues".
 
 ### Sumarizar número de issues reportados por tipo
 
 ### Realizar una evaluación global de la calidad
+
+Entendemos que nuestra aplicación tiene incorporadas todas las funcionalidades en las que se decidió trabajar en esta primera etapa del proyecto, y en general el funcionamiento de la misma es correcto. Sin embargo, creemos que nuestro código aún no estaría apto para pasar a un ambiente de producción ya que continúa habiendo algunos issues abiertos con prioridad alta, que según nuestra definión, estos issues deberían ser solucionados antes de pasar la aplicación a un ambiente de producción. En general estos issues se refieren a algunos casos puntuales que no funcionan adecuadamente, pero impiden el correcto de la aplicación, como por ejemplo el issue #84, que establece que la fecha no se valida correctamente en los formularios. 
+
+Una vez solucionados estos issues con prioridad alta, quedarían algunos abiertos que, a nuestro entender, no impedirían sí poder pasar la aplicación a un ambiente de producción, ya que podrían ser atacados en próximas etapas. 
 
 ## Reflexión
 
