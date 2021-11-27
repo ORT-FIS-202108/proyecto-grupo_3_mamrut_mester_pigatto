@@ -302,6 +302,12 @@ Creo que como equipo tuvimos el desafío de enfretarnos a nuevas tecnologías qu
 
 #### Reflexión Mauricio
 
+Trabajar en el proyecto representó un gran desafío. Al no tener experiencia en el desarrollo de aplicaciones hubo muchas cosas con las que tuve que familiarizarme en el proyecto. El uso de Material Design así como la codificación en JavaScript dio bastante trabajo al principio, sin embargo luego lo manejamos con mas fluidez. 
+Para dominar las tecnologías resultó muy útil la documentación encontrada en internet así como también la ayuda de los ayudantes de cátedra en situaciones que no sabíamos resolver.
+En relación al trabajo en equipo, dividimos las tareas para poder avanzar trabajando al paralelo y realizamos reuniones periódicas para mostrar los avances y trabajar en los puntos mas complejos.
+
+
 #### Reflexión Ignacio
 
 ### Técnicas aplicadas y aprendizajes
+
