@@ -282,6 +282,8 @@ Estos issues se encuentran en la pestaña de "issues" de GitHub, figuran como "o
 
 ### Sumarizar número de issues reportados por tipo
 
+<ul><li>Errores en formularios: 3 (#84, #85, #91)</li><li>Omisiones de funcionalidades: 1 (#92)</li><li>Funcionalidades a agregar en el futuro: 7 (#83, #94, #95, #96, #97, #98, #99)</li><li>Errores en las pruebas: 1 (#75)</li></ul>
+
 ### Realizar una evaluación global de la calidad
 
 Entendemos que nuestra aplicación tiene incorporadas todas las funcionalidades en las que se decidió trabajar en esta primera etapa del proyecto, y en general el funcionamiento de la misma es correcto. Sin embargo, creemos que nuestro código aún no estaría apto para pasar a un ambiente de producción ya que continúa habiendo algunos issues abiertos con prioridad alta, que según nuestra definión, estos issues deberían ser solucionados antes de pasar la aplicación a un ambiente de producción. En general estos issues se refieren a algunos casos puntuales que no funcionan adecuadamente, pero impiden el correcto de la aplicación, como por ejemplo el issue #84, que establece que la fecha no se valida correctamente en los formularios. 
