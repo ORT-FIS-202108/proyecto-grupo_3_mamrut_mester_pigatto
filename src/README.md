@@ -302,6 +302,21 @@ Creo que como equipo tuvimos el desafío de enfretarnos a nuevas tecnologías qu
 
 #### Reflexión Mauricio
 
+Trabajar en el proyecto representó un gran desafío. Al no tener experiencia en el desarrollo de aplicaciones hubo muchas cosas con las que tuve que familiarizarme en el proyecto. El uso de Material Design así como la codificación en JavaScript dio bastante trabajo al principio, sin embargo luego lo manejamos con mas fluidez. 
+Para dominar las tecnologías resultó muy útil la documentación encontrada en internet así como también la ayuda de los ayudantes de cátedra en situaciones que no sabíamos resolver.
+En relación al trabajo en equipo, dividimos las tareas para poder avanzar trabajando al paralelo y realizamos reuniones periódicas para mostrar los avances y trabajar en los puntos mas complejos.
+
+
 #### Reflexión Ignacio
 
 ### Técnicas aplicadas y aprendizajes
+
+Como modalidad de trabajo dividimos las diferentes tareas a realizar para poder avanzar en simultaneo. Realizamos reuniones periódicas por Zoom donde explicábamos los avances y resolvíamos problemas entre todos.
+
+Comenzamos aprendiendo el uso de Material Design utilizando la documentación proporcionada en la propuesta del trabajo. En un comienzo nos costó entender su forma de uso pero luego nos logramos familiarizar con los componentes y logramos sacarles provecho.
+
+Por otro lado, aprendimos las ventajas del uso de librerías externas en el proyecto. En una primera instancia nos preocupaba no saber como implementar las gráficas que habíamos planificado incluir pero logramos hacerlo fácilmente utilizando Charts.js. 
+
+El uso de eslint en un comienzo nos resultaba abrumador, debido a que encontraba errores en todo el código y era molesto para trabajar. Cuando nos familiarizamos con los estándares de codificación logramos incorporarlos a nuestra forma de trabajo y el corrector dejó de ser un problema. Esto mismo nos sucedió con el reporte de issues en Git, luego de reportar algunos issues sin seguir un mismo patrón nos pusimos de acuerdo y adoptamos una forma única de reportar de forma ordenada.
+
+Para que el trabajo fuera fácil de seguir, intentamos incluir títulos comentados en cada sección de código, siguiendo un mismo orden. De esta forma nos fue sencillo trabajar sin perdernos en las muchas de líneas de código.
