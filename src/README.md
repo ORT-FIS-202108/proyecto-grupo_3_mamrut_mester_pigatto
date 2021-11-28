@@ -243,6 +243,8 @@ test('Ordenar ingresos por fecha', () => {
 
 ### Generar casos de prueba aplicando técnica partición equivalente
 
+<img src="./images/CasosDePrueba1.png"> <img src="./images/CasosDePrueba2.png"> <img src="./images/CasosDePrueba3.png">
+
 ### Detallar sesiones de prueba exploratoria
 
 Se presenta la documentación de tres sesiones de testing exploratorio.
