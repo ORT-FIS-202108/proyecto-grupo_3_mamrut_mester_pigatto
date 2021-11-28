@@ -243,7 +243,9 @@ test('Ordenar ingresos por fecha', () => {
 
 ### Generar casos de prueba aplicando técnica partición equivalente
 
-<img src="./images/CasosDePrueba1.png"> <img src="./images/CasosDePrueba2.png"> <img src="./images/CasosDePrueba3.png">
+<img src="./images/particionEquivalente/CasosDePrueba1.png"> 
+<img src="./images/particionEquivalente/CasosDePrueba2.png"> 
+<img src="./images/particionEquivalente/CasosDePrueba3.png">
 
 ### Detallar sesiones de prueba exploratoria
 
@@ -297,7 +299,7 @@ Estos issues se encuentran en la pestaña de "issues" de GitHub, figuran como "o
 
 ### Sumarizar número de issues reportados por tipo
 
-<ul><li>Errores en formularios: 3 (#84, #85, #91)</li><li>Omisiones de funcionalidades: 1 (#92)</li><li>Funcionalidades a agregar en el futuro: 7 (#83, #94, #95, #96, #97, #98, #99)</li><li>Errores en las pruebas unitarias: 1 (#75)</li><li>Issues cerrados: 8 (#44, #46, #48, #52, #58, #59, #62, #66)</li></ul>
+<ul><li>Errores en formularios: 3 (#84, #85, #91)</li><li>Omisiones de funcionalidades: 2 (#92, #110)</li><li>Funcionalidades a agregar en el futuro: 7 (#83, #94, #95, #96, #97, #98, #99)</li><li>Errores en las pruebas unitarias: 1 (#75)</li><li>Issues cerrados: 8 (#44, #46, #48, #52, #58, #59, #62, #66)</li></ul>
 
 ### Realizar una evaluación global de la calidad
 
@@ -325,10 +327,10 @@ En relación al trabajo en equipo, dividimos las tareas para poder avanzar traba
 
 #### Reflexión Ignacio
 
-Desde mi punto de vista, trabajar en este proyecto me ayudo a trabajar en equipo de manera optima para llevar a cabo objetivos de forma conjunta. Lo que al principio parecía ser un gran desafío, las distintas herramientas aprendidas a lo largo del curso hicieron posible realizar los objetivos planteados.
-Me gusto mucho hacer la tarea porque me llevo un montón de aprendizaje que me acerca a lo que es trabajar junto a un equipo en cualquier proyecto laboral.
+Desde mi punto de vista, trabajar en este proyecto me ayudó a trabajar en equipo de manera óptima para llevar a cabo objetivos de forma conjunta. Lo que al principio parecía ser un gran desafío, las distintas herramientas aprendidas a lo largo del curso hicieron posible realizar los objetivos planteados.
+Me gustó mucho hacer la tarea porque me llevo un montón de aprendizaje que me acerca a lo que es trabajar junto a un equipo en cualquier proyecto laboral.
 
-Por último, como equipo, el trabajo día a día en conjunto simplifico la realización de tareas y con mis compañeros terminamos muy conformes con los resultados obtenidos.
+Por último, como equipo, el trabajo día a día en conjunto simplificó la realización de tareas y con mis compañeros terminamos muy conformes con los resultados obtenidos.
 
 
 ### Técnicas aplicadas y aprendizajes
