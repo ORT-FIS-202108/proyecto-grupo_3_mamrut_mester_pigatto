@@ -262,7 +262,7 @@ Se presenta la documentación de tres sesiones de testing exploratorio.
 #### Sesión 3:
 
 <img src="./images/testingExploratorio/testExpNach1.png" width="500">
-<img src="./images/testingExploratorio/testExpNach2.png" width="500">
+<img src="./images/testingExploratorio/testExpNacho2.png" width="500">
 
 
 ## Reporte de issues
