@@ -251,7 +251,7 @@ Se presenta la documentación de tres sesiones de testing exploratorio
 <img src="./images/testingExploratorio/testExpMauri2.PNG" width="500">
 
 <img src="./images/testingExploratorio/testExp2.1.png" width="500">
-<img src="./images/testingExploratorio/testExp2.1.png" width="500">
+<img src="./images/testingExploratorio/testExp2.2.png" width="500">
 
 
 
