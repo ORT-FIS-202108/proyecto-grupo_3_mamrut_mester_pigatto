@@ -33,11 +33,11 @@ Para llevar a cabo el proyecto utilizamos diferentes librerías externas. Alguna
 
 #### package.json dominio
 
-<img src="./images/packageJsonDominio.png">
+<img src="./images/packageJson/packageJsonDominio.png">
 
 #### package.json interfaz
 
-<img src="./images/packageJsonInterfaz.png">
+<img src="./images/packageJson/packageJsonInterfaz.png">
 
 ## Interfaz de usuario
 
@@ -102,8 +102,8 @@ Un ejemplo de componente de Material Design utilizado en nuestra aplicación es 
 
 Para evaluar la usabilidad utilizamos el template que vimos en clase:
 
-<img src="./images/heuristicas1.JPG">
-<img src="./images/heuristicas2.JPG">
+<img src="./images/heuristicas/heuristicas1.JPG">
+<img src="./images/heuristicas/heuristicas2.JPG">
 
 ### Cumplimiento de estándar de accesibilidad WCAG
 
@@ -245,7 +245,7 @@ test('Ordenar ingresos por fecha', () => {
 
 ### Detallar sesiones de prueba exploratoria
 
-Se presenta la documentación de tres sesiones de testing exploratorio
+Se presenta la documentación de tres sesiones de testing exploratorio.
 
 #### Sesión 1:
 
@@ -291,7 +291,7 @@ Estos issues se encuentran en la pestaña de "issues" de GitHub, figuran como "o
 
 ### Sumarizar número de issues reportados por tipo
 
-<ul><li>Errores en formularios: 3 (#84, #85, #91)</li><li>Omisiones de funcionalidades: 1 (#92)</li><li>Funcionalidades a agregar en el futuro: 7 (#83, #94, #95, #96, #97, #98, #99)</li><li>Errores en las pruebas: 1 (#75)</li></ul>
+<ul><li>Errores en formularios: 3 (#84, #85, #91)</li><li>Omisiones de funcionalidades: 1 (#92)</li><li>Funcionalidades a agregar en el futuro: 7 (#83, #94, #95, #96, #97, #98, #99)</li><li>Errores en las pruebas unitarias: 1 (#75)</li><li>Issues cerrados: 8 (#44, #46, #48, #52, #58, #59, #62, #66)</li></ul>
 
 ### Realizar una evaluación global de la calidad
 
@@ -316,7 +316,6 @@ Creo que como equipo tuvimos el desafío de enfretarnos a nuevas tecnologías qu
 Trabajar en el proyecto representó un gran desafío. Al no tener experiencia en el desarrollo de aplicaciones hubo muchas cosas con las que tuve que familiarizarme en el proyecto. El uso de Material Design así como la codificación en JavaScript dio bastante trabajo al principio, sin embargo luego lo manejamos con más fluidez. 
 Para dominar las tecnologías resultó muy útil la documentación encontrada en internet así como también la ayuda de los ayudantes de cátedra en situaciones que no sabíamos resolver.
 En relación al trabajo en equipo, dividimos las tareas para poder avanzar trabajando al paralelo y realizamos reuniones periódicas para mostrar los avances y trabajar en los puntos más complejos.
-
 
 #### Reflexión Ignacio
 
