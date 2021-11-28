@@ -261,6 +261,9 @@ Se presenta la documentación de tres sesiones de testing exploratorio.
 
 #### Sesión 3:
 
+<img src="./images/testingExploratorio/testExpNach.png" width="500">
+
+
 ## Reporte de issues
 
 ### Reportar issues (bugs, improvements, missing features) en GitHub 
