@@ -321,19 +321,12 @@ En relación al trabajo en equipo, dividimos las tareas para poder avanzar traba
 
 #### Reflexión Ignacio
 
-<<<<<<< HEAD
-Desde mi punto de vista, trabajar en este proyecto me ayudo a trabajar en equipo de manera optima para llevar a cabo objetivos de forma conjunta. Lo que al principio parecía ser un gran desafío, las distintas herramientas aprendidas a lo largo del curso hicieron posible realizar los objetivos planteados. Me gusto mucho hacer la tarea porque me llevo un montón de aprendizaje que me acerca a lo que es trabajar junto a un equipo en cualquier proyecto laboral.
-
-Por último, como equipo, el trabajo día a día en conjunto simplifico la realización de tareas y con mis compañeros terminamos muy conformes con los resultados obtenidos.
-
-=======
 Desde mi punto de vista, trabajar en este proyecto me ayudo a trabajar en equipo de manera optima para llevar a cabo objetivos de forma conjunta. Lo que al principio parecía ser un gran desafío, las distintas herramientas aprendidas a lo largo del curso hicieron posible realizar los objetivos planteados.
 Me gusto mucho hacer la tarea porque me llevo un montón de aprendizaje que me acerca a lo que es trabajar junto a un equipo en cualquier proyecto laboral.
 
 Por último, como equipo, el trabajo día a día en conjunto simplifico la realización de tareas y con mis compañeros terminamos muy conformes con los resultados obtenidos.
 
 
->>>>>>> 29f01bc0191dbc54301ff30e2187f5984289b156
 ### Técnicas aplicadas y aprendizajes
 
 Como modalidad de trabajo dividimos las diferentes tareas a realizar para poder avanzar en simultáneo. Realizamos reuniones periódicas por Zoom donde explicábamos los avances y resolvíamos problemas entre todos.
