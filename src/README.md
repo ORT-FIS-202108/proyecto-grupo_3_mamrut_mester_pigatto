@@ -241,6 +241,8 @@ test('Ordenar ingresos por fecha', () => {
 
 ### Realizar test de sistema en un entorno separado del desarrollo
 
+Como parte de la etapa de testing de nuestro proyecto, realizamos un test del sistema en un entorno separado del de desarrollo. Para ello, clonamos el repositorio en una computadora que no habíamos utilizado en el proceso de desarrollo de la aplicación, ejecutamos el comando "npm install" en las carpetas de dominio e interfaz y probamos utilizar la aplicación, que funcionó correctamente.  
+
 ### Generar casos de prueba aplicando técnica partición equivalente
 
 <img src="./images/particionEquivalente/CasosDePrueba1.png"> 
