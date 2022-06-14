@@ -1,6 +1,6 @@
 @use "@material/theme" with (
-  $primary: #00bcd4,
-  $secondary: #f44336,
+  $primary: #512da8,
+  $secondary: #00796b,
   $background: #c7c7c7,
 );
 @use '@material/button/mdc-button';
@@ -28,12 +28,15 @@
 @include textfield.core-styles;
 
 html {
+
   scroll-behavior: smooth;
 }
 
 body {
   font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0px auto;
+  display: flex;
+  height: 100vh;
 }
 
 .app-bar {
@@ -45,36 +48,207 @@ body {
   @include icon-button.core-styles;
 }
 
+.mdc-top-app-bar__title{
+  cursor: pointer;
+}
+
 section {
   text-align: center;
 }
 
-.content {
-  margin: 10rem auto;
-  padding-bottom: 20rem;
-  text-align: center;
+.main-content {
+  overflow: auto;
+  height: 100%;
+  padding-bottom: 2rem;
 }
 
 .sample-content--hidden {
   display: none;
 }
 
-.mdc-tab {
-    background-color: #67daff;
+.mdc-drawer {
+  background-color: white;
 }
 
-.mdc-tab__content .mdc-tab__text-label {
-    color: black;
+.mdc-drawer-app-content {
+  flex: auto;
+  overflow: auto;
+  position: relative;
+  margin-left: 8px;
 }
 
-.mdc-text-field {
-    margin: 1rem auto;
+.mdc-list{
+  width: 100%;
+}
+
+.mdc-list-item{
+  background-color: #439889;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 6px;
+  color: white;
+}
+
+.material-icons{
+  color: white;
+}
+
+.mdc-list-item__text{
+  margin-left: 8px;
+  color: white;
+  font-size: small;
+}
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-name{
+  font-size: medium;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.avatar{
+  width: 180px;
+  height: 180px;
+}
+
+.avatar-img{
+  width: 100%;
+  height: 100%;
+}
+
+.div-inicio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-inicio{
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo-section-inicio{
+  text-align: center;
+  color: gray;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.agregar{
+  margin-left: 25px;
+}
+
+.titulo-section{
+  text-align: start;
+  color: gray;
+  margin-left: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+.mdc-text-field{
+  width: 90%;
+  margin: 10px auto;
+}
+
+.mdc-text-field__input{
+  color: gray;
+  font-size: small;
+}
+
+.mdc-floating-label{
+  font-size: 14px;
+}
+
+.mdc-select{
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .button {
   margin-top: 1rem;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.mdc-snackbar__actions .mdc-button__label {
-  color: #67daff;
+.mdc-button{
+  border-radius: 10px;
+  font-weight: bolder;
+  width: 35%;
+  height: 45px;
+}
+
+.titulo-listas-vacias{
+  color: gray;
+}
+
+.listado{
+  margin-left: 25px;
+  width: 40%;
+}
+
+.item-listado{
+  border-radius: 6px;
+  background-color:white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 1px 1px 1px 1px rgb(212, 209, 209);
+}
+
+.titulo-item-listado{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.titulo-item-listado-text{
+  color: grey;
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.item-listado-text{
+  color: grey;
+}
+
+.contenedor-grafico{
+  width: 40%;
+  height: 40%;
+}
+
+@media screen and (max-width: 768px) {
+  .mdc-button {
+      width: 90% !important;
+  }
+
+  .mdc-drawer__content{
+    display: none;
+  }
 }
